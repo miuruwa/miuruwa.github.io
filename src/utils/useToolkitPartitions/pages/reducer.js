@@ -6,6 +6,13 @@ export const state = {
                 localStorage.getItem("page-settings-number")
             ) || 0,
     },
+    repos: {
+        mounted: true,
+        loaded: true,
+        number: parseInt(
+                localStorage.getItem("page-repos-number")
+            ) || 0,
+    },
 }
 
 export function Reducer(state, action) {
@@ -19,6 +26,11 @@ export function Reducer(state, action) {
 
                     break
                 
+                case "repos":
+                    newState.repos.mounted = action.state
+
+                    break
+                    
                 default:
                     Error('Unknown page.')
             }
@@ -29,6 +41,11 @@ export function Reducer(state, action) {
             switch (action.page) {
                 case "settings":
                     newState.settings.loaded = action.state
+
+                    break
+
+                case "repos":
+                    newState.repos.loaded = action.state
 
                     break
                 
@@ -45,6 +62,18 @@ export function Reducer(state, action) {
                     
                     localStorage.setItem(
                         "page-settings-number", 
+                        JSON.stringify(
+                            action.state
+                        )
+                    )
+
+                    break
+
+                case "repos":
+                    newState.repos.number = action.state
+                    
+                    localStorage.setItem(
+                        "page-repos-number", 
                         JSON.stringify(
                             action.state
                         )

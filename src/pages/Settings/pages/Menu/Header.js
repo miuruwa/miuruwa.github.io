@@ -14,7 +14,7 @@ export default function Header() {
     const toolkit = useToolKit()
 
     const buttonAction = () => {
-        toolkit.app.goTo(toolkit.app.path)
+        toolkit.app.goTo(window.location.origin)
     }
 
     return <div className="settings-headline settings-block">

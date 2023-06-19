@@ -2,7 +2,7 @@ import "./stylesheet.scss"
 
 import useToolkitPartitions from "utils/useToolkitPartitions"
 
-import Working from "./Working"
+import Repos from "./Repos"
 import NotFound from "./NotFound"
 import Settings from "./Settings"
 
@@ -17,8 +17,8 @@ export default function Router () {
     
     return <BrowserRouter>
         <Routes>
-            <Route exact path="/template/" element={<Working />} />
-            <Route exact path="/template/settings" element={<Settings />} />
+            <Route exact path="/" element={<Repos />} />
+            <Route exact path="/settings" element={<Settings />} />
             <Route path="/*" element={<NotFound />} />
         </Routes>
     </BrowserRouter>
