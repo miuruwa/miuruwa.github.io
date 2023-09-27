@@ -27,17 +27,17 @@ export default function Menu() {
         <ButtonBlock className="repos-block">
             <MenuButton
                     icon={<WebXIcon/>}
-                    title="WebX UI"
+                    title="WebX"
                     page={2}
             />
             <MenuButton
                     icon={<ShoppingCartIcon/>}
-                    title="Калькулятор покупок"
+                    title="Cartify"
                     page={3}
             />
             <MenuButton
                     icon={<NotesIcon/>}
-                    title="Заметки"
+                    title="Notify"
                     page={4}
             />
         </ButtonBlock>
@@ -49,12 +49,12 @@ export default function Menu() {
             />
             <MenuButton
                     icon={<AutoAwesomeMosaicIcon/>}
-                    title="CanaryBot"
+                    title="Менеджер Марсель"
                     page={6}
             />
             <MenuButton
                     icon={<AutoAwesomeMosaicIcon/>}
-                    title="PopokaBot"
+                    title="Канарейка"
                     page={7}
             />
         </ButtonBlock>
