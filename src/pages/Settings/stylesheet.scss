@@ -45,8 +45,8 @@
 
     &.screen-device-desktop {
         .desktop.settings {
-            grid-template-columns: 320px minmax(696px, 1fr);
-            margin: 0 auto;
+            grid-template-columns: 1fr 2fr 1fr;
+            margin: 0;
         }
 
         .settings-wrapper {
