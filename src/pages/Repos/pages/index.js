@@ -1,6 +1,6 @@
 import {
     useToolKit
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 import Main from "./Main"
 

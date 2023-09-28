@@ -1,10 +1,10 @@
 import {
     useToolKit
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 import {
     Button
-} from "@webx-ui/forms"
+} from "@webx/forms"
 
 export default function LinkButton({ title, children, link }) {
     const toolkit = useToolKit()

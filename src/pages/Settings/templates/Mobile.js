@@ -1,10 +1,10 @@
 import {
     useToolKit
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 import { 
     MountTransition
- } from "@webx-ui/transitions/"
+ } from "@webx/transitions/"
 
 import {
     Menu, 

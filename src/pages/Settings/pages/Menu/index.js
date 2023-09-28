@@ -1,6 +1,6 @@
 import {
     ButtonBlock
-} from "@webx-ui/forms"
+} from "@webx/forms"
 
 import {
     SettingsIcon,

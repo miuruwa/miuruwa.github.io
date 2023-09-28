@@ -12,7 +12,7 @@ import {
     Routes
 } from "react-router-dom"
 
-export default function Router () {
+function Router () {
     useToolkitPartitions()
     
     return <BrowserRouter>
@@ -23,3 +23,5 @@ export default function Router () {
         </Routes>
     </BrowserRouter>
 }
+
+export default Router

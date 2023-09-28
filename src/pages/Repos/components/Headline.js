@@ -4,11 +4,11 @@ import {
 
 import {
     Button
-} from "@webx-ui/forms"
+} from "@webx/forms"
 
 import {
     useToolKit
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 function BackButtonMobile() {
     const toolkit = useToolKit()

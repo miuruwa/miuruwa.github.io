@@ -1,6 +1,6 @@
 import {
     useToolKit
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 import "./stylesheet.scss"
 
@@ -9,12 +9,16 @@ import {
     MobileTemplate 
 } from "./templates/"
 
-export default function Repos () {
+function Repos () {
     const toolkit = useToolKit()
 
-    if (toolkit.app.windowWidth >= 768) {
+    const IS_DESKTOP = toolkit.settings.windowWidth >= 768
+
+    if (IS_DESKTOP) {
         return <DesktopTemplate />
     }
 
     return <MobileTemplate />
 }
+
+export default Repos

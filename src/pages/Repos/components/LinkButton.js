@@ -1,6 +1,6 @@
 import {
     Button
-} from "@webx-ui/forms"
+} from "@webx/forms"
 
 export default function LinkButton({ title, children, link }) {
     const onClick = () => {

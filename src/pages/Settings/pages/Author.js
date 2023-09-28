@@ -1,6 +1,7 @@
 
 import {
-    CardBlock} from "@webx-ui/forms"
+    CardBlock
+} from "@webx/forms"
 
 import Headline from "../components/Headline"
 import LinkButton from "../components/LinkButton"

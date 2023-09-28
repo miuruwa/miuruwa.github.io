@@ -4,7 +4,7 @@ import {
 
 import {
     usePartition
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 import { 
     Reducer as PagesReducer, 

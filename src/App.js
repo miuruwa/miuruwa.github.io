@@ -1,8 +1,8 @@
 import {
     ToolKitContext
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
-import "themes/stylesheet.scss"
+import "theme/stylesheet.scss"
 
 import Router from "pages"
 

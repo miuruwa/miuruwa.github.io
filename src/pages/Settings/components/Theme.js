@@ -6,11 +6,11 @@ import {
     ButtonBlock,
     Button,
     Dropdown
-} from "@webx-ui/forms"
+} from "@webx/forms"
 
 import {
     useToolKit
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 import {
     LightModeIcon, 

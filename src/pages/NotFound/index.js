@@ -1,15 +1,15 @@
 import {
     useToolKit
-} from "@webx-ui/toolkit"
+} from "@webx/toolkit"
 
 import {
     Button,
     CardBlock
-} from "@webx-ui/forms"
+} from "@webx/forms"
 
 import "./stylesheet.scss"
 
-export default function NotFound() {
+function NotFound() {
     const toolkit = useToolKit()
 
     function MoveToRootButton() {
@@ -39,3 +39,5 @@ export default function NotFound() {
         </CardBlock>
     </div>
 }
+
+export default NotFound

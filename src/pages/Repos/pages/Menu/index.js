@@ -1,6 +1,6 @@
 import {
     ButtonBlock
-} from "@webx-ui/forms"
+} from "@webx/forms"
 
 import {
     PersonIcon,
@@ -14,7 +14,7 @@ import {
 import Header from "./Header"
 import MenuButton from "./MenuButton"
 
-export default function Menu() {
+function Menu() {
     return <div className="repos-menu">
         <Header />
         <ButtonBlock className="repos-block">
@@ -60,3 +60,5 @@ export default function Menu() {
         </ButtonBlock>
     </div>
 }
+
+export default Menu
