@@ -5,12 +5,13 @@ import {
 import Main from "./Main"
 
 import WebX from "./WebX"
-import CartCalc from "./CartCalc"
-import Notes from "./Notes"
+import Cartify from "./CartCalc"
+import Notify from "./Notes"
 
 import VKBotKit from "./VKBotKit"
 import CanaryBot from "./CanaryBot"
 import PopokaBot from "./PopokaBot"
+import MarcelBot from "./MarcelBot"
 
 import Menu from "./Menu"
 
@@ -22,19 +23,22 @@ function Resolver() {
             return <WebX />
 
         case 3:
-            return <CartCalc />
+            return <Cartify />
 
         case 4:
-            return <Notes />
+            return <Notify />
 
         case 5:
             return <VKBotKit />
 
         case 6:
-            return <CanaryBot />
+            return <PopokaBot />
 
         case 7:
-            return <PopokaBot />
+            return <CanaryBot />
+
+        case 8:
+            return <MarcelBot />
     
         default:
             return <Main />

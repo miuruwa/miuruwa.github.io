@@ -5,9 +5,9 @@ import {
 import Headline from "../components/Headline"
 import LinkButton from "../components/LinkButton"
 
-export default function Notes () {
+function Notify () {
     return <div className="repos-wrapper">
-        <Headline title="Заметки" />
+        <Headline title="Notify" />
         <CardBlock className="repos-page options">
             <div className="repo-description">
                 Приложение-клон iCloud Заметок, созданное в целях теста WebX UI
@@ -15,8 +15,10 @@ export default function Notes () {
         </CardBlock>
         <CardBlock className="repos-page options">
             <div className="options-button-list">
-                <LinkButton title="Запустить" link="https://kensoi.github.io/notes" />
+                <LinkButton title="Запустить" link="https://kensoi.github.io/notify" />
             </div>
         </CardBlock>
     </div>
 }
+
+export default Notify;

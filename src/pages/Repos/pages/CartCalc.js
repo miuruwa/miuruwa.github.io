@@ -5,9 +5,9 @@ import {
 import Headline from "../components/Headline"
 import LinkButton from "../components/LinkButton"
 
-export default function CartCalc () {
+function Cartify () {
     return <div className="repos-wrapper">
-        <Headline title="Калькулятор покупок" />
+        <Headline title="Cartify" />
         <CardBlock className="repos-page options">
             <div className="repo-description">
                 Калькулятор для подсчитывания общей стоимости всех выбранных в магазине продуктов.
@@ -18,8 +18,10 @@ export default function CartCalc () {
         </CardBlock>
         <CardBlock className="repos-page options">
             <div className="options-button-list">
-                <LinkButton title="Запустить" link="https://kensoi.github.io/cart-calc" />
+                <LinkButton title="Запустить" link="https://kensoi.github.io/cartify" />
             </div>
         </CardBlock>
     </div>
 }
+
+export default Cartify

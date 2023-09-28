@@ -50,7 +50,7 @@ export default function Menu() {
             <MenuButton
                     icon={<AutoAwesomeMosaicIcon/>}
                     title="Менеджер Марсель"
-                    page={6}
+                    page={8}
             />
             <MenuButton
                     icon={<AutoAwesomeMosaicIcon/>}
