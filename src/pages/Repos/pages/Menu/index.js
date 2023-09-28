@@ -2,13 +2,11 @@ import {
     ButtonBlock
 } from "@webx/forms"
 
-import {
-    ShoppingCartIcon,
-    NotesIcon,
-    AutoAwesomeMosaicIcon,
-    WebXIcon,
-    VKBotKitLogo
-} from "icons/repos/menu"
+import CartifyIcon from "@webx/icons/CartifyIcon"
+import NotesIcon from "@webx/icons/NotesIcon"
+import WebXIcon from "@webx/icons/WebXIcon"
+import VKBotKitIcon from "@webx/icons/VKBotKitIcon"
+import BotIcon from "@webx/icons/BotIcon"
 
 import Header from "./Header"
 import MenuButton from "./MenuButton"
@@ -23,29 +21,29 @@ function Menu() {
                     page={2}
             />
             <MenuButton
-                    icon={<ShoppingCartIcon/>}
+                    icon={<CartifyIcon/>}
                     title="Cartify"
                     page={3}
             />
             <MenuButton
                     icon={<NotesIcon/>}
-                    title="Notify"
+                    title="Заметки"
                     page={4}
             />
         </ButtonBlock>
         <ButtonBlock className="repos-block">
             <MenuButton
-                    icon={<VKBotKitLogo />}
+                    icon={<VKBotKitIcon />}
                     title="VKBotKit"
                     page={5}
             />
             <MenuButton
-                    icon={<AutoAwesomeMosaicIcon/>}
+                    icon={<BotIcon/>}
                     title="Менеджер Марсель"
                     page={8}
             />
             <MenuButton
-                    icon={<AutoAwesomeMosaicIcon/>}
+                    icon={<BotIcon/>}
                     title="Канарейка"
                     page={7}
             />

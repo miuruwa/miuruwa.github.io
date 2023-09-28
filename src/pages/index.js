@@ -16,15 +16,51 @@ import {
 
 function Router () {
     useToolkitPartitions()
+
+    const routesProps = [
+        {
+            path: "/",
+            exact: true,
+            element: <Navigate to="/repos" />
+        },
+        {
+            path: "/cart-calc",
+            exact: true,
+            element: <Navigate to="/cartify" />
+        },
+        {
+            path: "/*",
+            element: <Navigate to="/not-found" />
+        },
+        {
+            path: "/homepage",
+            exact: true,
+            element: <Main />
+        },
+        {
+            path: "/repos",
+            exact: true,
+            element: <Repos />
+        },
+        {
+            path: "/settings",
+            exact: true,
+            element: <Settings />
+        },
+        {
+            path: "/not-found",
+            exact: true,
+            element: <NotFound />
+        },
+    ]
     
     return <BrowserRouter>
         <Routes>
-            <Route exact path="/" element={<Main />} />
-            <Route exact path="/repos/" element={<Repos />} />
-            <Route exact path="/settings" element={<Settings />} />
-            <Route exact path="/not-found" element={<NotFound />} />
-            <Route exact path="/cart-calc" element={ <Navigate to="/cartify" /> } />
-            <Route path="/*" element={ <Navigate to="/not-found" /> } />
+            {
+                routesProps.map(
+                    props => <Route {...props} />
+                )
+            }
         </Routes>
     </BrowserRouter>
 }

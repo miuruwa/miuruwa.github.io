@@ -19,7 +19,7 @@ function BackButtonMobile() {
 
     return <Button 
             icon={<ArrowBackIcon/>}
-            theme="transparent"
+            theme="white"
             onClick={returnToMenu}
     />
 }
@@ -31,7 +31,7 @@ export default function Headline({
     
     return <div className="repos-headline">
         {
-            toolkit.app.windowWidth < 768 ? <BackButtonMobile /> : <></>
+            toolkit.settings.windowWidth < 768 ? <BackButtonMobile /> : <></>
         }
         { title }
     </div>
