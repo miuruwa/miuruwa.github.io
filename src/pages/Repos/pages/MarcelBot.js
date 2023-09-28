@@ -9,22 +9,23 @@ function MarcelBot () {
     return <div className="repos-wrapper">
         <Headline title="Менеджер Марсель" />
         <CardBlock className="repos-page options">
-            <div className="repo-description">
+            <p>
                 Марсель -- чат-бот, предназначенный для дубликации постов из ВК сообщества в другие соцсети: X (Twitter) и Telegram
-            </div>
-            <div className="repo-description">
+            </p>
+            <p>
                 Также бот репостит пост в беседу ВК.
-            </div>
-            <div className="repo-description">
+            </p>
+            <p>
                 Работает на VKBotKit
-            </div>
+            </p>
         </CardBlock>
-        <CardBlock className="repos-page options">
-            <div className="options-button-list">
-                <LinkButton title="Сообщество" link="https://vk.com/marcelbot" />
-                <LinkButton title="Исходный код" link="https://github.com/kensoi/marcelbot" />
-            </div>
-        </CardBlock>
+        <h6>
+            Полезные ссылки
+        </h6>
+        <div className="options">
+            <LinkButton title="Сообщество" link="https://vk.com/marcelbot" />
+            <LinkButton title="Исходный код" link="https://github.com/kensoi/marcelbot" />
+        </div>
     </div>
 }
 

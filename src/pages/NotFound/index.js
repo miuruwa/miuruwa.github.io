@@ -1,8 +1,4 @@
 import {
-    useToolKit
-} from "@webx/toolkit"
-
-import {
     Button,
     CardBlock
 } from "@webx/forms"
@@ -10,33 +6,32 @@ import {
 import "./stylesheet.scss"
 
 function NotFound() {
-    const toolkit = useToolKit()
-
     function MoveToRootButton() {
 
         function onClick() {
-            toolkit.app.goTo(toolkit.app.path)
+            window.location.href="https://kensoi.github.io/"
         }
 
         return <Button 
                 title="Вернуться на главную"
+                theme="white"
                 onClick={onClick}
         />
     }
 
     return <div className="not-found">
+        <h1>
+            Ошиблись адресом?
+        </h1>
         <CardBlock>
-            <h1>
-                Ошиблись адресом?
-            </h1>
             <p>
                 Страница не найдена, либо она не существует.
             </p>
             <p>
                 Попробуйте вернуться на главную страницу.
             </p>
-            <MoveToRootButton/>
         </CardBlock>
+        <MoveToRootButton/>
     </div>
 }
 

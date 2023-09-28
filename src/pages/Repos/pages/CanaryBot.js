@@ -8,18 +8,19 @@ import LinkButton from "../components/LinkButton"
 export default function CanaryBot () {
     return <div className="repos-wrapper">
         <Headline title="Канарейка" />
-        <CardBlock className="repos-page options">
-            <div className="repo-description">
-                Архивированный репозиторий с исходным кодом чат-бота, на котором был создан VKBotKit. Целью этого бота было упрощение менеджмента беседы сообщества, а также проводку некоторых развлекательных функций.
-            </div>
-            <div className="repo-description">
+        <CardBlock className="repos-page">
+            <p>
+                Архивированный репозиторий с исходным кодом чат-бота, на основе которого был создан фреймворк VKBotKit. Целью этого бота было упрощение менеджмента беседы сообщества, а также проводку некоторых развлекательных функций.
+            </p>
+            <p>
                 Работает на VKBotKit
-            </div>
+            </p>
         </CardBlock>
-        <CardBlock className="repos-page options">
-            <div className="options-button-list">
-                <LinkButton title="Исходный код" link="https://github.com/kensoi/pycanarybot" />
-            </div>
-        </CardBlock>
+        <h6>
+            Полезные ссылки
+        </h6>
+        <div className="options">
+            <LinkButton title="Исходный код" link="https://github.com/kensoi/pycanarybot" />
+        </div>
     </div>
 }

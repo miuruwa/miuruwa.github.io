@@ -9,17 +9,18 @@ export default function WebX () {
     return <div className="repos-wrapper">
         <Headline title="WebX" />
         <CardBlock className="repos-page options">
-            <div className="repo-description">
+            <p>
                 WebX - шаблон, используемый мной для разработки React приложений
-            </div>
-            <div className="repo-description">
+            </p>
+            <p>
                 WebX использует внешний вид VK UI и иконки для Material UI
-            </div>
+            </p>
         </CardBlock>
-        <CardBlock className="repos-page options">
-            <div className="options-button-list">
-                <LinkButton title="Шаблон на GitHub" link="https://github.com/webx-ui/template" />
-            </div>
-        </CardBlock>
+        <h6>
+            Полезные ссылки
+        </h6>
+        <div className="options">
+            <LinkButton title="Шаблон на GitHub" link="https://github.com/webx-ui/template" />
+        </div>
     </div>
 }

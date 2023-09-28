@@ -49,8 +49,8 @@
 
     &.screen-device-desktop {
         .desktop.repos {
-            grid-template-columns: 1fr 2fr 1fr;
-            margin: 0;
+            grid-template-columns: 240px 640px;
+            margin: 0 auto;
         }
 
         .repos-wrapper {
@@ -74,12 +74,19 @@
         }
     }
 
-    .repos-page {
-        &.options {
-            .options-grid-item {
-                &:nth-child(2n) {
-                    justify-content: right;
-                }
+    .options {
+        .x-button {
+            display: inline-block;
+            width: fit-content;
+            border: 2px solid white;
+            opacity: 0.5;
+
+            :hover {
+                opacity: 1!important;
+            }
+
+            &:not(:last-child) {
+                margin-right: 8px;
             }
         }
     }

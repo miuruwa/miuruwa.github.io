@@ -8,7 +8,7 @@ export default function LinkButton({ title, children, link }) {
     }
 
     return <Button
-        theme="white"
+        theme="transparent"
         title={title || children}
         onClick={onClick} />
 }

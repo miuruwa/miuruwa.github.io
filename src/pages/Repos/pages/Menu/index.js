@@ -3,7 +3,6 @@ import {
 } from "@webx/forms"
 
 import {
-    PersonIcon,
     ShoppingCartIcon,
     NotesIcon,
     AutoAwesomeMosaicIcon,
@@ -17,13 +16,6 @@ import MenuButton from "./MenuButton"
 function Menu() {
     return <div className="repos-menu">
         <Header />
-        <ButtonBlock className="repos-block">
-            <MenuButton
-                    icon={<PersonIcon/>}
-                    title="Главная"
-                    page={1}
-            />
-        </ButtonBlock>
         <ButtonBlock className="repos-block">
             <MenuButton
                     icon={<WebXIcon/>}

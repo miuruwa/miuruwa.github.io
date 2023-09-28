@@ -4,10 +4,14 @@ import {
 
 import "theme/stylesheet.scss"
 
+import Header from "Header"
 import Router from "pages"
 
-export default function App () {
+function App () {
     return <ToolKitContext>
+        <Header />
         <Router/>
     </ToolKitContext>
 }
+
+export default App

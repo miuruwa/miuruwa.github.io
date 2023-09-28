@@ -7,17 +7,18 @@ import LinkButton from "../components/LinkButton"
 
 function Notify () {
     return <div className="repos-wrapper">
-        <Headline title="Notify" />
+        <Headline title="Заметки" />
         <CardBlock className="repos-page options">
-            <div className="repo-description">
+            <p>
                 Приложение-клон iCloud Заметок, созданное в целях теста WebX UI
-            </div>
+            </p>
         </CardBlock>
-        <CardBlock className="repos-page options">
-            <div className="options-button-list">
-                <LinkButton title="Запустить" link="https://kensoi.github.io/notify" />
-            </div>
-        </CardBlock>
+        <h6>
+            Полезные ссылки
+        </h6>
+        <div className="options">
+            <LinkButton title="Запустить" link="https://kensoi.github.io/notes" />
+        </div>
     </div>
 }
 

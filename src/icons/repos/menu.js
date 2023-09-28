@@ -45,7 +45,7 @@ function WebXIcon() {
         </g>
       </svg>
     );
-  }
+}
 
 function VKBotKitLogo() {
   return (
@@ -65,6 +65,7 @@ function VKBotKitLogo() {
     </svg>
   );
 }
+
 export {
     PersonIcon,
     ShoppingCartIcon,

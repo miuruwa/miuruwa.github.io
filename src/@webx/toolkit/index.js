@@ -19,9 +19,6 @@ import {
     getScreenDeviceType
 } from "./screen-device-type"
 
-import {
-    MountTransition
-} from "@webx/transitions"
 import CardWrapper from "@webx/card"
 
 const getToolKitContext = createContext()
@@ -68,18 +65,6 @@ class ToolKit {
             ...this.#toolDict
         }
     }
-}
-
-function Wrapper ({children, mount, loaded}) {
-    return <MountTransition
-        mountState={mount}
-        visibilityState={loaded}
-        className="index"
-    >
-        {
-            children
-        }
-    </MountTransition>
 }
 
 function ToolKitContext ({children}) {
@@ -188,11 +173,9 @@ function ToolKitContext ({children}) {
     })
     
     return <getToolKitContext.Provider value={toolkit}>
-        <Wrapper mount={toolkit.app.mount} loaded={toolkit.app.loaded}>
-            {
-                children
-            }
-        </Wrapper>
+        <div className="index">
+            {children}
+        </div>
         <CardWrapper />
     </getToolKitContext.Provider>
 }
