@@ -10,7 +10,7 @@ import Notes from "./Notes"
 
 import VKBotKit from "./VKBotKit"
 import CanaryBot from "./CanaryBot"
-import PopokaBot from "./PopokaBot"
+import MarcelBot from "./MarcelBot"
 
 import Menu from "./Menu"
 
@@ -34,7 +34,7 @@ function Resolver() {
             return <CanaryBot />
 
         case 7:
-            return <PopokaBot />
+            return <MarcelBot />
     
         default:
             return <Main />

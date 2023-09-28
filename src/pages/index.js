@@ -9,7 +9,8 @@ import Settings from "./Settings"
 import {
     BrowserRouter, 
     Route,
-    Routes
+    Routes,
+    Navigate
 } from "react-router-dom"
 
 export default function Router () {
@@ -19,6 +20,7 @@ export default function Router () {
         <Routes>
             <Route exact path="/" element={<Repos />} />
             <Route exact path="/settings" element={<Settings />} />
+            <Route exact path="/cart-calc" element={<Navigate to="/cartify" />} />
             <Route path="/*" element={<NotFound />} />
         </Routes>
     </BrowserRouter>
