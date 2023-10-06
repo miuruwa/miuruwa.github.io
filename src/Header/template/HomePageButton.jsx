@@ -1,7 +1,7 @@
 import DevIcon from "@webx/icons/DevIcon"
 
 function onClick() {
-    window.location.href = "https://kensoi.github.io/"
+    window.location.pathname = "/"
 }
 
 function HomePageButton() {
@@ -10,7 +10,6 @@ function HomePageButton() {
       onClick={onClick}
     >
         <DevIcon />
-        kensoidev
     </div>
 }
 

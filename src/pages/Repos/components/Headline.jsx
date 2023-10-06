@@ -1,6 +1,4 @@
-import {
-    ArrowBackIcon
-} from 'icons/settings/menu/header'
+import BackIcon from '@webx/icons/BackIcon'
 
 import {
     Button
@@ -18,7 +16,7 @@ function BackButtonMobile() {
     }
 
     return <Button 
-            icon={<ArrowBackIcon/>}
+            icon={<BackIcon/>}
             theme="white"
             onClick={returnToMenu}
     />

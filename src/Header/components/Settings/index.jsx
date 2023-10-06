@@ -1,3 +1,3 @@
-export {
-    SettingsСard
-} from "./SettingsСard"
+import SettingsСard from "./SettingsСard"
+
+export default SettingsСard

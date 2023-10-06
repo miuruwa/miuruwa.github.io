@@ -1,39 +1,39 @@
 @mixin header {
+    .header-button {
+        min-width: 56px;
+        height: 56px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        gap: 8px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        color: var(--color);
+        opacity: 0.5;
+        transition: 0.1s;
+        font-size: 20px;
+        .x-dropdown-content svg {
+            opacity: 1!important;
+        }
+        .x-dropdown {
+            width: 32px!important;
+        }
+        .x-dropdown-children {
+            height: 20px;
+            display: flex;
+            align-items: center;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
     .header {
         height: 56px;
 
-        .header-button {
-            min-width: 56px;
-            height: 56px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            gap: 8px;
-            svg {
-                width: 20px;
-                height: 20px;
-            }
-            color: var(--color);
-            opacity: 0.5;
-            transition: 0.1s;
-            font-size: 20px;
-            .x-dropdown-content svg {
-                opacity: 1!important;
-            }
-            .x-dropdown {
-                width: 32px!important;
-            }
-            .x-dropdown-children {
-                height: 20px;
-                display: flex;
-                align-items: center;
-            }
-            &:hover {
-                opacity: 1;
-            }
-        }
 
         .button-block {
             width: 228px;

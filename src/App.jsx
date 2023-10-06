@@ -2,10 +2,10 @@ import {
     ToolKitContext
 } from "@webx/toolkit"
 
-import "theme/stylesheet.scss"
+import "./theme/stylesheet.scss"
 
-import Header from "Header"
-import Router from "pages"
+import Header from "./Header"
+import Router from "./pages"
 
 function App () {
     return <ToolKitContext>

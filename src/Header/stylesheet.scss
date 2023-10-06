@@ -5,5 +5,12 @@
         user-select: none;
         position: relative;
         z-index: 100;
+        .header-menu {
+            display: flex;
+
+            &.desktop-menu {
+                gap: 16px;
+            }
+        }
     }
 }

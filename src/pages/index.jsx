@@ -1,11 +1,16 @@
 import "./stylesheet.scss"
 
-import useToolkitPartitions from "utils/useToolkitPartitions"
+import useToolkitPartitions from "~/utils/useToolkitPartitions"
 
 import Main from "./Main"
+import Links from "./Links"
+import About from "./About"
 import Repos from "./Repos"
 import NotFound from "./NotFound"
-import Settings from "./Settings"
+
+import {
+    nanoid
+} from "nanoid"
 
 import {
     BrowserRouter, 
@@ -38,14 +43,19 @@ function Router () {
             element: <Main />
         },
         {
+            path: "/links",
+            exact: true,
+            element: <Links />
+        },
+        {
+            path: "/about",
+            exact: true,
+            element: <About />
+        },
+        {
             path: "/repos",
             exact: true,
             element: <Repos />
-        },
-        {
-            path: "/settings",
-            exact: true,
-            element: <Settings />
         },
         {
             path: "/not-found",
@@ -58,7 +68,7 @@ function Router () {
         <Routes>
             {
                 routesProps.map(
-                    props => <Route {...props} />
+                    props => <Route key={nanoid()} {...props} />
                 )
             }
         </Routes>

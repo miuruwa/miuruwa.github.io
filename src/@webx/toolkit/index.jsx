@@ -103,7 +103,7 @@ function ToolKitContext ({children}) {
     ] = useState(false)
 
     const MountTransitionData = {
-        path: process.env.PUBLIC_URL,
+        path: import.meta.env.PUBLIC_URL,
 
         show: (offset=100) => {
             setTimeout(

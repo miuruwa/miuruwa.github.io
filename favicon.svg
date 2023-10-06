@@ -606,7 +606,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:20.3525;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:11.2;stroke-opacity:1;paint-order:markers stroke fill"
+       style="fill:#000000;fill-opacity:1;stroke:none;strokeWidth:20.3525;strokeLinecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:11.2;stroke-opacity:1;paint-order:markers stroke fill"
        cx="132.29167"
        cy="132.29167"
        id="circle4528"
@@ -638,7 +638,7 @@
            id="path4485" />
       </g>
       <path
-         style="fill:#ffffff;stroke:none;stroke-width:4.23333;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:11.2;stroke-opacity:1;paint-order:markers stroke fill"
+         style="fill:#ffffff;stroke:none;strokeWidth:4.23333;strokeLinecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:11.2;stroke-opacity:1;paint-order:markers stroke fill"
          id="path3923"
          sodipodi:type="arc"
          sodipodi:cx="65.578201"
