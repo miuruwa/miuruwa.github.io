@@ -7,7 +7,7 @@ import "./stylesheet.scss"
 import { 
     DesktopTemplate, 
     MobileTemplate 
-} from "./templates/"
+} from "./templates"
 
 function Repos () {
     const toolkit = useToolKit()

@@ -7,7 +7,7 @@ import "./stylesheet.scss"
 import { 
     DesktopTemplate, 
     MobileTemplate 
-} from "./templates/"
+} from "./templates"
 
 export default function Settings () {
     const toolkit = useToolKit()
