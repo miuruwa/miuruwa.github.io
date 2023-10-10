@@ -1,34 +1,26 @@
-import {
-    CardBlock
-} from "@webx/forms"
-
-import LinkButton from "../Repos/components/LinkButton"
+import "./stylesheet.scss"
+import LinkButton from "./Button"
 
 function Main () {
-    return <div className="repos-wrapper">
+    return <div className="links-wrapper">
         <h1>
-            Главная
+            Ссылки
         </h1>
-        <CardBlock className="repos-page options">
-            <p>
-                Здесь я не придумал чё написать {":)"}
-            </p>
-            <p>
-                Могу написать что делаю какие-то штуки, которыми мог бы пользоваться я сам (и я этим пользуюсь), и которыми могли бы пользоваться люди из моего окружения.
-            </p>
-            <p>
-                Работаю с ReactJS, Python
-            </p>
-        </CardBlock>
-        <h6>
-            Полезные ссылки
-        </h6>
-        <CardBlock className="repos-page options">
-            <p>
-                <LinkButton title="Github" link="https://github.com/kensoi" />
-                <LinkButton title="VK" link="https://vk.com/kensoi" />
-            </p>
-        </CardBlock>
+        <LinkButton link="https://github.com/kensoi">
+            Github
+        </LinkButton>
+        <LinkButton link="https://vk.com/miuruwa">
+            ВКонтакте
+        </LinkButton>
+        <LinkButton link="https://t.me/miuruwa">
+            Telegram
+        </LinkButton>
+        <LinkButton link="https://x.com/miuruwa_">
+            X (бывш. Твиттер)
+        </LinkButton>
+        <LinkButton link="https://youtube.com/@miruruwa">
+            Youtube
+        </LinkButton>
     </div>
 }
 
