@@ -3,6 +3,7 @@ import "./stylesheet.scss"
 import useToolkitPartitions from "~/utils/useToolkitPartitions"
 
 import About from "./About"
+import Home from "./Home"
 import Repos from "./Repos"
 import NotFound from "./NotFound"
 
@@ -36,10 +37,9 @@ function Router () {
             element: <Navigate to="/not-found" />
         },
         {
-            path: "/homepage",
+            path: "/home",
             exact: true,
-            element: <Navigate to="/repos" />
-            // element: <Main />
+            element: <Home />
         },
         {
             path: "/about",

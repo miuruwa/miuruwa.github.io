@@ -8,10 +8,10 @@ import {
     useEffect
 } from "react"
 
-function Main () {
+function Home () {
     useEffect(
         () => {
-            document.title = "homepage / kensoi"
+            document.title = "home / kensoi"
         }, []
     )
     return <>
@@ -21,4 +21,4 @@ function Main () {
     </>
 }
 
-export default Main
+export default Home
