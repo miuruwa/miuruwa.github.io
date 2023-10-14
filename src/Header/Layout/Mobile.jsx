@@ -4,9 +4,11 @@ import Settings from "../components/Settings"
 
 function Layout () {
     return <div className="header">
-        <Home Mobile/>
-        <Navigation isCard/>
-        <Settings Mobile/>
+        <div className="header-frame">
+            <Home Mobile/>
+            <Navigation isCard/>
+            <Settings Mobile/>
+        </div>
     </div>
 }
 

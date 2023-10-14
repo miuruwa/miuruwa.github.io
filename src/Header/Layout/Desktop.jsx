@@ -4,9 +4,11 @@ import Settings from "../components/Settings"
 
 function Layout () {
     return <div className="header">
-        <Home />
-        <Navigation />
-        <Settings />
+        <div className="header-frame">
+            <Home />
+            <Navigation />
+            <Settings />
+        </div>
     </div>
 }
 
