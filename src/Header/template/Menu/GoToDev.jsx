@@ -1,5 +1,5 @@
 function onClick() {
-    window.location.pathname = "/about"
+    window.location.pathname = "/dev"
 }
 
 function GoToAbout() {
