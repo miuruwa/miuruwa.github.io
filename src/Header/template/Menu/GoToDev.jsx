@@ -4,10 +4,10 @@ function onClick() {
 
 function GoToAbout() {
     return <div 
-      className="header-button" title="Об авторе"
+      className="header-button" title="разработчик"
       onClick={onClick}
     >
-        ссылки
+        разработчик
     </div>
 }
 

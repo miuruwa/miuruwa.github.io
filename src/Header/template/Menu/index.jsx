@@ -9,12 +9,12 @@ import MenuIcon from "@webx/icons/MenuIcon"
 
 import GoToRepos from "./GoToRepos"
 import OpenSettings from "./OpenSettings"
-import GoToAbout from "./GoToAbout"
+import GoToDev from "./GoToDev"
 
 function Links () {
     return <>
         <GoToRepos />
-        <GoToAbout />
+        <GoToDev />
     </>
 }
 
