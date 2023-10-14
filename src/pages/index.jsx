@@ -2,7 +2,7 @@ import "./stylesheet.scss"
 
 import useToolkitPartitions from "~/utils/useToolkitPartitions"
 
-import About from "./About"
+import Dev from "./Dev"
 import Home from "./Home"
 import Repos from "./Repos"
 import NotFound from "./NotFound"
@@ -33,6 +33,11 @@ function Router () {
             element: <Navigate to="/cartify" />
         },
         {
+            path: "/about",
+            exact: true,
+            element: <Navigate to="/dev" />
+        },
+        {
             path: "/*",
             element: <Navigate to="/not-found" />
         },
@@ -42,9 +47,9 @@ function Router () {
             element: <Home />
         },
         {
-            path: "/about",
+            path: "/dev",
             exact: true,
-            element: <About />
+            element: <Dev />
         },
         {
             path: "/repos",
