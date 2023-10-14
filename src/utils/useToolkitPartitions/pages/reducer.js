@@ -9,9 +9,7 @@ export const state = {
     repos: {
         mounted: true,
         loaded: true,
-        number: parseInt(
-                localStorage.getItem("page-repos-number")
-            ) || 0,
+        id: localStorage.getItem("page-repos-id")
     },
 }
 
@@ -70,13 +68,11 @@ export function Reducer(state, action) {
                     break
 
                 case "repos":
-                    newState.repos.number = action.state
+                    newState.repos.id = action.state
                     
                     localStorage.setItem(
-                        "page-repos-number", 
-                        JSON.stringify(
-                            action.state
-                        )
+                        "page-repos-id", 
+                        action.state
                     )
 
                     break

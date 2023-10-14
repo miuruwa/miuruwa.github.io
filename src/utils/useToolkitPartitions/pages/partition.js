@@ -36,10 +36,10 @@ export class Partition {
                 }
             },
 
-            number: {
-                get: () => this.#state.repos.number,
+            id: {
+                get: () => this.#state.repos.id,
                 set: value => {
-                    if (typeof value == "number" && value !== this.#state.repos.number) {
+                    if (typeof value == "string" && value !== this.#state.repos.id) {
                         this.repos.loaded = false
 
                         setTimeout(

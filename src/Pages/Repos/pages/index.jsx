@@ -1,4 +1,8 @@
 import {
+    useEffect
+} from "react"
+
+import {
     useToolKit
 } from "@webx/toolkit"
 
@@ -12,23 +16,33 @@ import CanaryBot from "./CanaryBot"
 
 import Menu from "./Menu"
 
+
 function Resolver() {
     const toolkit = useToolKit()
 
-    switch (toolkit.pages.repos.number) {
-        case 3:
+    useEffect(() =>{
+        const url = window.location.href
+        const r = new URL(url)
+
+        const repo = r.searchParams.get("id") || "webx"
+
+        toolkit.pages.repos.id = repo
+    }, [])
+
+    switch (toolkit.pages.repos.id) {
+        case "cartify":
             return <Cartify />
 
-        case 4:
+        case "notify":
             return <Notify />
 
-        case 5:
+        case "vkbotkit":
             return <VKBotKit />
 
-        case 7:
+        case "canarybot":
             return <CanaryBot />
 
-        case 8:
+        case "marcelbot":
             return <MarcelBot />
     
         default:

@@ -18,34 +18,34 @@ function Menu() {
             <MenuButton
                     icon={<WebXIcon/>}
                     title="WebX"
-                    page={2}
+                    page="webx"
             />
             <MenuButton
                     icon={<CartifyIcon/>}
                     title="Cartify"
-                    page={3}
+                    page="cartify"
             />
             <MenuButton
                     icon={<NotesIcon/>}
                     title="Заметки"
-                    page={4}
+                    page="notify"
             />
         </ButtonBlock>
         <ButtonBlock className="repos-block">
             <MenuButton
                     icon={<VKBotKitIcon />}
                     title="VKBotKit"
-                    page={5}
+                    page="vkbotkit"
             />
             <MenuButton
                     icon={<BotIcon/>}
                     title="Менеджер Марсель"
-                    page={8}
+                    page="marcelbot"
             />
             <MenuButton
                     icon={<BotIcon/>}
                     title="Канарейка"
-                    page={7}
+                    page="canarybot"
             />
         </ButtonBlock>
     </div>
