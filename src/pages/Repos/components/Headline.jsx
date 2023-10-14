@@ -17,7 +17,7 @@ function BackButtonMobile() {
 
     return <Button 
             icon={<BackIcon/>}
-            theme="white"
+            theme="transparent"
             onClick={returnToMenu}
     />
 }

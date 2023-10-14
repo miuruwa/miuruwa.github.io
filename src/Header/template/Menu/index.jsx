@@ -1,15 +1,19 @@
+import { 
+    CardBlock
+} from "@webx/forms"
+import { 
+    useToolKit
+} from "@webx/toolkit"
+
+import MenuIcon from "@webx/icons/MenuIcon"
+
 import GoToRepos from "./GoToRepos"
-import GoToLinks from "./GoToLinks"
 import OpenSettings from "./OpenSettings"
 import GoToAbout from "./GoToAbout"
-import { CardBlock } from "@webx/forms"
-import { useToolKit } from "@webx/toolkit"
-import MenuIcon from "@webx/icons/MenuIcon"
 
 function Links () {
     return <>
         <GoToRepos />
-        <GoToLinks />
         <GoToAbout />
     </>
 }

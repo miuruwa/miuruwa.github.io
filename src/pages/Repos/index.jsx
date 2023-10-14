@@ -1,4 +1,8 @@
 import {
+    useEffect
+} from "react"
+
+import {
     useToolKit
 } from "@webx/toolkit"
 
@@ -10,6 +14,11 @@ import {
 } from "./templates"
 
 function Repos () {
+    useEffect(
+        () => {
+            document.title = "repos / kensoi"
+        }, []
+    )
     const toolkit = useToolKit()
 
     const IS_DESKTOP = toolkit.settings.windowWidth >= 768

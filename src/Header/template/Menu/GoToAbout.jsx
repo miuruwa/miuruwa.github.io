@@ -7,7 +7,7 @@ function GoToAbout() {
       className="header-button" title="Об авторе"
       onClick={onClick}
     >
-        Об авторе
+        ссылки
     </div>
 }
 

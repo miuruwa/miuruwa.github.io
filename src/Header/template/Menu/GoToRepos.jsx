@@ -7,7 +7,7 @@ function GoToRepos() {
       className="header-button" title="Репозитории"
       onClick={onClick}
     >
-        Репозитории
+        репозитории
     </div>
 }
 

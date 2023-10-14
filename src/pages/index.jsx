@@ -2,8 +2,6 @@ import "./stylesheet.scss"
 
 import useToolkitPartitions from "~/utils/useToolkitPartitions"
 
-import Main from "./Main"
-import Links from "./Links"
 import About from "./About"
 import Repos from "./Repos"
 import NotFound from "./NotFound"
@@ -40,12 +38,8 @@ function Router () {
         {
             path: "/homepage",
             exact: true,
-            element: <Main />
-        },
-        {
-            path: "/links",
-            exact: true,
-            element: <Links />
+            element: <Navigate to="/repos" />
+            // element: <Main />
         },
         {
             path: "/about",

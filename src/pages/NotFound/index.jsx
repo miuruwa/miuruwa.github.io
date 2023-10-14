@@ -4,7 +4,11 @@ import {
 } from "@webx/forms"
 
 import "./stylesheet.scss"
-
+import Clouds from "./Illustration.png"
+import Footage from "./footage.gif"
+import {
+    useEffect
+} from "react"
 
 function MoveToRootButton() {
     function onClick() {
@@ -18,17 +22,38 @@ function MoveToRootButton() {
     />
 }
 
-function NotFound() {
-    return <div className="not-found">
+function Illustration () {
+    return <div className="not-found-background">
+        <img src={Footage} />
+        <img src={Clouds} />
+    </div>
+}
+
+function Message () {
+    return <div className="not-found-content">
         <h1>
-            Ошиблись адресом?
+            Затерялся, путник?
         </h1>
         <CardBlock>
             <p>
-                Не та эта страница вы которую искали.
+                Возможно вы заблудились. Попробуйте вернуться назад к известной дорожке.
+            </p>
+            <p>
+                Или вернитесь на главную
             </p>
         </CardBlock>
         <MoveToRootButton/>
+    </div>
+}
+
+function NotFound() {
+    useEffect(
+        () => {
+            document.title = "not found / kensoi"
+        }, []
+    )
+    return <div className="not-found">
+        <Message />
     </div>
 }
 
