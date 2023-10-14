@@ -4,6 +4,7 @@ import useToolkitPartitions from "~/utils/useToolkitPartitions"
 
 import Dev from "./Dev"
 import Home from "./Home"
+import Start from "./Start"
 import Repos from "./Repos"
 import NotFound from "./NotFound"
 
@@ -25,7 +26,7 @@ function Router () {
         {
             path: "/",
             exact: true,
-            element: <Navigate to="/repos" />
+            element: <Start />
         },
         {
             path: "/cart-calc",
@@ -41,11 +42,11 @@ function Router () {
             path: "/*",
             element: <Navigate to="/not-found" />
         },
-        {
-            path: "/home",
-            exact: true,
-            element: <Home />
-        },
+        // {
+        //     path: "/home",
+        //     exact: true,
+        //     element: <Home />
+        // },
         {
             path: "/dev",
             exact: true,

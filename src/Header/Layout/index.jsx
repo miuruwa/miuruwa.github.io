@@ -11,6 +11,10 @@ function Layout () {
 
     const IS_DESKTOP = toolkit.settings.windowWidth >= 768
 
+    if (window.location.pathname == "/") {
+        return <></>
+    }
+
     return IS_DESKTOP ? <Desktop /> : <Mobile />
 }
 

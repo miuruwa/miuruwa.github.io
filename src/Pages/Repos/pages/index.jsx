@@ -24,7 +24,7 @@ function Resolver() {
         const url = window.location.href
         const r = new URL(url)
 
-        const repo = r.searchParams.get("id") || "webx"
+        const repo = r.searchParams.get("id") || ""
 
         toolkit.pages.repos.id = repo
     }, [])

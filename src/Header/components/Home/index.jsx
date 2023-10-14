@@ -7,7 +7,7 @@ function Button ({Mobile}) {
         className: Mobile ? "header-home mobile" : "header-home",
         title: "На главную",
         onClick: () => {
-            window.location.pathname = "/"
+            window.location.pathname = "/repos"
         }
     }
 
