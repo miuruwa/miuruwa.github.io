@@ -104,6 +104,8 @@
         font-size: 28px;
         box-sizing: border-box;
 
+        font-family: 'TT Travels'!important;
+
         .x-button:first-child {
             margin-right: $point * 2;
         }
@@ -132,6 +134,8 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
+        font-family: 'TT Travels'!important;
 
         padding: $point $point*3;
         line-height: 32px;
