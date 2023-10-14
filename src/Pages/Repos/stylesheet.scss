@@ -38,7 +38,7 @@
         }
 
         .repos-page {
-            padding: $point*6 $point*8;
+            padding: $point*3 $point*4;
         }
 
         .options-button-list {
@@ -62,7 +62,16 @@
         }
 
         .repos-page {
-            padding: $point*6 $point*12;
+            padding: $point*4 $point*5;
+
+            p {
+                &:first-child {
+                    margin-block-start: 0;
+                }
+                &:last-child {
+                    margin-block-end: 0;
+                }
+            }
         }
 
         .options-button-list {

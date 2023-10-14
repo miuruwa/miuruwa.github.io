@@ -10,10 +10,28 @@ function MarcelBot () {
         <Headline title="Менеджер Марсель" />
         <CardBlock className="repos-page options">
             <p>
-                Основной функционал - оповещение о новых записях группы ВКонтакте в определённой беседе и Телеграм-канале. Также бот дублирует пост из ВКонтакте в X
+                Менеджер Марсель это бот ВКонтакте, предназначенный для сокращения рутины. Вот её основной функционал:
             </p>
             <p>
                 Работает при помощи библиотеки VKBotKit
+            </p>
+        </CardBlock>
+        <h6>
+            функционал
+        </h6>
+        <CardBlock className="repos-page options">
+            <p>
+                1. Оповещение о новой записи в беседе
+            </p>
+        </CardBlock>
+        <CardBlock className="repos-page options">
+            <p>
+                2. Оповещение о новой записи в телеграм-канале
+            </p>
+        </CardBlock>
+        <CardBlock className="repos-page options">
+            <p>
+                3. Дублирование поста в X (бывш. Твиттер) с возможностью изменить текст
             </p>
         </CardBlock>
         <h6>
