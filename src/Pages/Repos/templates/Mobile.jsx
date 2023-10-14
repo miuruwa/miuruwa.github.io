@@ -14,8 +14,8 @@ import {
 function Content() {
     const toolkit = useToolKit()
 
-    switch (toolkit.pages.repos.number) {
-        case 0:
+    switch (toolkit.pages.repos.id) {
+        case "":
             return <Menu />
 
         default:

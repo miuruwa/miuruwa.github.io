@@ -5,6 +5,12 @@
         user-select: none;
         position: relative;
         z-index: 100;
+
+        width: 100%;
+        max-width: 1280px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 12px;
         .header-menu {
             display: flex;
 

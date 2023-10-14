@@ -19,6 +19,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            svg {
+                fill: #0077ff!important;
+
+                .fill {
+                    fill: #0077ff!important;
+                }
+                .stroke {
+                    stroke: #0077ff!important;
+                }
+            }
         }
 
         .x-button-title {

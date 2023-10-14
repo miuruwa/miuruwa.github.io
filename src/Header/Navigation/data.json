@@ -1,10 +1,10 @@
 [
     {
         "name": "репозитории",
-        "href": "/repos/"
+        "href": "/repos"
     },
     {
         "name": "разработчик",
-        "href": "/dev/"
+        "href": "/dev"
     }
 ]
