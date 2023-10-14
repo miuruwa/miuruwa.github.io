@@ -2,7 +2,7 @@ function onClick() {
     window.location.pathname = "/dev"
 }
 
-function GoToAbout() {
+function GoToDev() {
     return <div 
       className="header-button" title="разработчик"
       onClick={onClick}
@@ -11,4 +11,4 @@ function GoToAbout() {
     </div>
 }
 
-export default GoToAbout
+export default GoToDev
