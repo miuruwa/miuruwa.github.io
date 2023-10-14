@@ -1,6 +1,6 @@
-import Header from "./template"
+import Layout from "./Layout"
 
 import "./stylesheet.scss"
 
 
-export default Header
+export default Layout
