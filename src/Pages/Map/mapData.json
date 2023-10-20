@@ -1,0 +1,22 @@
+[
+    {
+        "title": "главная",
+        "link": "/home"
+    },
+    {
+        "title": "проекты",
+        "link": "/repos"
+    },
+    {
+        "title": "разработчик",
+        "link": "/dev"
+    },
+    {
+        "title": "cartify",
+        "link": "/cartify"
+    },
+    {
+        "title": "заметки",
+        "link": "/notes"
+    }
+]

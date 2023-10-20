@@ -26,20 +26,21 @@ function insertUrlParam(key, value) {
     }
 }
 
-export default function MenuButton({
-    icon, title, page
-}) {
+function MenuButton({icon, title, id}) {
     const toolkit = useToolKit()
 
-    const menuAction = () => {
-        toolkit.pages.repos.id = page
-        insertUrlParam("id", page)
+    const buttonProps = {
+        theme: "transparent",
+        icon: icon,
+        style: { width: "100%" },
+        title: title,
+        onClick: () => {
+            toolkit.pages.repos.id = id
+            insertUrlParam("id", id)
+        }
     }
 
-    return <Button
-        theme="transparent"
-        icon={icon}
-        style={{ width: "100%" }}
-        title={title}
-        onClick={menuAction} />
+    return <Button {...buttonProps} />
 }
+
+export default MenuButton

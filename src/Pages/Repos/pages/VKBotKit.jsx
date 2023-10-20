@@ -8,6 +8,9 @@ import LinkButton from "../components/LinkButton"
 export default function VKBotKit () {
     return <div className="repos-wrapper">
         <Headline title="VKBotKit" />
+        <h6>
+            Описание
+        </h6>
         <CardBlock className="repos-page options">
             <p>
                 VKBotKit это Python фреймворк, предназначенный для работы чат-бота в сообществе ВКонтакте.

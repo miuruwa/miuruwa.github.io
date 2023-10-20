@@ -8,6 +8,9 @@ import LinkButton from "../components/LinkButton"
 function MarcelBot () {
     return <div className="repos-wrapper">
         <Headline title="Менеджер Марсель" />
+        <h6>
+            Описание
+        </h6>
         <CardBlock className="repos-page options">
             <p>
                 Менеджер Марсель это бот ВКонтакте, предназначенный для сокращения рутины. Вот её основной функционал:

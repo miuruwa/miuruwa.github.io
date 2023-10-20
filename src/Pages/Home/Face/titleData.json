@@ -1,0 +1,42 @@
+[
+    {
+        "title": "&nbsp;",
+        "timeout": 500
+    },
+    {
+        "title": "mi",
+        "timeout": 50
+    },
+    {
+        "title": "mi uru~",
+        "timeout": 50
+    },
+    {
+        "title": "miuru~-",
+        "timeout": 50
+    },
+    {
+        "title": "miuru-",
+        "timeout": 50
+    },
+    {
+        "title": "miuru wa~",
+        "timeout": 50
+    },
+    {
+        "title": "miuruwa~-",
+        "timeout": 50
+    },
+    {
+        "title": "miuruwa-",
+        "timeout": 50
+    },
+    {
+        "title": "miuruwa",
+        "timeout": 100
+    },
+    {
+        "title": "miuruwa.",
+        "timeout": 2000
+    }
+]

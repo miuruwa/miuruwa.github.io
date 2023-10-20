@@ -12,7 +12,6 @@ import Notify from "./Notes"
 
 import VKBotKit from "./VKBotKit"
 import MarcelBot from "./MarcelBot"
-import CanaryBot from "./CanaryBot"
 
 import Menu from "./Menu"
 
@@ -38,9 +37,6 @@ function Resolver() {
 
         case "vkbotkit":
             return <VKBotKit />
-
-        case "canarybot":
-            return <CanaryBot />
 
         case "marcelbot":
             return <MarcelBot />

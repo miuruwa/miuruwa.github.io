@@ -1,6 +1,6 @@
 function Header() {
     return <div className="repos-menu-headline repos-block">
-        Репозитории
+        Проекты
     </div>
 }
 

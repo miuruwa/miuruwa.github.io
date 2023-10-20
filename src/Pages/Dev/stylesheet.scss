@@ -36,6 +36,12 @@
         display: flex;
         gap: 8px;
     }
+
+    img {
+        height: 50vh;
+        width: auto;
+    }
+    
     .x-button {
         display: inline-block;
         width: fit-content;

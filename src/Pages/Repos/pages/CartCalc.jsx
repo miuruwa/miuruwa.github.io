@@ -8,6 +8,9 @@ import LinkButton from "../components/LinkButton"
 function Cartify () {
     return <div className="repos-wrapper">
         <Headline title="Cartify" />
+        <h6>
+            Описание
+        </h6>
         <CardBlock className="repos-page options">
             <p>
                 Калькулятор для подсчитывания общей стоимости всех выбранных в магазине продуктов.

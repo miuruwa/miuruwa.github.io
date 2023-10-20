@@ -16,7 +16,7 @@ import {
 function Repos () {
     useEffect(
         () => {
-            document.title = "repos / kensoi"
+            document.title = "проекты / miuruwa"
         }, []
     )
     const toolkit = useToolKit()

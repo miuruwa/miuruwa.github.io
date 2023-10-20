@@ -1,0 +1,24 @@
+.homepage-face {
+    background: url("~/media/footage.gif");
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 35vh;
+    box-sizing: border-box;
+    height: 60vh;
+
+    user-select: none;
+    font-family: 'TT Travels';
+    font-weight: bolder;
+    font-size: 64px;
+
+    .homepage-title {
+        width: 312px;
+        height: 77px;
+        overflow-x: visible;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+}

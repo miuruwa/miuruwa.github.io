@@ -8,6 +8,9 @@ import LinkButton from "../components/LinkButton"
 export default function WebX () {
     return <div className="repos-wrapper">
         <Headline title="WebX" />
+        <h6>
+            Описание
+        </h6>
         <CardBlock className="repos-page options">
             <p>
                 WebX - шаблон React приложения от kensoi, созданный для быстрого написания приложения.

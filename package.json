@@ -1,7 +1,7 @@
 {
-  "name": "kensoi",
-  "version": "0.3.0",
-  "homepage": "https://kensoi.github.io/",
+  "name": "miuruwa",
+  "version": "0.3.1",
+  "homepage": "https://miuruwa.github.io/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

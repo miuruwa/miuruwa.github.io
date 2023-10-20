@@ -11,7 +11,7 @@ function Layout () {
 
     const IS_DESKTOP = toolkit.settings.windowWidth >= 768
 
-    if (window.location.pathname == "/") {
+    if (window.location.pathname == "/home") {
         return <></>
     }
 
