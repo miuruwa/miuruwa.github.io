@@ -8,7 +8,7 @@ import {
 
 import {
     Menu,
-    Resolver
+    default as Resolver
 } from "../pages"
 
 

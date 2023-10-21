@@ -2,7 +2,8 @@ import {
     Button
 } from "@webx/forms"
 
-function LinkButton({ icon, title, link, path }) {
+
+export default function ({ icon, title, link, path }) {
     const buttonProps = {
         icon: icon,
         theme: "transparent",
@@ -18,5 +19,3 @@ function LinkButton({ icon, title, link, path }) {
 
     return <Button {...buttonProps} />
 }
-
-export default LinkButton

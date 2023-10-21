@@ -1,4 +1,8 @@
 import {
+    nanoid
+} from "nanoid"
+
+import {
     useToolKit
 } from "@webx/toolkit"
 
@@ -14,7 +18,7 @@ function Link ({name, href}) {
         href: href
     }
 
-    return <li>
+    return <li key={nanoid()}>
         <a {...buttonProps}/>
     </li>
 }

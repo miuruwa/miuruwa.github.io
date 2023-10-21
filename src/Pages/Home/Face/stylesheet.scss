@@ -2,11 +2,10 @@
     background: url("~/media/footage.gif");
     background-size: contain;
     background-position: center;
+
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding-top: 35vh;
-    box-sizing: border-box;
     height: 60vh;
 
     user-select: none;
@@ -14,11 +13,15 @@
     font-weight: bolder;
     font-size: 64px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .homepage-title {
         width: 424px;
         height: 77px;
         overflow-x: visible;
-        margin: 0 auto;
+        margin: auto;
         white-space: nowrap;
         span {
             height: 77px;

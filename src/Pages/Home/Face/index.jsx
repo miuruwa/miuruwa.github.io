@@ -7,7 +7,7 @@ import titleData from "./titleData.json"
 
 import "./stylesheet.scss"
 
-function Component () {
+export default function () {
     const title = createRef()
     const [state, setState] = useState(false)
     const spanClassName = state ? "separator hidden" : "separator"
@@ -46,5 +46,3 @@ function Component () {
         </div>
     </div>
 }
-
-export default Component

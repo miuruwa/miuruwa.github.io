@@ -11,7 +11,7 @@ import {
 } from "~/utils/URLParameters"
 
 
-function MenuButton({icon, title, id}) {
+export default function ({icon, title, id}) {
     const toolkit = useToolKit()
 
     const buttonProps = {
@@ -27,5 +27,3 @@ function MenuButton({icon, title, id}) {
 
     return <Button {...buttonProps} />
 }
-
-export default MenuButton

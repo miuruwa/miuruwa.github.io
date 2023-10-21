@@ -22,7 +22,7 @@ function Description () {
     </>
 }
 
-function Links () {
+function Functional () {
     return <>
         <h6>
             функционал

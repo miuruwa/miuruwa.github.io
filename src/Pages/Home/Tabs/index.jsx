@@ -1,19 +1,30 @@
-
 import LinkButton from "./LinkButton"
-import "./stylesheet.scss"
 import linksData from "./linksData"
 
-function Tabs () {
-    return <div className="homepage-content">
+import "./stylesheet.scss"
+
+
+function Start () {
+    return <>
         <h6>
             Домашняя страница
         </h6>
+    </>
+}
+
+function Links () {
+    return <>
         <div className="homepage-links">
             {
                 linksData.map(LinkButton)
             }
         </div>
-    </div>
+    </>
 }
 
-export default Tabs
+export default function () {
+    return <div className="homepage-content">
+        <Start />
+        <Links />
+    </div>
+}
