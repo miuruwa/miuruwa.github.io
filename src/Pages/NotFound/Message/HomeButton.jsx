@@ -2,7 +2,8 @@ import {
     Button
 } from "@webx/forms"
 
-function HomeButton() {
+
+export default function () {
     const buttonProps = {
         title: "на главную",
         theme: "white",
@@ -13,5 +14,3 @@ function HomeButton() {
 
     return <Button {...buttonProps} />
 }
-
-export default HomeButton

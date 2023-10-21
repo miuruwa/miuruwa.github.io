@@ -5,7 +5,7 @@ import {
 import ShowSettingsButton from "./ShowSettingsButton"
 
 
-function EnableOfflineCard() {
+export default function () {
     return <div className="cart-calc-message">
         <h6>
             Ошибка выполнения задачи
@@ -18,5 +18,3 @@ function EnableOfflineCard() {
         <ShowSettingsButton />
     </div>
 }
-
-export default EnableOfflineCard

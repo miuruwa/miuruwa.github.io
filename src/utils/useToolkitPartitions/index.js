@@ -1,7 +1,7 @@
 // import useRouteNameAPI from "./route-name"
 import usePagesAPI from "./pages"
 
-export default function useToolkitPartitions () {
+export default function () {
     // useRouteNameAPI()
     usePagesAPI()
 }

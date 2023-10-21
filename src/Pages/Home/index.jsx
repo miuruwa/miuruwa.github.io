@@ -11,15 +11,11 @@ import {
     useEffect
 } from "react"
 
-function removeUrlParameter(paramKey) {
-    const url = window.location.href
-    var r = new URL(url)
-    r.searchParams.delete(paramKey)
-    const newUrl = r.href
-    window.history.pushState({ path: newUrl }, '', newUrl)
-}
+import {
+    removeUrlParameter
+} from "~/utils/URLParameters"
 
-function Home () {
+export default function () {
     useEffect(
         () => {
             document.title = "главная / miuruwa"
@@ -31,5 +27,3 @@ function Home () {
         <Tabs />
     </>
 }
-
-export default Home

@@ -15,10 +15,22 @@
     font-size: 64px;
 
     .homepage-title {
-        width: 312px;
+        width: 424px;
         height: 77px;
         overflow-x: visible;
         margin: 0 auto;
         white-space: nowrap;
+        span {
+            height: 77px;
+            display: inline-flex;
+            align-items: end;
+        }
+        .separator {
+            opacity: 1;
+            transition: 1s;
+            &.hidden {
+                opacity: 0;
+            }
+        }
     }
 }

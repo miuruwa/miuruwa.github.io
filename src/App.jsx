@@ -7,11 +7,9 @@ import Router from "./Pages"
 
 import "./scss/stylesheet.scss"
 
-function App () {
+export default function () {
     return <ToolKitContext>
         <Header />
         <Router />
     </ToolKitContext>
 }
-
-export default App

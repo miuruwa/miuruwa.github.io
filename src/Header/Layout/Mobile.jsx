@@ -2,7 +2,7 @@ import Home from "../components/Home"
 import Navigation from "../Navigation"
 import Settings from "../components/Settings"
 
-function Layout () {
+export default function () {
     return <div className="header">
         <div className="header-frame">
             <Home Mobile/>
@@ -11,5 +11,3 @@ function Layout () {
         </div>
     </div>
 }
-
-export default Layout

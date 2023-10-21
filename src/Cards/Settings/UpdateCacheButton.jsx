@@ -11,7 +11,7 @@ import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'
 import EnableOfflineCard from "./EnableOfflineCard"
 
 
-function UpdateCacheButton() {
+export default function () {
     const toolkit = useToolKit()
 
     const buttonProps = {
@@ -31,5 +31,3 @@ function UpdateCacheButton() {
 
     return <Button {...buttonProps} />
 }
-
-export default UpdateCacheButton;

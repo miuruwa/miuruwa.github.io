@@ -11,7 +11,8 @@ import {
     Resolver
 } from "../pages"
 
-export function Template() {
+
+export default function () {
     const toolkit = useToolKit()
 
     return <div className="desktop repos">

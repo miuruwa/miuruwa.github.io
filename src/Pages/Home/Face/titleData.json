@@ -1,42 +1,71 @@
 [
     {
-        "title": "&nbsp;",
+        "title": "見うるわ",
         "timeout": 500
     },
     {
-        "title": "mi",
-        "timeout": 50
+        "title": "香うるわ",
+        "timeout": 20
     },
     {
-        "title": "mi uru~",
-        "timeout": 50
+        "title": "岡うるわ",
+        "timeout": 20
     },
     {
-        "title": "miuru~-",
-        "timeout": 50
+        "title": "潟うるわ",
+        "timeout": 0
     },
     {
-        "title": "miuru-",
-        "timeout": 50
+        "title": "miうるわ",
+        "timeout": 80
     },
     {
-        "title": "miuru wa~",
-        "timeout": 50
+        "title": "mi阪るわ",
+        "timeout": 20
     },
     {
-        "title": "miuruwa~-",
-        "timeout": 50
+        "title": "mi茨るわ",
+        "timeout": 20
     },
     {
-        "title": "miuruwa-",
-        "timeout": 50
+        "title": "mi光るわ",
+        "timeout": 0,
+        "hideSpan": true
+    },
+    {
+        "title": "miuるわ",
+        "timeout": 80
+    },
+    {
+        "title": "miu今わ",
+        "timeout": 20
+    },
+    {
+        "title": "miu道わ",
+        "timeout": 20
+    },
+    {
+        "title": "miu話わ",
+        "timeout": 0
+    },
+    {
+        "title": "miuruわ",
+        "timeout": 80
+    },
+    {
+        "title": "miuru紙",
+        "timeout": 20
+    },
+    {
+        "title": "miuru教",
+        "timeout": 20
+    },
+    {
+        "title": "miuru鳥",
+        "timeout": 0
     },
     {
         "title": "miuruwa",
-        "timeout": 100
-    },
-    {
-        "title": "miuruwa.",
-        "timeout": 2000
+        "timeout": 0
     }
 ]

@@ -6,24 +6,21 @@ import {
     Tumbler
 } from "@webx/forms"
 
-import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'
+import {
+    register, unregister
+} from '~/serviceWorkerRegistration'
 
 
-function CacheApp() {
+export default function () {
     const toolkit = useToolKit()
 
-    function setState(state) {
-        state ? (
-            serviceWorkerRegistration.register()
-        ) : (
-            serviceWorkerRegistration.unregister()
-        )
-        toolkit.settings.cacheApp = state;
+    const tumblerProps = {
+        state: toolkit.settings.cacheApp,
+        setState: state => {
+            state ? register() : unregister()
+            toolkit.settings.cacheApp = state
+        }
     }
 
-    return <Tumbler
-        state={toolkit.settings.cacheApp}
-        setState={setState} />;
+    return <Tumbler {...tumblerProps} />
 }
-
-export default CacheApp;

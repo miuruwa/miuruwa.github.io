@@ -33,7 +33,7 @@ function Content ({isCard}) {
     </ul>
 }
 
-function Navigation ({isCard}) {
+export default function ({isCard}) {
     const toolkit = useToolKit()
     return isCard ? <Button onClick={
         () => {
@@ -41,5 +41,3 @@ function Navigation ({isCard}) {
         }
     } /> : <Content />
 }
-
-export default Navigation

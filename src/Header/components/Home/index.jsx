@@ -1,7 +1,7 @@
 import Icon from "@webx/icons/DevIcon"
 import "./stylesheet.scss"
 
-function Button ({Mobile}) {
+export default function ({Mobile}) {
     const divProps = {
         children: <Icon />,
         className: Mobile ? "header-home mobile" : "header-home",
@@ -13,5 +13,3 @@ function Button ({Mobile}) {
 
     return <div {...divProps} />
 }
-
-export default Button

@@ -19,7 +19,7 @@ function MapData(block) {
     </ButtonBlock>
 }
 
-function Menu() {
+export default function () {
     return <div className="repos-menu">
         <Header />
         {
@@ -27,5 +27,3 @@ function Menu() {
         }
     </div>
 }
-
-export default Menu

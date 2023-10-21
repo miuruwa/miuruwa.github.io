@@ -7,7 +7,7 @@ import {
 } from "@webx/forms"
 
 
-function ShowSettingsButton() {
+export default function () {
     const toolkit = useToolKit()
 
     const buttonProps = {
@@ -17,5 +17,3 @@ function ShowSettingsButton() {
 
     return <Button {...buttonProps} />
 }
-
-export default ShowSettingsButton

@@ -1,7 +1,5 @@
-function wait(milliseconds){
+export default function (milliseconds){
     return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
+        setTimeout(resolve, milliseconds)
+    })
 }
-
-export default wait

@@ -1,7 +1,8 @@
 import Icon from "@webx/icons/MenuIcon"
 import "./stylesheet.scss"
 
-function Button({onClick}) {
+
+export default function ({onClick}) {
     const divProps = {
         className: "header-navigation-button",
         title: "Открыть навигацию",
@@ -11,5 +12,3 @@ function Button({onClick}) {
 
     return <div {...divProps} />
 }
-
-export default Button

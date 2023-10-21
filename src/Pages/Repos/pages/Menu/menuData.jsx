@@ -1,10 +1,11 @@
-import CartifyIcon from "@webx/icons/CartifyIcon";
-import NotesIcon from "@webx/icons/NotesIcon";
-import WebXIcon from "@webx/icons/WebXIcon";
-import VKBotKitIcon from "@webx/icons/VKBotKitIcon";
-import BotIcon from "@webx/icons/BotIcon";
+import CartifyIcon from "@webx/icons/CartifyIcon"
+import NotesIcon from "@webx/icons/NotesIcon"
+import WebXIcon from "@webx/icons/WebXIcon"
+import VKBotKitIcon from "@webx/icons/VKBotKitIcon"
+import BotIcon from "@webx/icons/BotIcon"
 
-const menuData = [
+
+export default [
     [
         {
             icon: <WebXIcon />,
@@ -20,7 +21,7 @@ const menuData = [
             icon: <NotesIcon />,
             title: "Заметки",
             id: "notify"
-        },
+        }
     ],
     [
         {
@@ -32,8 +33,6 @@ const menuData = [
             icon: <BotIcon />,
             title: "Менеджер Марсель",
             id: "marcelbot"
-        },
+        }
     ]
-];
-
-export default menuData
+]

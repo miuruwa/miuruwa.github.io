@@ -1,5 +1,5 @@
 import {
-    useEffect, createRef
+    useEffect, createRef, useState
 } from "react"
 
 import wait from "../wait"
@@ -8,7 +8,9 @@ import titleData from "./titleData.json"
 import "./stylesheet.scss"
 
 function Component () {
-    const title = createRef();
+    const title = createRef()
+    const [state, setState] = useState(false)
+    const spanClassName = state ? "separator hidden" : "separator"
 
     async function titleAnimation () {
         const titleContent = title.current
@@ -17,8 +19,13 @@ function Component () {
             const element = titleData[index];
 
             titleContent.innerHTML = element.title
+
+            if (element.hideSpan) {
+                setState(true)
+            }
             await wait(element.timeout)
         }
+
     }
 
     useEffect(
@@ -28,7 +35,15 @@ function Component () {
     )
 
     return <div className="homepage-face">
-        <div className="homepage-title" ref={title}></div>
+        <div className="homepage-title" >
+            <span className={spanClassName}>
+                【
+            </span>
+            <span ref={title} className="homepage-text"></span>
+            <span className={spanClassName}>
+                】
+            </span>
+        </div>
     </div>
 }
 

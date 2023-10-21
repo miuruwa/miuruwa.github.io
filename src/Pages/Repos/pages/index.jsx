@@ -13,39 +13,31 @@ import Notify from "./Notes"
 import VKBotKit from "./VKBotKit"
 import MarcelBot from "./MarcelBot"
 
-import Menu from "./Menu"
+export {
+    default as Menu
+} from "./Menu"
 
 
-function Resolver() {
-    const toolkit = useToolKit()
-
-    useEffect(() =>{
-        const url = window.location.href
-        const r = new URL(url)
-
-        const repo = r.searchParams.get("id") || ""
-
-        toolkit.pages.repos.id = repo
-    }, [])
-
-    switch (toolkit.pages.repos.id) {
-        case "cartify":
-            return <Cartify />
-
-        case "notify":
-            return <Notify />
-
-        case "vkbotkit":
-            return <VKBotKit />
-
-        case "marcelbot":
-            return <MarcelBot />
-    
-        default:
-            return <WebX />
-    }
+const menuData = {
+    cartify: <Cartify />,
+    notify: <Notify />,
+    vkbotkit: <VKBotKit />,
+    marcelbot: <MarcelBot />,
+    default: <WebX />
 }
 
-export {
-    Resolver, Menu
+function GetIdByParameter () {
+    const url = window.location.href
+    const r = new URL(url)
+
+    const repo = r.searchParams.get("id") || ""
+
+    toolkit.pages.repos.id = repo
+}
+
+export default function () {
+    const toolkit = useToolKit()
+    useEffect(GetIdByParameter, [])
+    
+    return menuData[toolkit.pages.repos.id] || menuData.default
 }

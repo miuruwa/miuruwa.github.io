@@ -11,6 +11,7 @@ import {
     Resolver
 } from "../pages"
 
+
 function Content() {
     const toolkit = useToolKit()
 
@@ -23,7 +24,7 @@ function Content() {
     }
 }
 
-export function Template() {
+export default function () {
     const toolkit = useToolKit()
 
     return <MountTransition

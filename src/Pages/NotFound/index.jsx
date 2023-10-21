@@ -7,7 +7,7 @@ import Message from "./Message"
 
 import "./stylesheet.scss"
 
-function NotFound() {
+export default function () {
     useEffect(
         () => {
             document.title = "не найдено / miuruwa"
@@ -18,5 +18,3 @@ function NotFound() {
         <Message />
     </div>
 }
-
-export default NotFound

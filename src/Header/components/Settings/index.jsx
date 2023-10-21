@@ -7,7 +7,8 @@ import Сard from "~/Cards/Settings"
 
 import "./stylesheet.scss"
 
-function Button ({Mobile}) {
+
+export default function ({Mobile}) {
     const toolkit = useToolKit()
     const divProps = {
         children: <Icon />,
@@ -20,5 +21,3 @@ function Button ({Mobile}) {
 
     return <div {...divProps} />
 }
-
-export default Button

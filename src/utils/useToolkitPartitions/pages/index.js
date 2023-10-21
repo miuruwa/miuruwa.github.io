@@ -15,7 +15,7 @@ import {
     Partition as PagesPartition
 } from "./partition"
 
-export default function usePagesAPI () {
+export default function () {
     const [
         state, dispatch
     ] = useReducer(PagesReducer, pages)

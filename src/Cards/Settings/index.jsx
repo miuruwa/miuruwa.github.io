@@ -13,7 +13,7 @@ import {
 import CacheApp from "./CacheApp"
 import UpdateCacheButton from "./UpdateCacheButton"
 
-function Сard() {
+export default function () {
     return <form className="cart-calc-message">
         <h6>
             Настройки
@@ -27,5 +27,3 @@ function Сard() {
         <UpdateCacheButton />
     </form>
 }
-
-export default Сard

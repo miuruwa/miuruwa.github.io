@@ -4,7 +4,8 @@ import {
 
 import HomeButton from "./HomeButton"
 
-function Message() {
+
+export default function () {
     return <div className="not-found-content">
         <h1>
             Затерялся, путник?
@@ -20,5 +21,3 @@ function Message() {
         <HomeButton />
     </div>
 }
-
-export default Message

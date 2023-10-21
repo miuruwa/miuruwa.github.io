@@ -4,26 +4,9 @@ import {
 
 import "./stylesheet.scss"
 import data from "./mapData.json"
+import Section from "./Section"
 
-function Link ({children}) {
-    return <a href={children}>
-        {children}
-    </a>
-}
-
-function Section (item) {
-    return <p>
-        {
-            item.title
-        } <Link>
-            {
-                item.link
-            }
-        </Link>
-    </p>
-}
-
-function Map () {
+export default function () {
     useEffect(
         () => {
             document.title = "навигатор / miuruwa"
@@ -39,5 +22,3 @@ function Map () {
         }
     </div>
 }
-
-export default Map

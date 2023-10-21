@@ -2,13 +2,14 @@ import {
     Button
 } from "@webx/forms"
 
-export default function LinkButton({ title, children, link }) {
-    const onClick = () => {
-        window.open(link)
+export default function ({ children, link }) {
+    const buttonProps = {
+        theme: "transparent",
+        title: children,
+        onClick: () => {
+            window.open(link)
+        }
     }
 
-    return <Button
-        theme="transparent"
-        title={title || children}
-        onClick={onClick} />
+    return <Button {...buttonProps} />
 }

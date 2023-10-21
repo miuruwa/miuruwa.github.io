@@ -1,5 +1,7 @@
+
 import LinkButton from "./LinkButton"
 import "./stylesheet.scss"
+import linksData from "./linksData"
 
 function Tabs () {
     return <div className="homepage-content">
@@ -7,8 +9,9 @@ function Tabs () {
             Домашняя страница
         </h6>
         <div className="homepage-links">
-            <LinkButton title="проекты" path="/repos" />
-            <LinkButton title="разработчик" path="/dev" />
+            {
+                linksData.map(LinkButton)
+            }
         </div>
     </div>
 }
