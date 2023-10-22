@@ -4,7 +4,6 @@ import {
 
 import Dev from "./Dev"
 import Home from "./Home"
-import Repos from "./Repos"
 import Map from "./Map"
 import NotFound from "./NotFound"
 
@@ -58,11 +57,6 @@ export default [
         path: "/dev",
         exact: true,
         element: <Dev />
-    },
-    {
-        path: "/repos",
-        exact: true,
-        element: <Repos />
     },
     {
         path: "/not-found",
