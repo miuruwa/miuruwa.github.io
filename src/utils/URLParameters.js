@@ -17,7 +17,17 @@ function insertUrlParameter(key, value) {
     }
 }
 
+function getUrlParameter(paramKey) {
+    const url = window.location.href
+    const r = new URL(url)
+
+    const value = r.searchParams.get(paramKey) || ""
+
+    return value
+}
+
 export {
     removeUrlParameter,
-    insertUrlParameter
+    insertUrlParameter,
+    getUrlParameter
 }

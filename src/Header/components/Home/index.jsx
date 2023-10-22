@@ -1,4 +1,4 @@
-import Icon from "@webx/icons/DevIcon"
+import Icon from "@webx/icons/HeaderLogoIcon"
 import "./stylesheet.scss"
 
 export default function ({Mobile}) {

@@ -30,18 +30,15 @@ function Content ({isCard}) {
 
     return <ul {...ulProps}>
         {
-            data.map(
-                Link
-            )
+            data.map(Link)
         }
     </ul>
 }
 
 export default function ({isCard}) {
     const toolkit = useToolKit()
+
     return isCard ? <Button onClick={
-        () => {
-            toolkit.card.show(<Content isCard/>)
-        }
+        toolkit.card.show.bind((<Content isCard/>))
     } /> : <Content />
 }

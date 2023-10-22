@@ -13,5 +13,10 @@ export default [
         link: "https://t.me/miuruwa",
         children: "Telegram",
         key: 2
+    },
+    {
+        link: "https://x.com/miuruwa_",
+        children: "X / Twitter",
+        key: 3
     }
 ]

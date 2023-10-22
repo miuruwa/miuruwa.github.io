@@ -6,14 +6,27 @@ import BackToList from "./BackToList"
 import "./stylesheet.scss"
 
 
-export default function ({title}) {
+function Headline({
+  title
+}) {
     const toolkit = useToolKit()
+
     const IS_DESKTOP = toolkit.settings.windowWidth >= 768
 
-    return <div className='repo-headline'>
-        <BackToList IS_DESKTOP={IS_DESKTOP} />
-        <h1>
-            { title }
-        </h1>
-    </div>
+    return IS_DESKTOP ? <>
+        <div className='repo-headline'>
+            <h1>
+                { title }
+            </h1>
+        </div>
+    </> : <>
+        <BackToList />
+        <div className='repo-headline'>
+            <h1>
+                { title }
+            </h1>
+        </div>
+    </>
 }
+
+export default Headline

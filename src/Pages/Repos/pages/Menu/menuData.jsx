@@ -10,29 +10,29 @@ export default [
         {
             icon: <WebXIcon />,
             title: "Webx",
-            id: "webx"
+            repo_id: "webx"
         },
         {
             icon: <CartifyIcon />,
             title: "Cartify",
-            id: "cartify"
+            repo_id: "cartify"
         },
         {
             icon: <NotesIcon />,
             title: "Заметки",
-            id: "notify"
+            repo_id: "notify"
         }
     ],
     [
         {
             icon: <VKBotKitIcon />,
             title: "VKBotKit",
-            id: "vkbotkit"
+            repo_id: "vkbotkit"
         },
         {
             icon: <BotIcon />,
             title: "Менеджер Марсель",
-            id: "marcelbot"
+            repo_id: "marcelbot"
         }
     ]
 ]

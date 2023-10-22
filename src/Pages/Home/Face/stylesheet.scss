@@ -1,38 +1,102 @@
+.webx.screen-device-desktop {
+    .homepage-face {
+        height: 75vh;
+    }
+}
+
+.webx:not(.screen-device-desktop) {
+    .homepage-face {
+        height: 100vw;
+        margin-bottom: 8px;
+    }
+}
+
 .homepage-face {
     background: url("~/media/footage.gif");
+    // background: #0077ff;
     background-size: contain;
     background-position: center;
 
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    height: 60vh;
+
+    overflow: hidden;
 
     user-select: none;
     font-family: 'TT Travels';
     font-weight: bolder;
     font-size: 64px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    
+    svg {
+        width: 8rem;
+        height: 8rem;
+    }
+    img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+        height: auto;
+    }
 
     .homepage-title {
-        width: 424px;
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 75vw;
         height: 77px;
-        overflow-x: visible;
-        margin: auto;
         white-space: nowrap;
+        padding: 0 5%;
+        box-sizing: border-box;
         span {
-            height: 77px;
+            height: 64px;
             display: inline-flex;
-            align-items: end;
+            align-items: center;
         }
         .separator {
-            opacity: 1;
+            display: flex;
+            overflow: hidden;
+            width: 77px;
             transition: 1s;
+            box-sizing: border-box;
+            :first-child {
+                margin: 0 0px;
+                transition: 0.3s;
+            }
+
             &.hidden {
-                opacity: 0;
+                width: 0;
+                :first-child {
+                    margin: 0 32px;
+                }
+            }
+        }
+        .logo-span {
+            position: relative;
+            overflow: hidden;
+            width: 0;
+            height: 77px;
+            transition: 1s;
+
+            svg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 77px;
+                height: 77px;
+            }
+
+            &.show {
+                width: 77px;
             }
         }
     }

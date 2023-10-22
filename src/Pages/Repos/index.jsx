@@ -6,23 +6,28 @@ import {
     useToolKit
 } from "@webx/toolkit"
 
+import "./stylesheet.scss"
+
 import { 
     DesktopTemplate, 
     MobileTemplate 
 } from "./templates"
 
-import "./stylesheet.scss"
-
-
-export default function () {
+function Repos () {
     useEffect(
         () => {
-            document.title = "проекты / miuruwa"
+            document.title = "repos / kensoi"
         }, []
     )
-
     const toolkit = useToolKit()
+
     const IS_DESKTOP = toolkit.settings.windowWidth >= 768
 
-    return IS_DESKTOP ? <DesktopTemplate /> : <MobileTemplate />
+    if (IS_DESKTOP) {
+        return <DesktopTemplate />
+    }
+
+    return <MobileTemplate />
 }
+
+export default Repos

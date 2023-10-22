@@ -1,8 +1,9 @@
-import DevIcon from "@webx/icons/DevIcon"
 import CartifyIcon from "@webx/icons/CartifyIcon"
 import NotesIcon from "@webx/icons/NotesIcon"
-import GuideIcon from "@webx/icons/GuideIcon"
-
+import VKLogoIcon from "@webx/icons/VKLogoIcon"
+import TelegramLogo from "@webx/icons/TelegramLogoIcon"
+import GithubLogo from "@webx/icons/GithubLogoIcon"
+import XTwitterLogo from "@webx/icons/XTwitterLogoIcon"
 
 export default [
     {
@@ -16,13 +17,23 @@ export default [
         path: "/notes"
     },
     {
-        icon: <GuideIcon />,
-        title: "Проекты",
-        path: "/repos"
+        icon: <GithubLogo />,
+        title: "Github",
+        link: "github.com/miuruwa"
     },
     {
-        icon: <DevIcon />,
-        title: "Обо мне",
-        path: "/dev"
+        icon: <VKLogoIcon />,
+        title: "ВКонтакте",
+        link: "vk.com/miuruwa"
+    },
+    {
+        icon: <TelegramLogo />,
+        title: "Телеграм",
+        link: "t.me/miuruwa"
+    },
+    {
+        icon: <XTwitterLogo />,
+        title: "X (бывш. Твиттер)",
+        link: "x.com/miuruwa_"
     }
 ]

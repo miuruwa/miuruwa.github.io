@@ -1,7 +1,7 @@
 export {
-    default as DesktopTemplate
+    Template as DesktopTemplate
 } from "./Desktop"
 
 export {
-    default as MobileTemplate
+    Template as MobileTemplate
 } from "./Mobile"

@@ -1,5 +1,10 @@
+import {
+    nanoid
+} from "nanoid"
+
 import Button from "./Button"
 import buttonData from "./buttonData"
+
 
 export default function () {
     return <>
@@ -8,7 +13,9 @@ export default function () {
         </h6>
         <div className="links-block">
             {
-                buttonData.map(Button)
+                buttonData.map(
+                    item => <Button key={nanoid()} {...item} />
+                )
             }
         </div>
     </>

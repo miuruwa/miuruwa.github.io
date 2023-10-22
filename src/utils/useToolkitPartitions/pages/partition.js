@@ -44,11 +44,11 @@ export class Partition {
 
                         setTimeout(
                             () => {
-                                    this.#dispatch({
-                                        type: "set-page-number",
-                                        page: "repos",
-                                        state: value
-                                    })
+                                this.#dispatch({
+                                    type: "set-page-number",
+                                    page: "repos",
+                                    state: value
+                                })
                                 
                                 this.repos.loaded = true
                             }, 100

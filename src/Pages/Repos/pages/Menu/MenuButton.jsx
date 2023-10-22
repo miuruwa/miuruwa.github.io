@@ -11,7 +11,7 @@ import {
 } from "~/utils/URLParameters"
 
 
-export default function ({icon, title, id}) {
+export default function ({icon, title, repo_id}) {
     const toolkit = useToolKit()
 
     const buttonProps = {
@@ -20,8 +20,8 @@ export default function ({icon, title, id}) {
         style: { width: "100%" },
         title: title,
         onClick: () => {
-            toolkit.pages.repos.id = id
-            insertUrlParameter("id", id)
+            toolkit.pages.repos.id = repo_id
+            insertUrlParameter("id", repo_id)
         }
     }
 

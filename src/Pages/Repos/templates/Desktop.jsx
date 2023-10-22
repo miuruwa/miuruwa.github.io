@@ -8,11 +8,10 @@ import {
 
 import {
     Menu,
-    default as Resolver
+    Resolver
 } from "../pages"
 
-
-export default function () {
+export function Template() {
     const toolkit = useToolKit()
 
     return <div className="desktop repos">

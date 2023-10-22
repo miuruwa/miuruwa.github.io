@@ -5,12 +5,9 @@ import {
 import Headline from "../components/Headline"
 import LinkButton from "../components/LinkButton"
 
-
-function Description () {
-    return <>
-        <h6>
-            Описание
-        </h6>
+export default function VKBotKit () {
+    return <div className="repos-wrapper">
+        <Headline title="VKBotKit" />
         <CardBlock className="repos-page options">
             <p>
                 VKBotKit это Python фреймворк, предназначенный для работы чат-бота в сообществе ВКонтакте.
@@ -19,11 +16,6 @@ function Description () {
                 VKBotKit спроектирован с целью упростить и структуризировать контент и настроиваемый функционал. Библиотека работает в связке с VK Bots API, а также библиотекой aiohttp.
             </p>
         </CardBlock>
-    </>
-}
-
-function Links () {
-    return <>
         <h6>
             Полезные ссылки
         </h6>
@@ -32,13 +24,5 @@ function Links () {
             <LinkButton title="Шаблон" link="https://github.com/vkbotkit/template" />
             <LinkButton title="Примеры" link="https://github.com/vkbotkit/examples" />
         </div>
-    </>
-}
-
-export default function () {
-    return <div className="repos-wrapper">
-        <Headline title="VKBotKit" />
-        <Description />
-        <Links />
     </div>
 }

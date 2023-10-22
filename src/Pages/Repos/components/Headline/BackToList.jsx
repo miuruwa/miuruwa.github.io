@@ -8,13 +8,17 @@ import {
 
 import BackIcon from '@webx/icons/BackIcon'
 
-import {
-    removeUrlParameter
-} from "~/utils/URLParameters"
 
+function removeUrlParameter(paramKey) {
+    const url = window.location.href
+    var r = new URL(url)
+    r.searchParams.delete(paramKey)
+    const newUrl = r.href
+    window.history.pushState({ path: newUrl }, '', newUrl)
+}
 
-export default function({IS_DESKTOP}) {
-    const toolkit = useToolKit()
+function BackToList() {
+    const toolkit = useToolKit();
 
     const buttonProps = {
         icon: <BackIcon />,
@@ -26,5 +30,7 @@ export default function({IS_DESKTOP}) {
         }
     }
 
-    return IS_DESKTOP ? <></> : <Button {...buttonProps} />
+    return <Button {...buttonProps} />;
 }
+
+export default BackToList

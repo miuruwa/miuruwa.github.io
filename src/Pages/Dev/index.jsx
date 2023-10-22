@@ -3,7 +3,6 @@ import {
 } from "react"
 
 import Description from "./Description"
-import DevArt from "./DevArt"
 import LinksTab from "./LinksTab"
 
 import "./stylesheet.scss"
@@ -18,7 +17,6 @@ export default function () {
     return <>
         <div className="links-wrapper">
             <Description />
-            <DevArt />
             <LinksTab />
         </div>
     </>

@@ -8,9 +8,8 @@ import {
 
 import {
     Menu, 
-    default as Resolver
+    Resolver
 } from "../pages"
-
 
 function Content() {
     const toolkit = useToolKit()
@@ -24,7 +23,7 @@ function Content() {
     }
 }
 
-export default function () {
+export function Template() {
     const toolkit = useToolKit()
 
     return <MountTransition

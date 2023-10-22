@@ -17,7 +17,8 @@
     },
     {
         "title": "miうるわ",
-        "timeout": 80
+        "timeout": 80,
+        "hideSpan": true
     },
     {
         "title": "mi阪るわ",
@@ -29,8 +30,7 @@
     },
     {
         "title": "mi光るわ",
-        "timeout": 0,
-        "hideSpan": true
+        "timeout": 0
     },
     {
         "title": "miuるわ",

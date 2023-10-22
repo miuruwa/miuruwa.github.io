@@ -1,5 +1,7 @@
-export default function () {
+function Header() {
     return <div className="repos-menu-headline repos-block">
-        Проекты
+        Репозитории
     </div>
 }
+
+export default Header
