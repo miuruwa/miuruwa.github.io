@@ -12,7 +12,7 @@ const config = defineConfig({
         outDir: "build",
     },
     server: {
-        open: '/repos/',
+        open: '/',
     },
     resolve:{
         alias: [

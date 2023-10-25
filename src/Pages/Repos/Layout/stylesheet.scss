@@ -1,0 +1,13 @@
+.code {
+    &.mobile {
+        
+    }
+    &.tablet {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+    &.desktop {
+        display: grid;
+        grid-template-columns: 2fr 6fr 2fr;
+    }
+}

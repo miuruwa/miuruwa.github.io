@@ -2,10 +2,11 @@ import {
     Navigate
 } from "react-router-dom"
 
-import Dev from "./Dev"
 import Home from "./Home"
-import Map from "./Map"
 import NotFound from "./NotFound"
+import Map from "./Map"
+import Dev from "./Dev"
+import Repos from "./Repos"
 
 
 export default [
@@ -54,18 +55,23 @@ export default [
         element: <Home />
     },
     {
+        path: "/map",
+        exact: true,
+        element: <Map />
+    },
+    {
         path: "/dev",
         exact: true,
         element: <Dev />
     },
     {
+        path: "/repos",
+        exact: true,
+        element: <Repos />
+    },
+    {
         path: "/not-found",
         exact: true,
         element: <NotFound />
-    },
-    {
-        path: "/map",
-        exact: true,
-        element: <Map />
     },
 ]

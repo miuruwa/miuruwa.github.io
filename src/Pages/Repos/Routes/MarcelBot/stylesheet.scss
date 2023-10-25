@@ -1,0 +1,23 @@
+.marcelbot {
+    .repo-headline {
+        background: url(~/media/diagobg.png)!important;
+        color: white!important;
+        border: 2px dashed #728A7A;
+
+        text-shadow: 0 0 12px #DDD7AD;
+        
+        svg {
+            fill: white!important;
+            filter: drop-shadow(0 0 12px #DDD7AD);
+
+            path {
+                &[class=fill] {
+                    fill: white!important
+                }
+                &[class=stroke] {
+                    stroke: white!important
+                }
+            }
+        }
+    }
+}

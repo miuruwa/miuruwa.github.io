@@ -1,0 +1,19 @@
+.vkbotkit {
+    .repo-headline {
+        background: #0077ff;
+        color: white!important;
+
+        svg {
+            fill: white!important;
+
+            path {
+                &[class=fill] {
+                    fill: white!important
+                }
+                &[class=stroke] {
+                    stroke: white!important
+                }
+            }
+        }
+    }
+}

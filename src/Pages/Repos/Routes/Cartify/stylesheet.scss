@@ -1,0 +1,24 @@
+.cartify {
+    .repo-headline {
+        background: #111!important;
+        color: white!important;
+
+        h1 {
+            background: #222;
+            border-radius: 128px;
+        }
+
+        svg {
+            fill: white!important;
+
+            path {
+                &[class=fill] {
+                    fill: white!important
+                }
+                &[class=stroke] {
+                    stroke: white!important
+                }
+            }
+        }
+    }
+}

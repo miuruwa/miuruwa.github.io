@@ -18,5 +18,13 @@
             gap: $point*2;
         }
 
+        .tablet {
+            display: grid!important;
+            gap: $point*2;
+        }
+
+        .mobile {
+            padding: 0 5%;
+        }
     }
 }
