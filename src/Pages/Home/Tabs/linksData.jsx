@@ -19,21 +19,21 @@ export default [
     {
         icon: <GithubLogo />,
         title: "Github",
-        link: "github.com/miuruwa"
+        link: "https://github.com/miuruwa"
     },
     {
         icon: <VKLogoIcon />,
         title: "ВКонтакте",
-        link: "vk.com/miuruwa"
+        link: "https://vk.com/miuruwa"
     },
     {
         icon: <TelegramLogo />,
         title: "Телеграм",
-        link: "t.me/miuruwa"
+        link: "https://t.me/miuruwa"
     },
     {
         icon: <XTwitterLogo />,
         title: "X (бывш. Твиттер)",
-        link: "x.com/miuruwa_"
+        link: "https://x.com/miuruwa_"
     }
 ]

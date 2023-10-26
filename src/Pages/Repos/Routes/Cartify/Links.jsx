@@ -7,7 +7,7 @@ export default function () {
             Полезные ссылки
         </h6>
         <div className="options">
-            <LinkButton label="Запустить" link="https://kensoi.github.io/cartify" />
+            <LinkButton label="Запустить" link="https://miuruwa.github.io/cartify" />
         </div>
     </>
 }

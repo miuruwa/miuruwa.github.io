@@ -9,6 +9,11 @@ import Dev from "./Dev"
 import Repos from "./Repos"
 
 
+function External ({to}) {
+    window.location.href = to
+    return null
+}
+
 export default [
     {
         path: "/",
@@ -18,7 +23,7 @@ export default [
     {
         path: "/cart-calc",
         exact: true,
-        element: <Navigate to="/cartify" />
+        element: <External to="https://miuruwa.github.io/cartify" />
     },
     {
         path: "/about",
