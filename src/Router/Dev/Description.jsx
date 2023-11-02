@@ -1,12 +1,23 @@
+import {
+    useToolKit
+} from "@webx/toolkit"
+
+import languages from "./languages"
+
+
 export default function () {
+    const toolkit = useToolKit()
+
+    const actualLanguage = languages[toolkit.settings.language]
+
     return <>
         <h6>
-            20 лет, Екатеринбург
+            {actualLanguage.short}
             <br />
-            Художник & Программист
+            {actualLanguage.hobby}
         </h6>
         <h6>
-            Люблю пряники и горячий чай с лимоном.
+            {actualLanguage.pasta}
         </h6>
     </>
 }

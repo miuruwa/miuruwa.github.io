@@ -7,11 +7,16 @@ import LinksTab from "./LinksTab"
 
 import "./stylesheet.scss"
 
+import languages from "./languages"
+import { useToolKit } from "@webx/toolkit"
+
 
 export default function () {
+    const toolkit = useToolKit()
+
     useEffect(
         () => {
-            document.title = "о разработчике / miuruwa"
+            document.title = `${languages[toolkit.settings.language].title} / miuruwa`
         }, []
     )
     return <>
