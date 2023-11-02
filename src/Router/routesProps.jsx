@@ -3,7 +3,6 @@ import {
 } from "react-router-dom"
 
 import Home from "./Home"
-import Start from "./Start"
 import Language from "./Language"
 import NotFound from "./NotFound"
 import Map from "./Map"
@@ -20,7 +19,7 @@ export default [
     {
         path: "/",
         exact: true,
-        element: <Start />
+        element: <Navigate to="/home" />
     },
     {
         path: "/cart-calc",
