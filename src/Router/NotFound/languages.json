@@ -1,0 +1,16 @@
+{
+    "ru": {
+        "title": "не найдено",
+        "headline": "Затерялся, путник?",
+        "road": "Возможно вы заблудились. Попробуйте вернуться назад к известной дорожке.",
+        "tryHome": "Или вернитесь на главную",
+        "button": "На главную"
+    },
+    "eng": {
+        "title": "not found",
+        "headline": "Lost, traveler?",
+        "road": "Seems like you are lost. Try going back to a known path.",
+        "tryHome": "Or return to home page",
+        "button": "Go to home"
+    }
+}

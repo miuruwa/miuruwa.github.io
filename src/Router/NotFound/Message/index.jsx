@@ -1,21 +1,29 @@
 import {
+    useToolKit
+} from "@webx/toolkit"
+
+import {
     CardBlock
 } from "@webx/forms"
 
 import HomeButton from "./HomeButton"
+import languages from "../languages"
 
 
 export default function () {
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
     return <div className="not-found-content">
         <h1>
-            Затерялся, путник?
+            {actualLanguage.headline}
         </h1>
         <CardBlock>
             <p>
-                Возможно вы заблудились. Попробуйте вернуться назад к известной дорожке.
+                {actualLanguage.road}
             </p>
             <p>
-                Или вернитесь на главную
+                {actualLanguage.tryHome}
             </p>
         </CardBlock>
         <HomeButton />
