@@ -1,0 +1,30 @@
+{
+    "ru": {
+        "title": "Настройки",
+        "offline": {
+            "tumbler": "Кешировать для офлайн-доступа",
+            "reset": "Обновить офлайн-кеш",
+            "error": {
+                "title": "Ошибка выполнения задачи",
+                "content": "Данная функция работает только при включённом офлайн-режиме (т.е. есть кеш приложения)",
+                "button": "Закрыть"
+            }
+        },
+        "language": "Выбранный язык",
+        "theme": "Цветовая схема"
+    },
+    "eng": {
+        "title": "Settings",
+        "offline": {
+            "tumbler": "Cache for offline access",
+            "reset": "Update offline-cache",
+            "error": {
+                "title": "Ошибка выполнения задачи",
+                "content": "Данная функция работает только при включённом офлайн-режиме (т.е. есть кеш приложения)",
+                "button": "Закрыть"
+            }
+        },
+        "language": "Selected language",
+        "theme": "Color scheme"
+    }
+}

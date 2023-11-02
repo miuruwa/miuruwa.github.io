@@ -9,23 +9,25 @@ import {
 import UpdateCacheIcon from "@webx/icons/UpdateCacheIcon"
 import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'
 import EnableOfflineCard from "./EnableOfflineCard"
+import languages from "./languages"
 
 
 export default function () {
     const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
 
     const buttonProps = {
         className: "settings-block",
         icon: <UpdateCacheIcon />,
         theme: "white",
-        title: "Сбросить offline-версию",
+        title: actualLanguage.offline.reset,
         onClick: () => {
-            if (toolkit.settings.cacheApp) {
+            if (!toolkit.settings.cacheApp) {
                 return toolkit.card.show(<EnableOfflineCard />)
             }
     
             serviceWorkerRegistration.unregister()
-            window.location.href = process.env.PUBLIC_URL
+            window.location.pathname = "/"
         }
     }
 

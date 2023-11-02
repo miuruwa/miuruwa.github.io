@@ -1,8 +1,4 @@
 import { 
-    useState
-} from "react"
-
-import { 
     useToolKit
 } from "@webx/toolkit"
 
@@ -12,16 +8,26 @@ import {
 
 import CacheApp from "./CacheApp"
 import UpdateCacheButton from "./UpdateCacheButton"
+import LanguageDropdown from "./LanguageDropdown"
+import languages from "./languages"
+
 
 export default function () {
-    return <form className="cart-calc-message">
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
+    return <form className="card">
         <h6>
-            Настройки
+            {actualLanguage.title}
         </h6>
         <CardBlock>
             <label>
-                Запускать offline
+                {actualLanguage.offline.tumbler}
                 <CacheApp />
+            </label>
+            <label>
+                {actualLanguage.language}
+                <LanguageDropdown />
             </label>
         </CardBlock>
         <UpdateCacheButton />
