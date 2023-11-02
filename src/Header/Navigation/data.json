@@ -1,10 +1,16 @@
 [
     {
-        "name": "проекты",
+        "name": {
+            "ru": "проекты",
+            "eng": "repositories"
+        },
         "href": "/repos"
     },
     {
-        "name": "обо мне",
+        "name": {
+            "ru": "обо мне",
+            "eng": "about"
+        },
         "href": "/dev"
     }
 ]

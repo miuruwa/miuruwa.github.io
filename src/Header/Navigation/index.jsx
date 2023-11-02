@@ -13,8 +13,10 @@ import "./stylesheet.scss"
 
 
 function Link ({name, href}) {
+    const toolkit = useToolKit()
+
     const buttonProps = {
-        children: name,
+        children: name[toolkit.settings.language],
         href: href
     }
 
