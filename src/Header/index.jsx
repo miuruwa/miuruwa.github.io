@@ -12,5 +12,9 @@ export default function () {
 
     const IS_DESKTOP = toolkit.settings.windowWidth >= 768
 
+    if (toolkit.settings.language === "unset") {
+        return <></>
+    }
+
     return IS_DESKTOP ? <Desktop /> : <Mobile />
 }

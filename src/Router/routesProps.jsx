@@ -4,6 +4,7 @@ import {
 
 import Home from "./Home"
 import Start from "./Start"
+import Language from "./Language"
 import NotFound from "./NotFound"
 import Map from "./Map"
 import Dev from "./Dev"
@@ -64,6 +65,11 @@ export default [
         path: "/map",
         exact: true,
         element: <Map />
+    },
+    {
+        path: "/language",
+        exact: true,
+        element: <Language />
     },
     {
         path: "/dev",

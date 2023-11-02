@@ -3,6 +3,10 @@ import {
 } from "nanoid"
 
 import {
+    useToolKit
+} from "@webx/toolkit"
+
+import {
     BrowserRouter, 
     Route,
     Routes
@@ -14,6 +18,13 @@ import "./stylesheet.scss"
 
 
 export default function () {
+    const toolkit = useToolKit()
+
+    if (toolkit.settings.language === "unset" & window.location.pathname !== "/language") {
+        window.localStorage.setItem("get-cache", window.location.href)
+        window.location.pathname = "/language"
+    }
+
     return <BrowserRouter>
         <Routes>
             {

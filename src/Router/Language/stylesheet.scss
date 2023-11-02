@@ -1,0 +1,47 @@
+.language {
+    width: 100%;
+    max-width: 840px;
+    padding: 0 5%;
+    margin: 0 auto;
+    $point: 4px;
+
+    h1 {
+        padding: 0!important;
+    }
+
+    p {
+        padding: 0!important;
+    }
+
+    label {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        justify-content: space-between;
+        align-items: center;
+        gap: $point*2;
+
+        input {
+            background: #333;
+        }
+        p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding: 0!important;
+        }
+    }
+
+    .card-block {
+        max-width: 640px;
+        margin: auto;
+        padding: $point*5 5% $point*6!important;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+        .home-lang-button {
+            display: inline-block;
+            width: fit-content;
+            padding: $point*1.5 $point*6;
+        }
+    }
+}

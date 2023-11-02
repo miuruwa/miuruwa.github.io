@@ -1,0 +1,14 @@
+[
+    {
+        "name": "unset",
+        "title": "Не выбрано / Unselect"
+    },
+    {
+        "name": "eng",
+        "title": "English"
+    },
+    {
+        "name": "ru",
+        "title": "Русский"
+    }
+]

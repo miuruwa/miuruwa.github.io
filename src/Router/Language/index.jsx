@@ -1,10 +1,6 @@
 import {
-    useEffect, useState, createContext
+    useEffect
 } from "react"
-
-import {
-    Navigate
-} from "react-router-dom"
 
 import { useToolKit } from "@webx/toolkit"
 
@@ -18,14 +14,12 @@ import "./stylesheet.scss"
 import {
     LanguageContext
 } from "./Context"
+import { CardBlock } from "@webx/forms"
+import languages from "./languages"
 
 
 export default function () {
     const toolkit = useToolKit()
-
-    if (toolkit.settings.language !== "unset") {
-        return <Navigate to="/home" />
-    }
 
     useEffect(
         () => {
@@ -33,11 +27,18 @@ export default function () {
         }, []
     )
 
-    return <div className="start-language">
+    return <div className="language">
         <LanguageContext>
             <Headline />
-            <LanguageDropdown />
-            <HomeButton />
+            <CardBlock className="card-block">
+                <label>
+                    <p>
+                        {languages[toolkit.settings.language].language}
+                    </p>
+                    <LanguageDropdown />
+                </label>
+                <HomeButton />
+            </CardBlock>
         </LanguageContext>
     </div>
 }

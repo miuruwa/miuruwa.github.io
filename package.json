@@ -1,6 +1,6 @@
 {
   "name": "miuruwa",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "homepage": "https://miuruwa.github.io/",
   "private": true,
   "dependencies": {
@@ -28,6 +28,7 @@
     "serve": "vite preview",
     "deploy": "node ./utils/deploy.js",
     "not-found-patch": "node ./utils/NotFoundPatch.js",
+    "cname-patch": "node ./utils/CNAMEPatch.js",
     "github-pages": "gh-pages -d build",
     "postinstall": "patch-package"
   },
