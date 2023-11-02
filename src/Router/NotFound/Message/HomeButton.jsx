@@ -16,7 +16,7 @@ export default function () {
         title: languages[toolkit.settings.language].button,
         theme: "white",
         onClick: () => {
-            window.location.path = "/home"
+            window.location.pathname = "/home"
         }
     }
 
