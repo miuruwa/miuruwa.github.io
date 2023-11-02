@@ -5,10 +5,13 @@ import {
 import DevIcon from "@webx/icons/DevIcon"
 import wait from "../wait"
 import titleData from "./titleData.json"
+import { useToolKit } from "@webx/toolkit"
 
 
 export default function () {
+    const toolkit = useToolKit()
     const title = createRef()
+    const languageTitleData = titleData[toolkit.settings.language]
 
     const [state, setState] = useState(false);
     const spanClassName = state ? "separator hidden" : "separator"
@@ -17,8 +20,8 @@ export default function () {
     async function titleAnimation() {
         const titleContent = title.current
 
-        for (let index = 0; index < titleData.length; index++) {
-            const element = titleData[index]
+        for (let index = 0; index < languageTitleData.length; index++) {
+            const element = languageTitleData[index]
 
             titleContent.innerHTML = element.title
 

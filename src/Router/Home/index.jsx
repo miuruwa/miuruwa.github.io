@@ -2,18 +2,23 @@ import {
     useEffect
 } from "react"
 
+import { useToolKit } from "@webx/toolkit"
+
 import Face from "./Face"
 import Tabs from "./Tabs"
 
 import {
     removeUrlParameter
 } from "~/utils/URLParameters"
+import languages from "./languages"
 
 
 export default function () {
+    const toolkit = useToolKit()
+
     useEffect(
         () => {
-            document.title = "главная / miuruwa"
+            document.title = `${languages[toolkit.settings.language].title} / miuruwa`
             removeUrlParameter("id")
         }, []
     )

@@ -9,37 +9,58 @@ import ArtStationLogo from "@webx/icons/ArtStationLogo"
 export default [
     {
         icon: <CartifyIcon />,
-        title: "Cartify",
+        title: {
+            ru: "Калькулятор покупок",
+            eng: "Cartify"
+        },
         path: "/cartify"
     },
     {
         icon: <NotesIcon />,
-        title: "Заметки",
+        title: {
+            ru: "Заметки",
+            eng: "Notes"
+        },
         path: "/notes"
     },
     {
         icon: <GithubLogo />,
-        title: "Github",
+        title: {
+            ru: "GitHub",
+            eng: "GitHub"
+        },
         link: "https://github.com/miuruwa"
     },
     {
         icon: <VKLogoIcon />,
-        title: "ВКонтакте",
+        title: {
+            ru: "ВКонтакте",
+            eng: "VK"
+        },
         link: "https://vk.com/miuruwa"
     },
     {
         icon: <ArtStationLogo />,
-        title: "ArtStation",
+        title: {
+            ru: "ArtStation",
+            eng: "ArtStation"
+        },
         link: "https://www.artstation.com/miuruwa"
     },
     {
         icon: <TelegramLogo />,
-        title: "Телеграм",
+        title: {
+            ru: "Телеграм",
+            eng: "Telegram"
+        },
         link: "https://t.me/miuruwa"
     },
     {
         icon: <XTwitterLogo />,
-        title: "X (бывш. Твиттер)",
+        title: {
+            ru: "X / Твиттер",
+            eng: "X / Twitter"
+        },
         link: "https://x.com/miuruwa_"
     }
 ]
