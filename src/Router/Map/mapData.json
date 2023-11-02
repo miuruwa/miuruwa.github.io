@@ -1,22 +1,43 @@
-[
-    {
-        "title": "главная",
-        "link": "/home"
-    },
-    {
-        "title": "проекты",
-        "link": "/repos"
-    },
-    {
-        "title": "разработчик",
-        "link": "/dev"
-    },
-    {
-        "title": "cartify",
-        "link": "/cartify"
-    },
-    {
-        "title": "заметки",
-        "link": "/notes"
+{
+    "array": [
+        {
+            "title": {
+                "ru": "главная",
+                "eng": "homepage"
+            },
+            "link": "/home"
+        },
+        {
+            "title": {
+                "ru": "проекты",
+                "eng": "repositories"
+            },
+            "link": "/repos"
+        },
+        {
+            "title": {
+                "ru": "разработчик",
+                "eng": "developer"
+            },
+            "link": "/dev"
+        },
+        {
+            "title": {
+                "ru": "калькулятор покупок",
+                "eng": "cartify"
+            },
+            "link": "/cartify"
+        },
+        {
+            "title": {
+                "ru": "заметки",
+                "eng": "notes"
+            },
+            "link": "/notes"
+        }
+    ],
+    "title": {
+        "eng": "navigator",
+        "ru": "навигатор"
     }
-]
+}
