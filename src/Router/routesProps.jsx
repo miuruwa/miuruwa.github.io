@@ -3,6 +3,7 @@ import {
 } from "react-router-dom"
 
 import Home from "./Home"
+import LanguageSet from "./LanguageSet"
 import NotFound from "./NotFound"
 import Map from "./Map"
 import Dev from "./Dev"
@@ -18,7 +19,8 @@ export default [
     {
         path: "/",
         exact: true,
-        element: <Navigate to="/home" />
+        // element: <Navigate to="/home" />
+        element: <LanguageSet />
     },
     {
         path: "/cart-calc",
