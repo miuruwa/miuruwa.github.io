@@ -1,0 +1,32 @@
+{
+    "ru": {
+        "description": {
+            "title": "Описание",
+            "content": [
+                "VKBotKit это Python фреймворк, предназначенный для работы чат-бота в сообществе ВКонтакте.",
+                "VKBotKit спроектирован с целью упростить и структуризировать контент и настроиваемый функционал. Библиотека работает в связке с VK Bots API, а также библиотекой aiohttp."
+            ]
+        },
+        "links": {
+            "title": "Полезные ссылки",
+            "source": "Исходный код",
+            "template": "Шаблон",
+            "examples": "Примеры"
+        }
+    },
+    "eng": {
+        "description": {
+            "title": "Description",
+            "content": [
+                "VKBotKit is a Python framework designed to make a chatbots for VK communities.",
+                "VKBotKit is designed to simplify content and customizable functionality. Framework works with the VK Bots API and aiohttp"
+            ]
+        },
+        "links": {
+            "title": "Useful links",
+            "source": "Source code",
+            "template": "Template",
+            "examples": "Examples"
+        }
+    }
+}

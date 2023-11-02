@@ -19,7 +19,7 @@ export default function () {
         const pages = [].concat(...routes)
         const element = pages.find(item => item.repoID == page)
 
-        document.title = `${element.label} / miuruwa`
+        document.title = `${element.label[toolkit.settings.language]} / miuruwa`
 
     }, [page])
 

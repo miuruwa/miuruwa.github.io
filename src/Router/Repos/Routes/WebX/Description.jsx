@@ -1,21 +1,33 @@
-import { CardBlock } from "@webx/forms"
+import {
+    useToolKit
+} from "@webx/toolkit"
+
+import {
+    CardBlock
+} from "@webx/forms"
+
+import languages from "./languages"
+
 
 export default function () {
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
     return <>
         <CardBlock className="repos-page options">
             <p>
-                WebX - готовый шаблон приложения, написанный на React для упрощения работы.
+                {actualLanguage.description}
             </p>
         </CardBlock>
         <h6>
-            У WebX есть 2 реализации
+            {actualLanguage.realisation}
         </h6>
         <h3>
             {"~>"} Vite <br />
             {"~>"} Create-React-App
         </h3>
         <h6>
-            На WebX работают
+            {actualLanguage.projects}
         </h6>
         <h3>
             {"~>"} Cartify <br />

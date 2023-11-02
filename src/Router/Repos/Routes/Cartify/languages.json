@@ -1,0 +1,44 @@
+{
+    "ru": {
+        "title": "Калькулятор покупок",
+        "description": {
+            "title": "Описание",
+            "content": "Калькулятор для удобного подсчёта стоимости товаров."
+        },
+        "features": {
+            "title": "Функционал",
+            "li": "li",
+            "array": [
+                "Удобная форма создания продукта",
+                "Сохранение списка в каталоге",
+                "Подсчёт сдачи",
+                "Офлайн доступ"
+            ]
+        },
+        "links": {
+            "title": "Полезные ссылки",
+            "run": "Запустить"
+        }
+    },
+    "eng": {
+        "title": "Cartify",
+        "description": {
+            "title": "Description",
+            "content": "Calculator for convenient calculation of the cost of goods."
+        },
+        "features": {
+            "title": "Features",
+            "li": "+",
+            "array": [
+                "Convenient form of product creation",
+                "Saving a list in a directory",
+                "Counting change",
+                "Offline access"
+            ]
+        },
+        "links": {
+            "title": "Useful links",
+            "run": "Run"
+        }
+    }
+}

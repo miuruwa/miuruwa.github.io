@@ -1,10 +1,26 @@
-import { CardBlock } from "@webx/forms"
+import {
+    useToolKit
+} from "@webx/toolkit"
 
-    
+import {
+    CardBlock
+} from "@webx/forms"
+
+import languages from "./languages"
+
+
 export default function () {
-    return <CardBlock>
-        <p>
-            Приложение-клон iCloud Заметок, созданное в целях теста WebX UI
-        </p>
-    </CardBlock>
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
+    return <>
+        <h6>
+            {actualLanguage.description.title}
+        </h6>
+        <CardBlock>
+            <p>
+                {actualLanguage.description.content}
+            </p>
+        </CardBlock>
+    </>
 }

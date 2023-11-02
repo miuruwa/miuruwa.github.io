@@ -1,26 +1,36 @@
 import { nanoid } from "nanoid"
+
+import {
+    useToolKit
+} from "@webx/toolkit"
+
 import LinkButton from "../../components/LinkButton"
+
+import languages from "./languages"
 
 
 const routes = [
     {
-        label: "Сообщество",
+        label: "bot",
         link: "https://vk.com/marcelbot"
     },
     {
-        label: "Исходный код",
+        label: "source",
         link: "https://github.com/kensoi/marcelbot"
     }
 ]
 
 export default function () {
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
     return <>
         <h6>
-            Полезные ссылки
+        {actualLanguage.links.title}
         </h6>
         <div className="options">
             {
-                routes.map(item => <LinkButton key={nanoid()} {...item} />)
+                routes.map(item => <LinkButton key={nanoid()} label={actualLanguage.links[item.label]} link={item.link} />)
             }
         </div>
     </>

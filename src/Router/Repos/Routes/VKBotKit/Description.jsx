@@ -1,17 +1,38 @@
-import { CardBlock } from "@webx/forms"
+import {
+    nanoid
+} from "nanoid"
 
+import {
+    useToolKit
+} from "@webx/toolkit"
+
+import {
+    CardBlock
+} from "@webx/forms"
+
+import languages from "./languages"
+
+
+function Paragraph ({children}) {
+    return <CardBlock>
+        <p>
+            {children}
+        </p>
+    </CardBlock>
+}
 
 export default function () {
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
     return <>
-        <CardBlock>
-            <p>
-                VKBotKit это Python фреймворк, предназначенный для работы чат-бота в сообществе ВКонтакте.
-            </p>
-        </CardBlock>
-        <CardBlock>
-            <p>
-                VKBotKit спроектирован с целью упростить и структуризировать контент и настроиваемый функционал. Библиотека работает в связке с VK Bots API, а также библиотекой aiohttp.
-            </p>
-        </CardBlock>
+        <h6>
+            {actualLanguage.description.title}
+        </h6>
+        {
+            actualLanguage.description.content.map(
+                item => <Paragraph key={nanoid()}>{item}</Paragraph>
+            )
+        }
     </>
 }

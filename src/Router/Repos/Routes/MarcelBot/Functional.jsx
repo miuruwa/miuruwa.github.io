@@ -1,21 +1,28 @@
+import {
+    nanoid
+} from "nanoid"
+
+import {
+    useToolKit
+} from "@webx/toolkit"
+
 import Feature from "./Feature"
+
+import languages from "./languages"
 
 
 export default function () {
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
     return <>
         <h6>
-            Функционал
+            {actualLanguage.features.title}
         </h6>
         <div className="marcel-features">
-            <Feature>
-                Марсель дублирует все посты между ТГК и ВК группами
-            </Feature>
-            <Feature>
-                Также она может оповещать/делать репост ваших записей
-            </Feature>
-            <Feature>
-                Марсель продублирует пост в X, если это нужно
-            </Feature>
+            {actualLanguage.features.array.map(
+                item => <Feature key={nanoid()} children={item} />
+            )}
         </div>
     </>
 }

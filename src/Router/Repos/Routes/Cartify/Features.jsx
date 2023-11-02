@@ -1,19 +1,32 @@
+import {
+    nanoid
+} from "nanoid"
+
+import {
+    useToolKit
+} from "@webx/toolkit"
+
+import languages from "./languages"
+
+
+function Feature ({title, li}) {
+    return <h3>
+        {li} {title}
+    </h3>
+}
+
 export default function () {
+    const toolkit = useToolKit()
+    const actualLanguage = languages[toolkit.settings.language]
+
     return <>
         <h6>
-            Функционал
+            {actualLanguage.features.title}
         </h6>
-        <h3>
-            + Удобная форма создания продукта
-        </h3>
-        <h3>
-            + Сохранение списка в каталоге
-        </h3>
-        <h3>
-            + Подсчёт сдачи
-        </h3>
-        <h3>
-            + Офлайн доступ
-        </h3>
+        {
+            actualLanguage.features.array.map(
+                item => <Feature key={nanoid()} title={item} li={actualLanguage.features.li} />
+            )
+        }
     </>
 }

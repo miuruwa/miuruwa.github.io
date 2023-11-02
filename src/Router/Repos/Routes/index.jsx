@@ -21,7 +21,10 @@ export default [
     [
         {
             icon: <DevIcon />,
-            label: "О разделе",
+            label: {
+                "ru": "О разделе",
+                "eng": "About partition"
+            },
             repoID: "main",
             content: <Main />
         }
@@ -29,19 +32,28 @@ export default [
     [
         {
             icon: <WebXIcon />,
-            label: "WebX",
+            label: {
+                "ru": "WebX",
+                "eng": "WebX"
+            },
             repoID: "webx",
             content: <WebX />
         },
         {
             icon: <CartifyIcon />,
-            label: "Cartify",
+            label: {
+                "ru": "Калькулятор покупок",
+                "eng": "Cartify"
+            },
             repoID: "cartify",
             content: <Cartify />
         },
         {
             icon: <NotesIcon />,
-            label: "Заметки",
+            label: {
+                "ru": "Заметки",
+                "eng": "Notes"
+            },
             repoID: "notify",
             content: <Notify />
         }
@@ -49,13 +61,19 @@ export default [
     [
         {
             icon: <VKBotKitIcon />,
-            label: "VKBotKit",
+            label: {
+                "ru": "VKBotKit",
+                "eng": "VKBotKit"
+            },
             repoID: "vkbotkit",
             content: <VKBotKit />
         },
         {
             icon: <BotIcon />,
-            label: "Марсель",
+            label: {
+                "ru": "Марсель",
+                "eng": "Marcel"
+            },
             repoID: "marcelbot",
             content: <MarcelBot />
         }
