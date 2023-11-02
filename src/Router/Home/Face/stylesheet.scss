@@ -62,42 +62,5 @@
             display: inline-flex;
             align-items: center;
         }
-        .separator {
-            display: flex;
-            overflow: hidden;
-            width: 77px;
-            transition: 1s;
-            box-sizing: border-box;
-            :first-child {
-                margin: 0 0px;
-                transition: 0.3s;
-            }
-
-            &.hidden {
-                width: 0;
-                :first-child {
-                    margin: 0 32px;
-                }
-            }
-        }
-        .logo-span {
-            position: relative;
-            overflow: hidden;
-            width: 0;
-            height: 77px;
-            transition: 1s;
-
-            svg {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 77px;
-                height: 77px;
-            }
-
-            &.show {
-                width: 77px;
-            }
-        }
     }
 }

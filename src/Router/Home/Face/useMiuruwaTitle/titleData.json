@@ -1,0 +1,96 @@
+{
+    "ru": [
+        {
+            "title": "見うるわ",
+            "timeout": 300
+        },
+        {
+            "title": "香岡るわ",
+            "timeout": 30
+        },
+        {
+            "title": "潟道るわ",
+            "timeout": 30
+        },
+        {
+            "title": "ми光るわ",
+            "timeout": 30,
+            "hideSpan": true
+        },
+        {
+            "title": "ми阪るわ",
+            "timeout": 30
+        },
+        {
+            "title": "ми茨岡わ",
+            "timeout": 30
+        },
+        {
+            "title": "миу潟わ",
+            "timeout": 30
+        },
+        {
+            "title": "миу今わ",
+            "timeout": 30
+        },
+        {
+            "title": "миу道話",
+            "timeout": 30
+        },
+        {
+            "title": "миуру阪",
+            "timeout": 60
+        },
+        {
+            "title": "миурува",
+            "timeout": 0
+        }
+    ],
+    "eng": [
+        {
+            "title": "見うるわ",
+            "timeout": 300
+        },
+        {
+            "title": "香岡るわ",
+            "timeout": 30
+        },
+        {
+            "title": "潟道るわ",
+            "timeout": 30
+        },
+        {
+            "title": "mi光るわ",
+            "timeout": 30,
+            "hideSpan": true
+        },
+        {
+            "title": "mi阪るわ",
+            "timeout": 30
+        },
+        {
+            "title": "mi茨岡わ",
+            "timeout": 30
+        },
+        {
+            "title": "miu潟わ",
+            "timeout": 30
+        },
+        {
+            "title": "miu今わ",
+            "timeout": 30
+        },
+        {
+            "title": "miu道話",
+            "timeout": 30
+        },
+        {
+            "title": "miuru阪",
+            "timeout": 60
+        },
+        {
+            "title": "miuruwa",
+            "timeout": 0
+        }
+    ]
+}
