@@ -4,6 +4,7 @@ import VKLogoIcon from "@webx/icons/VKLogoIcon"
 import TelegramLogo from "@webx/icons/TelegramLogoIcon"
 import GithubLogo from "@webx/icons/GithubLogoIcon"
 import XTwitterLogo from "@webx/icons/XTwitterLogoIcon"
+import ArtStationLogo from "@webx/icons/ArtStationLogo"
 
 export default [
     {
@@ -25,6 +26,11 @@ export default [
         icon: <VKLogoIcon />,
         title: "ВКонтакте",
         link: "https://vk.com/miuruwa"
+    },
+    {
+        icon: <ArtStationLogo />,
+        title: "ArtStation",
+        link: "https://www.artstation.com/miuruwa"
     },
     {
         icon: <TelegramLogo />,
