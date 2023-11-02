@@ -30,7 +30,14 @@ export default function () {
         </h6>
         <div className="options">
             {
-                routes.map(item => <LinkButton key={nanoid()} label={actualLanguage.links[item.label]} link={item.link} />)
+                routes.map(item => {
+                    const props = {
+                        label: actualLanguage.links[item.label],
+                        link: item.link
+                    }
+
+                    return <LinkButton key={nanoid()} {...props} />
+                })
             }
         </div>
     </>
