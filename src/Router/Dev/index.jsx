@@ -3,7 +3,7 @@ import {
 } from "react"
 
 import Description from "./Description"
-import LinksTab from "./LinksTab"
+import Links from "./Links"
 
 import "./stylesheet.scss"
 
@@ -25,7 +25,7 @@ export default function () {
                 {languages[toolkit.settings.language].title}
             </h3>
             <Description />
-            <LinksTab />
+            <Links />
         </div>
     </>
 }
