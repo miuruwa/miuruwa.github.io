@@ -8,7 +8,7 @@ import {
 
 import UpdateCacheIcon from "@webx/icons/UpdateCacheIcon"
 import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'
-import EnableOfflineCard from "./EnableOfflineCard"
+import EnableOfflineCard from "../EnableOfflineCard"
 import languages from "./languages"
 
 

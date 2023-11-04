@@ -1,0 +1,12 @@
+{
+    "eng": {
+        "title": "Error while executing task",
+        "content": "You need to enable offline mode before updating cache",
+        "button": "Close"
+    },
+    "ru": {
+        "title": "Ошибка выполнения задачи",
+        "content": "Данная функция работает только при включённом офлайн-режиме (т.е. есть кеш приложения)",
+        "button": "Закрыть"
+    }
+}

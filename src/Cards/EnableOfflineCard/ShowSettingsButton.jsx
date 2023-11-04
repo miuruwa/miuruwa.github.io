@@ -14,9 +14,12 @@ export default function () {
     const actualLanguage = languages[toolkit.settings.language]
 
     const buttonProps = {
-        title: actualLanguage.offline.error.button,
+        title: actualLanguage.button,
+        theme: "white",
         onClick: () => toolkit.card.showPrevious()
     }
 
-    return <Button {...buttonProps} />
+    return <div className="card-options">
+        <Button {...buttonProps} />
+    </div>
 }

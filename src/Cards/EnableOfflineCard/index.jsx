@@ -9,20 +9,24 @@ import {
 import ShowSettingsButton from "./ShowSettingsButton"
 import languages from "./languages"
 
+import "./stylesheet.scss"
+
 
 export default function () {
     const toolkit = useToolKit()
     const actualLanguage = languages[toolkit.settings.language]
 
-    return <div className="cart-calc-message">
-        <h6>
-            {actualLanguage.offline.error.title}
-        </h6>
+    return <div className="error-offline">
+        <h3>
+            {actualLanguage.title}
+        </h3>
         <CardBlock>
-            <p>
-                {actualLanguage.offline.error.content}
-            </p>
+            <div className="error-card-content">
+                <p>
+                    {actualLanguage.content}
+                </p>
+            </div>
+            <ShowSettingsButton />
         </CardBlock>
-        <ShowSettingsButton />
     </div>
 }
