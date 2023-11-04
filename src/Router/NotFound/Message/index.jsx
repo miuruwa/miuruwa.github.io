@@ -15,9 +15,9 @@ export default function () {
     const actualLanguage = languages[toolkit.settings.language]
 
     return <div className="not-found-content">
-        <h1>
+        <h3>
             {actualLanguage.headline}
-        </h1>
+        </h3>
         <CardBlock>
             <p>
                 {actualLanguage.road}
@@ -25,7 +25,7 @@ export default function () {
             <p>
                 {actualLanguage.tryHome}
             </p>
+            <HomeButton />
         </CardBlock>
-        <HomeButton />
     </div>
 }

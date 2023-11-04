@@ -1,9 +1,9 @@
 import Clouds from "~/media/Illustration.png"
-import Footage from "~/media/footage.gif"
+import BackgroundImage from "./BackgroundImage"
 
 export default function () {
     return <div className="not-found-background">
-        <img src={Footage} />
+        <BackgroundImage />
         <img src={Clouds} />
     </div>
 }

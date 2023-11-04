@@ -6,6 +6,7 @@
             flex-direction: row-reverse;
             align-items: end;
             justify-content: center;
+            margin: 0 auto;
             
             .not-found-background {
                 width: 40vw;
@@ -46,11 +47,13 @@
         }
         .x-block {
             padding: 4px 5%!important;
-            margin-bottom: 8px;
         }
         .x-button {
             display: flex;
             justify-content: center;
+            width: fit-content;
+            padding: 1.5*4px 6*4px!important;
+            margin-bottom: 16px;
         }
     }
 }
