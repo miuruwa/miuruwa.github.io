@@ -9,6 +9,8 @@ import {
 import data from "./data"
 import Button from "../components/Navigation"
 
+import Navigation from "~/Cards/Navigation"
+
 import "./stylesheet.scss"
 
 
@@ -25,15 +27,9 @@ function Link ({name, href}) {
     </li>
 }
 
-function Content ({isCard}) {
-    const ulProps = {
-        className: isCard ? "x-block card-menu" : "header-navigation"
-    }
-
-    return <ul {...ulProps}>
-        {
-            data.map(Link)
-        }
+function Content () {
+    return <ul className="header-navigation">
+        {data.map(Link)}
     </ul>
 }
 
@@ -42,7 +38,7 @@ export default function ({isCard}) {
 
     return isCard ? <Button onClick={
         () => {
-            toolkit.card.show(<Content isCard/>)
+            toolkit.card.show(<Navigation />)
         }
     } /> : <Content />
 }
