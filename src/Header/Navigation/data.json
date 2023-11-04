@@ -8,6 +8,13 @@
     },
     {
         "name": {
+            "ru": "калькулятор покупок",
+            "eng": "cartify"
+        },
+        "href": "/cartify"
+    },
+    {
+        "name": {
             "ru": "обо мне",
             "eng": "about"
         },
