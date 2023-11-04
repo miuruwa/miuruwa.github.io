@@ -11,13 +11,13 @@ export default function () {
     const actualLanguage = languages[toolkit.settings.language]
 
     return <>
-        <h6>
+        <p>
             {actualLanguage.short}
             <br />
             {actualLanguage.hobby}
-        </h6>
-        <h6>
+        </p>
+        <p>
             {actualLanguage.pasta}
-        </h6>
+        </p>
     </>
 }

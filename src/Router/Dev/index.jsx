@@ -21,6 +21,9 @@ export default function () {
     )
     return <>
         <div className="links-wrapper">
+            <h3>
+                {languages[toolkit.settings.language].title}
+            </h3>
             <Description />
             <LinksTab />
         </div>
