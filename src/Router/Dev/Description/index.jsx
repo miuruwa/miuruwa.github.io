@@ -11,6 +11,9 @@ export default function () {
     const actualLanguage = languages[toolkit.settings.language]
 
     return <>
+        <h3>
+            {actualLanguage.title}
+        </h3>
         <p>
             {actualLanguage.short}
             <br />

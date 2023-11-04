@@ -1,0 +1,14 @@
+{
+    "ru": {
+        "title": "О разработчике",
+        "short": "20 лет, Екатеринбург",
+        "hobby": "Художник & Программист",
+        "pasta": "Люблю пряники и горячий чай с лимоном."
+    },
+    "eng": {
+        "title": "About",
+        "short": "20 years old, Yekaterinburg",
+        "hobby": "Artist & Programmist",
+        "pasta": "I love gingerbreads and hot lemon tea"
+    }
+}

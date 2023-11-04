@@ -1,5 +1,5 @@
 .webx.screen-device-mobile {
-    .homepage-links {
+    .about-dev-links {
         gap: 8px;
         .x-button {
             width: 100%;
@@ -10,9 +10,9 @@
     }
 }    
 .webx:not(.screen-device-mobile) {
-    .homepage-links {
+    .about-dev-links {
         display: flex;
-        width: fit-content;
+        width: 100%;
         gap: 8px;
 
         .x-button {

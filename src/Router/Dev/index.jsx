@@ -3,12 +3,13 @@ import {
 } from "react"
 
 import Description from "./Description"
+import languages from "./Description/languages"
 import Links from "./Links"
 
 import "./stylesheet.scss"
 
-import languages from "./languages"
 import { useToolKit } from "@webx/toolkit"
+import DevArt from "./DevArt"
 
 
 export default function () {
@@ -21,10 +22,8 @@ export default function () {
     )
     return <>
         <div className="links-wrapper">
-            <h3>
-                {languages[toolkit.settings.language].title}
-            </h3>
             <Description />
+            <DevArt />
             <Links />
         </div>
     </>
