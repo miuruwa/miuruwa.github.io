@@ -27,6 +27,15 @@ export default [
             },
             repoID: "main",
             content: <Main />
+        },
+        {
+            icon: <DevIcon />,
+            label: {
+                "ru": "О разделе",
+                "eng": "About partition"
+            },
+            repoID: "menu",
+            content: <Main />
         }
     ],
     [

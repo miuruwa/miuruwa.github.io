@@ -41,6 +41,8 @@ export default function ({isCard}) {
     const toolkit = useToolKit()
 
     return isCard ? <Button onClick={
-        toolkit.card.show.bind((<Content isCard/>))
+        () => {
+            toolkit.card.show(<Content isCard/>)
+        }
     } /> : <Content />
 }

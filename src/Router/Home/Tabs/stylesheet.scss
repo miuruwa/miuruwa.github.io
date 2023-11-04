@@ -4,6 +4,8 @@
         max-width: 512px;
         padding: 0 5%;
         margin: 0 auto;
+        box-sizing: border-box;
+
         .homepage-links {
             gap: 8px;
         }
@@ -20,6 +22,7 @@
         width: fit-content;
         padding: 0 5%;
         margin: 0 auto;
+        box-sizing: border-box;
 
         .homepage-links {
             display: flex;

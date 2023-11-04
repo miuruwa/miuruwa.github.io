@@ -26,12 +26,23 @@ function Block (item) {
     return <ButtonBlock key={nanoid()}>
         {
             item.map(item => {
+                if (item.repoID === "menu") {
+                    return
+                }
                 const bindState = () => {
                     setPage(item.repoID)
                     insertUrlParameter("id", item.repoID)
                 }
 
-                return <Button key={nanoid()} icon={item.icon} label={item.label[toolkit.settings.language]} bindState={bindState} />
+                const props = {
+                    icon:item.icon,
+                    label:item.label[toolkit.settings.language],
+                    bindState: bindState
+                }
+
+                console.log(item.label[toolkit.settings.language])
+
+                return <Button key={nanoid()} {...props} />
             })
         }
     </ButtonBlock>
