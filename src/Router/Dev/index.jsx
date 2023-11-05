@@ -12,6 +12,24 @@ import { useToolKit } from "@webx/toolkit"
 import DevArt from "./DevArt"
 
 
+function Mobile () {
+    return <div className="links-wrapper">
+        <Description />
+        <DevArt />
+        <Links />
+    </div>
+}
+
+function Desktop () {
+    return <div className="links-wrapper desktop">
+        <div className="links-content">
+            <Description />
+            <Links />
+        </div>
+        <DevArt />
+    </div>
+}
+
 export default function () {
     const toolkit = useToolKit()
 
@@ -20,11 +38,7 @@ export default function () {
             document.title = `${languages[toolkit.settings.language].title} / miuruwa`
         }, []
     )
-    return <>
-        <div className="links-wrapper">
-            <Description />
-            <DevArt />
-            <Links />
-        </div>
-    </>
+    const IS_DESKTOP = toolkit.settings.windowWidth >= 768
+
+    return IS_DESKTOP ? <Desktop /> : <Mobile />
 }

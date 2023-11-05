@@ -1,3 +1,4 @@
+import { CardBlock } from "@webx/forms"
 import {
     useToolKit
 } from "@webx/toolkit"
@@ -14,13 +15,15 @@ export default function () {
         <h3>
             {actualLanguage.title}
         </h3>
-        <p>
-            {actualLanguage.short}
-            <br />
-            {actualLanguage.hobby}
-        </p>
-        <p>
-            {actualLanguage.pasta}
-        </p>
+        <CardBlock>
+            <p>
+                {actualLanguage.short}
+                <br />
+                {actualLanguage.hobby}
+            </p>
+            <p>
+                {actualLanguage.pasta}
+            </p>
+        </CardBlock>
     </>
 }

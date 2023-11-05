@@ -1,4 +1,4 @@
-import Illustration from "~/media/dev.png"
+import Illustration from "~/media/devart.png"
 
 export default function () {
     return <img src={Illustration} />
