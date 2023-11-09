@@ -6,9 +6,8 @@ import {
     CardBlock, Button
 } from "@webx/forms"
 
-import CacheApp from "./CacheApp"
-import UpdateCacheButton from "./UpdateCacheButton"
-import LanguageDropdown from "./LanguageDropdown"
+import Caching from "./Caching"
+import Language from "./Language"
 import languages from "./languages"
 
 import "./stylesheet.scss"
@@ -44,24 +43,8 @@ export default function () {
                 <h6>
                     {actualLanguage.labels[0]}
                 </h6>
-                <label>
-                    <p>
-                        {actualLanguage.language}
-                    </p>
-                    <LanguageDropdown />
-                </label>
-                <label>
-                    <p>
-                        {actualLanguage.offline.tumbler}
-                    </p>
-                    <CacheApp />
-                </label>
-                <label>
-                    <p>
-                        <></>
-                    </p>
-                    <UpdateCacheButton />
-                </label>
+                <Language />
+                <Caching />
             </div>
             <OptionsBlock />
         </CardBlock>

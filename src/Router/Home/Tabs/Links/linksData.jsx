@@ -1,5 +1,4 @@
 import CartifyIcon from "@webx/icons/CartifyIcon"
-import NotesIcon from "@webx/icons/NotesIcon"
 import VKLogoIcon from "@webx/icons/VKLogoIcon"
 import TelegramLogo from "@webx/icons/TelegramLogoIcon"
 import GithubLogo from "@webx/icons/GithubLogoIcon"
@@ -14,14 +13,6 @@ export default [
             eng: "Cartify"
         },
         path: "/cartify"
-    },
-    {
-        icon: <NotesIcon />,
-        title: {
-            ru: "Заметки",
-            eng: "Notes"
-        },
-        path: "/notes"
     },
     {
         icon: <GithubLogo />,

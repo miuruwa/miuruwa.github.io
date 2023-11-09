@@ -14,8 +14,9 @@ import LanguageButtonList from "./LanguageButtonList"
 export default function () {
     const toolkit = useToolKit()
 
-    const actualLanguageID = languages.findIndex(item => item.name === toolkit.settings.language)
-    const actualLanguage = languages[~actualLanguageID ? actualLanguageID : 0]
+    const labelTitle = languages.label[toolkit.settings.language]
+    const actualLanguageID = languages.data.findIndex(item => item.name === toolkit.settings.language)
+    const actualLanguage = languages.data[~actualLanguageID ? actualLanguageID : 0]
 
     const buttonProps = {
         theme: "white",
@@ -29,5 +30,10 @@ export default function () {
         children: <Button {...buttonProps} />
     }
 
-    return <Dropdown {...dropdownProps} />
+    return <label>
+        <p>
+            {labelTitle}
+        </p>
+        <Dropdown {...dropdownProps} />
+    </label>
 }
