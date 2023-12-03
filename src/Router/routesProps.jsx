@@ -3,6 +3,7 @@ import {
 } from "react-router-dom"
 
 import Home from "./Home"
+import UnsupportedLanguage from "./UnsupportedLanguage"
 import Language from "./Language"
 import NotFound from "./NotFound"
 import Map from "./Map"
@@ -69,6 +70,11 @@ export default [
         path: "/language",
         exact: true,
         element: <Language />
+    },
+    {
+        path: "/unsupported",
+        exact: true,
+        element: <UnsupportedLanguage />
     },
     {
         path: "/dev",
