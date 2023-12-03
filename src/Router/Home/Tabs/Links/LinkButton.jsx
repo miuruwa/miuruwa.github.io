@@ -2,9 +2,10 @@ import {
     Button
 } from "@webx/forms"
 import { useToolKit } from "@webx/toolkit"
+import { Fragment } from "react"
 
 
-export default function ({ icon, title, link, path }) {
+export default function ({ icon, title, link, path, blockAtChina }) {
     const toolkit = useToolKit()
 
     const buttonProps = {
@@ -18,6 +19,10 @@ export default function ({ icon, title, link, path }) {
             }
             window.location.pathname = path
         }
+    }
+
+    if (blockAtChina && toolkit.settings.language === "prc") {
+        return <Fragment />
     }
 
     return <Button {...buttonProps} />

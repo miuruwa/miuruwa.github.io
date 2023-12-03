@@ -10,7 +10,8 @@ export default [
         icon: <CartifyIcon />,
         title: {
             ru: "Калькулятор покупок",
-            eng: "Cartify"
+            eng: "Cartify",
+            prc: "购物计算器"
         },
         path: "/cartify"
     },
@@ -20,13 +21,15 @@ export default [
             ru: "GitHub",
             eng: "GitHub"
         },
+        blockAtChina: true,
         link: "https://github.com/miuruwa"
     },
     {
         icon: <VKLogoIcon />,
         title: {
             ru: "ВКонтакте",
-            eng: "VK"
+            eng: "VK",
+            prc: "VK"
         },
         link: "https://vk.com/miuruwa"
     },
@@ -36,6 +39,7 @@ export default [
             ru: "ArtStation",
             eng: "ArtStation"
         },
+        blockAtChina: true,
         link: "https://www.artstation.com/miuruwa"
     },
     {
@@ -44,6 +48,7 @@ export default [
             ru: "Телеграм",
             eng: "Telegram"
         },
+        blockAtChina: true,
         link: "https://t.me/miuruwa"
     },
     {
@@ -52,6 +57,7 @@ export default [
             ru: "X / Твиттер",
             eng: "X / Twitter"
         },
+        blockAtChina: true,
         link: "https://x.com/miuruwa_"
     }
 ]

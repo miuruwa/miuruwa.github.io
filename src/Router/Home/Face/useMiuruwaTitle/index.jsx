@@ -1,5 +1,5 @@
 import {
-    createRef, useState
+    createRef, Fragment, useState
 } from "react"
 
 import {
@@ -13,6 +13,24 @@ import titleData from "./titleData.json"
 import "./stylesheet.scss"
 
 
+function SpanSpan ({children, className, justifyContent}) {
+    const toolkit = useToolKit()
+
+    const props = {
+        children: <span children={children}/>,
+        className: className,
+        style: {
+            justifyContent: justifyContent
+        }
+    }
+
+    if (toolkit.settings.language === "prc") {
+        return <Fragment />
+    }
+
+    return <span {...props } />
+}
+
 export default function () {
     const toolkit = useToolKit()
     const title = createRef()
@@ -20,7 +38,6 @@ export default function () {
 
     const [state, setState] = useState(true);
     const spanClassName = state ? "separator hidden" : "separator"
-    const logoClassName = state ? "logo-span show" : "logo-span"
 
     async function titleAnimation() {
         const titleContent = title.current
@@ -45,30 +62,15 @@ export default function () {
     return [
         titleAnimation,
         <div className="homepage-title">
-            <span className={logoClassName}>
-                <DevIcon />
-            </span>
-            <span className={spanClassName} style={
-                {
-                    justifyContent: "right"
-                }
-            }>
-                <span>
-                    【
-                </span>
-            </span>
+            <SpanSpan className={spanClassName} justifyContent="right">
+                【
+            </SpanSpan>
             <span ref={title} className="homepage-text">
                 {languageTitleData[languageTitleData.length - 1].title}
             </span>
-            <span className={spanClassName} style={
-                {
-                    justifyContent: "left"
-                }
-            }>
-                <span>
-                    】
-                </span>
-            </span>
+            <SpanSpan className={spanClassName} justifyContent="left">
+                】
+            </SpanSpan>
         </div>
     ]
 }

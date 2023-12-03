@@ -92,5 +92,28 @@
             "title": "miuruwa",
             "timeout": 0
         }
+    ],
+    "prc": [
+        {
+            "title": "欢迎来到",
+            "timeout": 800
+        },
+        {
+            "title": "mi迎来到",
+            "timeout": 80,
+            "hideSpan": true
+        },
+        {
+            "title": "miu来到",
+            "timeout": 80
+        },
+        {
+            "title": "miuru到",
+            "timeout": 80
+        },
+        {
+            "title": "miuruwa",
+            "timeout": 0
+        }
     ]
 }
