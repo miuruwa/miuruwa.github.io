@@ -32,7 +32,8 @@ export default function () {
         theme: "white",
         onClick: () => {
             toolkit.settings.language = language
-            window.location.href = window.localStorage.getItem("get-cache")
+            const path = window.localStorage.getItem("get-cache")
+            window.location.href = path || "https://miuruwa.ru/home"
         }
     }
 

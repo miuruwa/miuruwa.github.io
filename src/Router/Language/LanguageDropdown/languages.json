@@ -1,7 +1,7 @@
 [
     {
         "name": "unset",
-        "title": "Не выбрано / Unselect"
+        "title": "Unset"
     },
     {
         "name": "eng",
@@ -10,5 +10,10 @@
     {
         "name": "ru",
         "title": "Русский"
+    },
+    {
+        "name": "prc",
+        "title": "中国人",
+        "hidden": true
     }
 ]

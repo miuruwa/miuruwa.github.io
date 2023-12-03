@@ -12,14 +12,20 @@ import LanguageDropdown from "./LanguageDropdown"
 import "./stylesheet.scss"
 
 import {
-    LanguageContext
+    LanguageContext, useLanguage
 } from "./Context"
 import { CardBlock } from "@webx/forms"
 import languages from "./languages"
 
+function Label () {
+    const [language, _] = useLanguage()
+
+    return <p>
+        {languages[language].language}
+    </p>
+}
 
 export default function () {
-    const toolkit = useToolKit()
 
     useEffect(
         () => {
@@ -29,12 +35,10 @@ export default function () {
 
     return <div className="language">
         <LanguageContext>
-            <Headline />
             <CardBlock className="card-block">
+                <Headline />
                 <label>
-                    <p>
-                        {languages[toolkit.settings.language].language}
-                    </p>
+                    <Label />
                     <LanguageDropdown />
                 </label>
                 <HomeButton />

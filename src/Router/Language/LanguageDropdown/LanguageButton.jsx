@@ -1,6 +1,7 @@
 import {
     Button
 } from "@webx/forms"
+import { Fragment } from "react"
 
 import {
     useLanguage
@@ -8,7 +9,7 @@ import {
 
 
 export default function ({ selectedLanguage }) {
-    const [_, setLanguage] = useLanguage()
+    const [target, setLanguage] = useLanguage()
 
     const props = {
         theme: "transparent",
@@ -16,6 +17,14 @@ export default function ({ selectedLanguage }) {
         onClick: () => {
             setLanguage(selectedLanguage.name)
         }
+    }
+
+    if (selectedLanguage.hidden) {
+        return <Fragment />
+    }
+
+    if (selectedLanguage.name == "unset" ) {
+        return <Fragment />
     }
 
     return <Button {...props} />

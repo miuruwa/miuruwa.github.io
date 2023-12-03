@@ -1,5 +1,10 @@
+function Content () {
+    return <>
+        Выбор языка / <br /> Language choice
+        {/* / <br /> 选择语言 */}
+    </>
+}
+
 export default function () {
-    return <h1>
-        Перед началом нужно выбрать язык / <br /> Before start you need to select language
-    </h1>
+    return <h2 children={<Content />} />
 }
