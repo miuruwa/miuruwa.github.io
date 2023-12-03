@@ -13,6 +13,7 @@ export default [
             ru: "GitHub",
             eng: "GitHub"
         },
+        blockAtChina: true,
         link: "https://github.com/miuruwa"
     },
     {
@@ -29,6 +30,7 @@ export default [
             ru: "ArtStation",
             eng: "ArtStation"
         },
+        blockAtChina: true,
         link: "https://www.artstation.com/miuruwa"
     },
     {
@@ -37,6 +39,7 @@ export default [
             ru: "Телеграм",
             eng: "Telegram"
         },
+        blockAtChina: true,
         link: "https://t.me/miuruwa"
     },
     {
@@ -45,6 +48,7 @@ export default [
             ru: "X / Твиттер",
             eng: "X / Twitter"
         },
+        blockAtChina: true,
         link: "https://x.com/miuruwa_"
     }
 ]
