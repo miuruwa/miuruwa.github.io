@@ -1,13 +1,20 @@
 {
     "label": {
         "ru": "Выбранный язык",
-        "eng": "Selected language"
+        "eng": "Selected language",
+        "prc": "所选语言"
     },
     "data": [
         {
             "icon": "🇺🇸",
             "name": "eng",
             "title": "English"
+        },
+        {
+            "icon": "🇨🇳",
+            "name": "prc",
+            "title": "中国人",
+            "hidden": true
         },
         {
             "icon": "🇷🇺",

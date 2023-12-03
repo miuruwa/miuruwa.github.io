@@ -1,3 +1,5 @@
+import { Fragment } from "react"
+
 import { 
     useToolKit
 } from "@webx/toolkit"
@@ -16,6 +18,10 @@ export default function ({ selectedLanguage }) {
         onClick: () => {
             toolkit.settings.language = selectedLanguage.name
         }
+    }
+
+    if (selectedLanguage.hidden) {
+        return <Fragment />
     }
 
     return <Button {...props} />

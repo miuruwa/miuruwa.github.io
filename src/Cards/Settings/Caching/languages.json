@@ -6,5 +6,9 @@
     "eng": {
         "tumbler": "Cache for offline access",
         "reset": "Update"
+    },
+    "prc": {
+        "tumbler": "离线访问缓存",
+        "reset": "更新缓存"
     }
 }
