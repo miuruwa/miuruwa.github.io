@@ -12,5 +12,12 @@
         "road": "Seems like you are lost. Try going back to a known path.",
         "tryHome": "Or return to home page",
         "button": "Go to home"
+    },
+    "prc": {
+        "title": "未找到",
+        "headline": "迷路了，旅行者？",
+        "road": "看来你迷路了。 尝试返回已知路径。",
+        "tryHome": "或返回首页",
+        "button": "去首页"
     }
 }
