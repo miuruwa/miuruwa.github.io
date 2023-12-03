@@ -3,37 +3,34 @@
         {
             "title": {
                 "ru": "главная",
-                "eng": "homepage"
+                "eng": "homepage",
+                "prc": "首页"
             },
             "link": "/home"
         },
         {
             "title": {
                 "ru": "проекты",
-                "eng": "repositories"
+                "eng": "repositories",
+                "prc": "项目"
             },
             "link": "/repos"
         },
         {
             "title": {
                 "ru": "разработчик",
-                "eng": "developer"
+                "eng": "developer",
+                "prc": "关于我"
             },
             "link": "/dev"
         },
         {
             "title": {
                 "ru": "калькулятор покупок",
-                "eng": "cartify"
+                "eng": "cartify",
+                "prc": "购物计算器"
             },
             "link": "/cartify"
-        },
-        {
-            "title": {
-                "ru": "заметки",
-                "eng": "notes"
-            },
-            "link": "/notes"
         }
     ],
     "title": {
