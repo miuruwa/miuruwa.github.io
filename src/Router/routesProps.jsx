@@ -9,6 +9,7 @@ import NotFound from "./NotFound"
 import Map from "./Map"
 import Dev from "./Dev"
 import Repos from "./Repos"
+import TemporaryUnavailable from "./TemporaryUnavailable"
 
 
 function External ({to}) {
@@ -90,5 +91,10 @@ export default [
         path: "/not-found",
         exact: true,
         element: <NotFound />
+    },
+    {
+        path: "/important-thing",
+        exact: true,
+        element: <TemporaryUnavailable />
     },
 ]

@@ -2,7 +2,7 @@ import {
     useToolKit
 } from "@webx/toolkit"
 
-import Illustration from "~/media/risha&nastya.png"
+import Illustration from "/Risha&Nastya.png"
 
 
 export default function () {
