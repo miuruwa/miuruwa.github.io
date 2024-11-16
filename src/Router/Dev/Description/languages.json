@@ -1,19 +1,19 @@
 {
     "ru": {
         "title": "о разработчике",
-        "short": "20 лет, Екатеринбург",
+        "short": "21 год, Екатеринбург",
         "hobby": "Художник & Программист",
         "pasta": "Люблю пряники и горячий чай с лимоном."
     },
     "eng": {
         "title": "about",
-        "short": "20 years old, Yekaterinburg",
+        "short": "21 years old, Yekaterinburg",
         "hobby": "Artist & Programmist",
         "pasta": "I love gingerbreads and hot lemon tea"
     },
     "prc": {
         "title": "关于我",
-        "short": "20 岁, 叶卡捷琳堡",
+        "short": "21 岁, 叶卡捷琳堡",
         "hobby": "我是艺术家和程序员",
         "pasta": "我喜欢姜饼和热柠檬茶"
     }
