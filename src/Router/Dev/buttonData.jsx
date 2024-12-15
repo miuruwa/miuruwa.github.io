@@ -1,6 +1,6 @@
 export default [
     {
-        link: "https://github.com/kensoi",
+        link: "https://github.com/miuruwa",
         children: {
             "ru": "GitHub",
             "eng": "GitHub",
@@ -8,7 +8,7 @@ export default [
         key: 0
     },
     {
-        link: "https://vk.com/miuruwa",
+        link: "https://vk.com/icanseeit_archive",
         children: {
             "ru": "ВКонтакте",
             "eng": "VK",
@@ -24,7 +24,7 @@ export default [
         key: 2
     },
     {
-        link: "https://x.com/miuruwa_",
+        link: "https://x.com/icanseeitch",
         children: {
             "ru": "X / Твиттер",
             "eng": "X / Twitter",

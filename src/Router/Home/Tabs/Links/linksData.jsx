@@ -22,7 +22,7 @@ export default [
             eng: "VK",
             prc: "VK"
         },
-        link: "https://vk.com/miuruwa"
+        link: "https://vk.com/icanseeit_archive"
     },
     {
         icon: <ArtStationLogo />,
@@ -49,6 +49,6 @@ export default [
             eng: "X / Twitter"
         },
         blockAtChina: true,
-        link: "https://x.com/miuruwa_"
+        link: "https://x.com/icanseeit_ch"
     }
 ]
