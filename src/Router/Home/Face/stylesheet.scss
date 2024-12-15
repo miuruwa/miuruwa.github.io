@@ -18,12 +18,45 @@
 
     overflow: hidden;
 
+    box-sizing: border-box;
     user-select: none;
     font-family: 'TT Travels';
     font-weight: bolder;
     font-size: 64px;
 
     position: relative;
+
+    &.mobile {
+        .homepage-title {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 5%;
+            width: 100%;
+            justify-content: center;
+        }
+
+        img {
+            top: 15%;
+            height: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &:not(.mobile) {
+        img {
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            right: 5%;
+        }
+        
+        .homepage-title {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
     
     svg {
         width: 8rem;
@@ -31,10 +64,6 @@
     }
     img {
         position: absolute;
-        right: 5%;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 80%;
         width: auto;
     }
 
@@ -44,9 +73,6 @@
         display: flex;
         align-items: center;
 
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
         width: 75vw;
         height: 77px;
         white-space: nowrap;

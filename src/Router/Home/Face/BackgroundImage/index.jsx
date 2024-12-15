@@ -1,4 +1,4 @@
-import useProgressiveImg from "./useProgressiveImg";
+import useProgressiveImg from "../useProgressiveImg";
 import "./stylesheet.scss"
 
 

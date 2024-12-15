@@ -7,15 +7,6 @@ import ArtStationLogo from "@webx/icons/ArtStationLogo"
 
 export default [
     {
-        icon: <CartifyIcon />,
-        title: {
-            ru: "Калькулятор покупок",
-            eng: "Cartify",
-            prc: "购物计算器"
-        },
-        path: "/cartify"
-    },
-    {
         icon: <GithubLogo />,
         title: {
             ru: "GitHub",
