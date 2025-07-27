@@ -2,7 +2,7 @@ import { Fragment } from "react"
 
 import { 
     useToolKit
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 import {
     Button

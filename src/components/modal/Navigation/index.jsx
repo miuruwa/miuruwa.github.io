@@ -1,5 +1,5 @@
 import { ButtonBlock } from "@ui"
-import { useToolKit } from "@webx/toolkit"
+import { useToolKit } from "@shared/toolkit"
 import ButtonList from "./ButtonList"
 import data from "./data"
 

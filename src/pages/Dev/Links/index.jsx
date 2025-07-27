@@ -1,4 +1,4 @@
-import { useToolKit } from "@webx/toolkit";
+import { useToolKit } from "@shared/toolkit";
 import { nanoid } from "nanoid";
 import LinkButton from "./LinkButton";
 import linksData from "./linksData";

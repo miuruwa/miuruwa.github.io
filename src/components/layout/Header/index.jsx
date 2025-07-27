@@ -1,6 +1,6 @@
 import {
     useToolKit
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 import Desktop from "./Layout/Desktop"
 import Mobile from "./Layout/Mobile"

@@ -1,6 +1,6 @@
 import {
     useToolKit
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 import Icon from "@icons/MenuIcon"
 import "./stylesheet.scss"

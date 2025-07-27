@@ -4,7 +4,7 @@ import {
 
 import {
     useToolKit
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 import Illustration from "./Illustration"
 import Message from "./Message"

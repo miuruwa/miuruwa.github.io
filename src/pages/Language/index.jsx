@@ -2,7 +2,7 @@ import {
     useEffect
 } from "react"
 
-import { useToolKit } from "@webx/toolkit"
+import { useToolKit } from "@shared/toolkit"
 
 
 import Headline from "./Headline"

@@ -2,7 +2,7 @@ import {
     useEffect
 } from "react"
 
-import { useToolKit } from "@webx/toolkit"
+import { useToolKit } from "@shared/toolkit"
 
 import Face from "./Face"
 import Tabs from "./Tabs"

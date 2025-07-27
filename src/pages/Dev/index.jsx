@@ -8,7 +8,7 @@ import Links from "./Links"
 
 import "./stylesheet.scss"
 
-import { useToolKit } from "@webx/toolkit"
+import { useToolKit } from "@shared/toolkit"
 import DevArt from "./DevArt"
 
 

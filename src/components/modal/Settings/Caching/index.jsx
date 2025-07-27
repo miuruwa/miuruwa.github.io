@@ -1,4 +1,4 @@
-import { useToolKit } from "@webx/toolkit"
+import { useToolKit } from "@shared/toolkit"
 
 import Tumbler from "./Tumbler"
 import Button from "./Button"

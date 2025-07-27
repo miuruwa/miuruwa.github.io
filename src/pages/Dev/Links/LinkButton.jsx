@@ -1,7 +1,7 @@
 import {
     Button
 } from "@ui"
-import { useToolKit } from "@webx/toolkit"
+import { useToolKit } from "@shared/toolkit"
 import { Fragment } from "react"
 
 

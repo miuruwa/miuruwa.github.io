@@ -1,7 +1,7 @@
 import { CardBlock } from "@ui"
 import {
     useToolKit
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 import languages from "./languages"
 

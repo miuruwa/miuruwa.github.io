@@ -2,7 +2,7 @@ import "./stylesheet.scss"
 
 import {
     useToolKit
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 function Card () {
     const toolkit = useToolKit()

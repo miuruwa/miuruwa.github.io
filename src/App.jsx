@@ -1,6 +1,6 @@
 import {
     ToolKitContext
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 import Footer from "@layout/Footer"
 import Header from "@layout/Header"

@@ -4,7 +4,7 @@ import {
 
 import {
     useToolKit
-} from "@webx/toolkit"
+} from "@shared/toolkit"
 
 import Button from "./Button"
 import buttonData from "./buttonData"
