@@ -2,7 +2,7 @@ import {
     useToolKit
 } from "@webx/toolkit"
 
-import Icon from "@webx/icons/SettingsIcon"
+import Icon from "@icons/SettingsIcon"
 import Сard from "@modal/Settings"
 import languages from "./languages"
 

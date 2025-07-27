@@ -1,4 +1,4 @@
-import KeyboardArrowDownIcon from "@webx/icons/AddIcon";
+import KeyboardArrowDownIcon from "@icons/AddIcon";
 
 export function Button ({
     icon, title, isDropdown, xstyle, children, theme="usual", className, alt,

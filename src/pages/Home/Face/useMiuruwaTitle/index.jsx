@@ -6,7 +6,7 @@ import {
     useToolKit
 } from "@webx/toolkit"
 
-import DevIcon from "@webx/icons/DevIcon"
+import DevIcon from "@icons/DevIcon"
 import wait from "../../wait"
 import titleData from "./titleData.json"
 

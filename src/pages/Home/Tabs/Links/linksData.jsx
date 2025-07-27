@@ -1,9 +1,9 @@
-import CartifyIcon from "@webx/icons/CartifyIcon"
-import VKLogoIcon from "@webx/icons/VKLogoIcon"
-import TelegramLogo from "@webx/icons/TelegramLogoIcon"
-import GithubLogo from "@webx/icons/GithubLogoIcon"
-import XTwitterLogo from "@webx/icons/XTwitterLogoIcon"
-import ArtStationLogo from "@webx/icons/ArtStationLogo"
+import CartifyIcon from "@icons/CartifyIcon"
+import VKLogoIcon from "@icons/VKLogoIcon"
+import TelegramLogo from "@icons/TelegramLogoIcon"
+import GithubLogo from "@icons/GithubLogoIcon"
+import XTwitterLogo from "@icons/XTwitterLogoIcon"
+import ArtStationLogo from "@icons/ArtStationLogo"
 
 export default [
     {

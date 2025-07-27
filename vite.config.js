@@ -35,6 +35,9 @@ const config = defineConfig({
                 find: '@ui', replacement: path.resolve(__dirname, 'src/components/ui')
             },
             {
+                find: '@icons', replacement: path.resolve(__dirname, 'src/@icons')
+            },
+            {
                 find: '~', replacement: path.resolve(__dirname, 'src')
             }
         ]

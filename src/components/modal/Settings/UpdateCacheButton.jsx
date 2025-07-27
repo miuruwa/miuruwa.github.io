@@ -6,7 +6,7 @@ import {
     Button
 } from "@ui"
 
-import UpdateCacheIcon from "@webx/icons/UpdateCacheIcon"
+import UpdateCacheIcon from "@icons/UpdateCacheIcon"
 import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'
 import EnableOfflineCard from "../EnableOfflineCard"
 import languages from "./languages"

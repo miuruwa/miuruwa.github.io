@@ -2,7 +2,7 @@ import {
     useToolKit
 } from "@webx/toolkit"
 
-import Icon from "@webx/icons/HeaderLogoIcon"
+import Icon from "@icons/HeaderLogoIcon"
 
 import "./stylesheet.scss"
 

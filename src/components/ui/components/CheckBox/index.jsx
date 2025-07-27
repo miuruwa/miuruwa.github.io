@@ -2,7 +2,7 @@ import {
     useState
 } from 'react'
 
-import DoneIcon from "@webx/icons/AddIcon";
+import DoneIcon from "@icons/AddIcon";
 
 
 export function CheckBox ({
