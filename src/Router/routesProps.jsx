@@ -7,13 +7,6 @@ import UnsupportedLanguage from "./UnsupportedLanguage"
 import Language from "./Language"
 import NotFound from "./NotFound"
 import Dev from "./Dev"
-import TemporaryUnavailable from "./TemporaryUnavailable"
-
-
-function External ({to}) {
-    window.location.href = to
-    return null
-}
 
 export default [
     {
@@ -54,10 +47,5 @@ export default [
         path: "/not-found",
         exact: true,
         element: <NotFound />
-    },
-    {
-        path: "/important-thing",
-        exact: true,
-        element: <TemporaryUnavailable />
     },
 ]
