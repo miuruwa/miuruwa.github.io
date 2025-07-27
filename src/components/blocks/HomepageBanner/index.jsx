@@ -1,4 +1,4 @@
-import BackgroundImage from "./BackgroundImage"
+import BackgroundImage from "@blocks/BackgroundImage"
 import Title from "@blocks/Title"
 import RishaAndNastya from "../RishaAndNastya"
 
