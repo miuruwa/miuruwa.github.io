@@ -1,4 +1,4 @@
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"
+import KeyboardArrowDownIcon from "@webx/icons/AddIcon";
 
 export function Button ({
     icon, title, isDropdown, xstyle, children, theme="usual", className, alt,

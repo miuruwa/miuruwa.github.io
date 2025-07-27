@@ -24,32 +24,12 @@ export default [
         element: <Navigate to="/home" />
     },
     {
-        path: "/cart-calc",
-        exact: true,
-        element: <External to="https://miuruwa.github.io/cartify" />
-    },
-    {
         path: "/about",
         exact: true,
         element: <Navigate to="/dev" />
     },
     {
-        path: "/navigate",
-        exact: true,
-        element: <Navigate to="/map" />
-    },
-    {
-        path: "/navigator",
-        exact: true,
-        element: <Navigate to="/map" />
-    },
-    {
-        path: "/godmode",
-        exact: true,
-        element: <Navigate to="/map" />
-    },
-    {
-        path: "/god-mode",
+        path: "/navigation",
         exact: true,
         element: <Navigate to="/map" />
     },
@@ -61,11 +41,6 @@ export default [
         path: "/home",
         exact: true,
         element: <Home />
-    },
-    {
-        path: "/map",
-        exact: true,
-        element: <Map />
     },
     {
         path: "/language",

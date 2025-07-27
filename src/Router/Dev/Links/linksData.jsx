@@ -22,16 +22,7 @@ export default [
             ru: "ВКонтакте",
             eng: "VK"
         },
-        link: "https://vk.com/miuruwa"
-    },
-    {
-        icon: <ArtStationLogo />,
-        title: {
-            ru: "ArtStation",
-            eng: "ArtStation"
-        },
-        blockAtChina: true,
-        link: "https://www.artstation.com/miuruwa"
+        link: "https://vk.com/miuruwax8"
     },
     {
         icon: <TelegramLogo />,
@@ -40,7 +31,7 @@ export default [
             eng: "Telegram"
         },
         blockAtChina: true,
-        link: "https://t.me/miuruwa"
+        link: "https://t.me/miuruwax8"
     },
     {
         icon: <XTwitterLogo />,
@@ -49,6 +40,6 @@ export default [
             eng: "X / Twitter"
         },
         blockAtChina: true,
-        link: "https://x.com/miuruwa_"
+        link: "https://x.com/miuruwax8"
     }
 ]

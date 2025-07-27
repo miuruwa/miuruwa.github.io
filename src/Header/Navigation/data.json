@@ -1,22 +1,6 @@
 [
     {
         "name": {
-            "ru": "проекты",
-            "eng": "repositories",
-            "prc": "项目"
-        },
-        "href": "/repos"
-    },
-    {
-        "name": {
-            "ru": "калькулятор покупок",
-            "eng": "cartify",
-            "prc": "购物计算器"
-        },
-        "href": "/cartify"
-    },
-    {
-        "name": {
             "ru": "обо мне",
             "eng": "about",
             "prc": "关于我"
