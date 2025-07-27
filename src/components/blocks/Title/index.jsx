@@ -9,8 +9,6 @@ import {
 import wait from "@utils/wait"
 import languageData from "@shared/languages"
 
-import "./stylesheet.scss"
-
 const Title = () => {
     const toolkit = useToolKit()
     const title = createRef()
@@ -35,7 +33,7 @@ const Title = () => {
         titleAnimation()
     }, [])
 
-    return <div className="homepage-title" ref={title}></div>
+    return <h1 ref={title}></h1>
 }
 
 export default Title;
