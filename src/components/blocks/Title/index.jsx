@@ -35,11 +35,7 @@ const Title = () => {
         titleAnimation()
     }, [])
 
-    return <div className="homepage-title">
-        <span ref={title} className="homepage-text">
-            {blockData[blockData.length - 1].title}
-        </span>
-    </div>
+    return <div className="homepage-title" ref={title}></div>
 }
 
 export default Title;

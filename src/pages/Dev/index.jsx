@@ -5,27 +5,35 @@ import { useToolKit } from "@shared/toolkit"
 import Links from "@blocks/Links"
 import Meta from "@layout/Meta"
 import DevArt from "/img/DevArt.png"
-
-import "./stylesheet.scss"
+import styles from "./Dev.module.scss";
+import { useNavigate } from "react-router-dom"
+import PageNavigation from "@blocks/PageNavigation"
 
 const Dev = () => {
+    const {
+        root, devContent, infoBlock
+    } = styles;
     const toolkit = useToolKit()
     const isMobile = useIsMobile(768);
 
-    return <Meta title={languageData[toolkit.settings.language].about.title}>
-        <div className={isMobile ? "links-wrapper" : "links-wrapper desktop"}>
+    const pageData = languageData[toolkit.settings.language].about
+
+    return <Meta title={pageData.title}>
+        <div className={root}>
             {
-                isMobile ? <>
+                isMobile ? <div className={infoBlock}>
+                    <PageNavigation />
                     <AboutDev />
                     <img src={DevArt} />
                     <Links />
-                </> : <>
-                    <div className="links-content">
+                </div> : <div className={devContent}>
+                    <img src={DevArt} />
+                    <div className={infoBlock}>
+                        <PageNavigation />
                         <AboutDev />
                         <Links />
                     </div>
-                    <img src={DevArt} />
-                </>
+                </div>
             }
         </div>
     </Meta>
