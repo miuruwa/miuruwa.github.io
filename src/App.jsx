@@ -2,8 +2,6 @@ import {
     ToolKitContext
 } from "@shared/toolkit"
 
-import Footer from "@layout/Footer"
-import Header from "@layout/Header"
 import routesConfig from "@shared/routeConfig"
 import {
     nanoid
@@ -21,7 +19,6 @@ import "./stylesheet.scss"
 
 const App = () => {
     return <ToolKitContext>
-        <Header />
         <BrowserRouter>
             <Routes>
                 {
@@ -31,7 +28,6 @@ const App = () => {
                 }
             </Routes>
         </BrowserRouter>
-        <Footer />
     </ToolKitContext>
 }
 
