@@ -1,23 +1,17 @@
-import { useToolKit } from "@shared/toolkit"
 import BackgroundImage from "./BackgroundImage"
 import Content from "./Content"
 import DevArt from "./DevArt"
 
 import "./stylesheet.scss"
+import { useIsMobile } from "hooks/useIsMobile"
 
 
 export default function () {
-    const toolkit = useToolKit()
-    const IS_DESKTOP = toolkit.settings.windowWidth > 768
+    const isMobile = useIsMobile(768);
 
-    const props = {
-        className: IS_DESKTOP ? "homepage-face": "homepage-face mobile",
-        children: <>
-            <BackgroundImage />
-            <Content />
-            <DevArt />
-        </>
-    }
-
-    return <div {...props} />
+    return <div className={isMobile ? "homepage-face mobile" : "homepage-face"}>
+        <BackgroundImage />
+        <Content />
+        <DevArt />
+    </div>
 }
