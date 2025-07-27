@@ -8,7 +8,7 @@ import {
 
 import UpdateCacheIcon from "@icons/UpdateCacheIcon"
 import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'
-import EnableOfflineCard from "../EnableOfflineCard"
+import EnableOfflineCard from "@blocks/EnableOfflineCard"
 import languages from "./languages"
 
 

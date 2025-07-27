@@ -13,6 +13,7 @@ import {
     Route,
     Routes
 } from "react-router-dom"
+import Modal from "@ui/modal"
 
 import "./scss/stylesheet.scss"
 import "./stylesheet.scss"
@@ -28,6 +29,7 @@ const App = () => {
                 }
             </Routes>
         </BrowserRouter>
+        <Modal />
     </ToolKitContext>
 }
 

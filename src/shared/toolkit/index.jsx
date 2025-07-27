@@ -19,8 +19,6 @@ import {
     getScreenDeviceType
 } from "./screen-device-type"
 
-import CardWrapper from "@webx/card"
-
 const getToolKitContext = createContext()
 
 const createPartition = (state, dispatch, Behaviour) => {
@@ -97,7 +95,6 @@ function ToolKitContext ({children}) {
         <div className="index">
             {children}
         </div>
-        <CardWrapper />
     </getToolKitContext.Provider>
 }
 
