@@ -1,29 +1,17 @@
-import {
-    useEffect
-} from "react"
-
 import { useToolKit } from "@shared/toolkit"
 
-import Face from "./Face"
-import Tabs from "./Tabs"
+import HomepageBanner from "@blocks/HomepageBanner"
+import languagesData from "@shared/languages"
+import Meta from "@layout/Meta"
 
-import {
-    removeUrlParameter
-} from "~/utils/URLParameters"
-import languages from "./languages"
+const Home = () => {
+    const toolkit = useToolKit();
 
+    const pageData = languagesData[toolkit.settings.language].homepage
 
-export default function () {
-    const toolkit = useToolKit()
-
-    useEffect(
-        () => {
-            document.title = `${languages[toolkit.settings.language].title} / miuruwa`
-            removeUrlParameter("id")
-        }, []
-    )
-    return <>
-        <Face />
-        <Tabs />
-    </>
+    return <Meta title={pageData.title}>
+        <HomepageBanner />
+    </Meta>
 }
+
+export default Home;

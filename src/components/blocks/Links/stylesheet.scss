@@ -1,0 +1,43 @@
+.webx.screen-device-mobile {
+    .about-dev-links {
+        gap: 8px;
+        .x-button {
+            width: 100%;
+            .x-button-title {
+                font-size: 20px!important;
+            }
+        }
+    }
+}    
+.webx:not(.screen-device-mobile) {
+    .about-dev-links {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+
+        .x-button {
+            width: 48px;
+            height: 48px;
+            gap: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+
+            .x-button-icon {
+                width: 32px;
+                height: 32px;
+
+                svg {
+                    width: 32px;
+                    height: 32px;
+                    fill: white!important;
+                }
+            }
+            .x-button-title {
+                display: none;
+            }
+        }
+    }
+}

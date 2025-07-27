@@ -4,7 +4,7 @@ import {
 
 import Icon from "@icons/MenuIcon"
 import "./stylesheet.scss"
-import languages from "./languages"
+import languagesData from "@shared/languages"
 
 
 export default function ({onClick}) {
@@ -12,7 +12,7 @@ export default function ({onClick}) {
 
     const divProps = {
         className: "header-navigation-button",
-        title: languages[toolkit.settings.language],
+        title: languagesData[toolkit.settings.language].header.navigation,
         children: <Icon />,
         onClick: onClick
     }

@@ -6,7 +6,7 @@ import Icon from "@icons/HeaderLogoIcon"
 
 import "./stylesheet.scss"
 
-import languages from "./languages"
+import languagesData from "@shared/languages"
 
 
 export default function ({Mobile}) {
@@ -15,7 +15,7 @@ export default function ({Mobile}) {
     const divProps = {
         children: <Icon />,
         className: Mobile ? "header-home mobile" : "header-home",
-        title: languages[toolkit.settings.language],
+        title: languagesData[toolkit.settings.language].header.home,
         onClick: () => {
             window.location.pathname = "/home"
         }

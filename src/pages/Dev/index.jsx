@@ -1,42 +1,34 @@
-import {
-    useEffect
-} from "react"
-
-import Description from "./Description"
-import languages from "./Description/languages"
-import Links from "./Links"
+import AboutDev from "@blocks/AboutDev"
+import languageData from "@shared/languages"
+import { useIsMobile } from "@hooks/useIsMobile"
+import { useToolKit } from "@shared/toolkit"
+import Links from "@blocks/Links"
+import Meta from "@layout/Meta"
+import DevArt from "/img/DevArt.png"
 
 import "./stylesheet.scss"
-
-import { useToolKit } from "@shared/toolkit"
-import DevArt from "./DevArt"
-import { useIsMobile } from "hooks/useIsMobile"
 
 const Dev = () => {
     const toolkit = useToolKit()
     const isMobile = useIsMobile(768);
 
-    useEffect(
-        () => {
-            document.title = `${languages[toolkit.settings.language].title} / miuruwa`
-        }, []
-    )
-
-    return <div className={isMobile ? "links-wrapper" : "links-wrapper desktop"}>
-        {
-            isMobile ? <>
-                <Description />
-                <DevArt />
-                <Links />
-            </> : <>
-                <div className="links-content">
-                    <Description />
+    return <Meta title={languageData[toolkit.settings.language].about.title}>
+        <div className={isMobile ? "links-wrapper" : "links-wrapper desktop"}>
+            {
+                isMobile ? <>
+                    <AboutDev />
+                    <img src={DevArt} />
                     <Links />
-                </div>
-                <DevArt />
-            </>
-        }
-    </div>
+                </> : <>
+                    <div className="links-content">
+                        <AboutDev />
+                        <Links />
+                    </div>
+                    <img src={DevArt} />
+                </>
+            }
+        </div>
+    </Meta>
 }
 
 export default Dev;

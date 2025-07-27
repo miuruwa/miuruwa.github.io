@@ -29,6 +29,9 @@ const config = defineConfig({
                 find: '@layout', replacement: path.resolve(__dirname, 'src/components/layout')
             },
             {
+                find: '@blocks', replacement: path.resolve(__dirname, 'src/components/blocks')
+            },
+            {
                 find: '@modal', replacement: path.resolve(__dirname, 'src/components/modal')
             },
             {
@@ -39,6 +42,9 @@ const config = defineConfig({
             },
             {
                 find: '@hooks', replacement: path.resolve(__dirname, 'src/hooks')
+            },
+            {
+                find: '@utils', replacement: path.resolve(__dirname, 'src/utils')
             },
             {
                 find: '~', replacement: path.resolve(__dirname, 'src')

@@ -1,28 +1,25 @@
 import {
-    useEffect
-} from "react"
-
-import {
     useToolKit
 } from "@shared/toolkit"
 
-import Illustration from "./Illustration"
-import Message from "./Message"
-import languages from "./languages"
+import NotFoundIllustration from "@blocks/NotFoundIllustration"
+import NotFoundMessage from "@blocks/NotFoundMessage"
+import languages from "@shared/languages"
 
 import "./stylesheet.scss"
+import Meta from "@layout/Meta"
 
-
-export default function () {
+const NotFound = () => {
     const toolkit = useToolKit()
 
-    useEffect(
-        () => {
-            document.title = `${languages[toolkit.settings.language].title} / miuruwa`
-        }, []
-    )
-    return <div className="not-found">
-        <Illustration />
-        <Message />
-    </div>
+    const pageData = languages[toolkit.settings.language].notFound
+
+    return <Meta title={pageData.title}>
+        <div className="not-found">
+            <NotFoundIllustration />
+            <NotFoundMessage />
+        </div>
+    </Meta>
 }
+
+export default NotFound;
