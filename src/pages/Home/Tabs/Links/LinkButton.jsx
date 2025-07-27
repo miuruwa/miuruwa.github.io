@@ -1,6 +1,6 @@
 import {
     Button
-} from "@webx/forms"
+} from "@ui"
 import { useToolKit } from "@webx/toolkit"
 import { Fragment } from "react"
 

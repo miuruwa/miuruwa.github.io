@@ -8,7 +8,7 @@ import {
 
 import {
     Button
-} from "@webx/forms"
+} from "@ui"
 
 import titleLang from "./languages"
 

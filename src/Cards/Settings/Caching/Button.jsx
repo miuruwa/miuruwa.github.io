@@ -4,7 +4,7 @@ import {
 
 import {
     Button
-} from "@webx/forms"
+} from "@ui"
 
 import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'
 import languages from "./languages"

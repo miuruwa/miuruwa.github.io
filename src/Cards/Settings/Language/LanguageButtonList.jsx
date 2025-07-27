@@ -4,7 +4,7 @@ import {
 
 import {
     ButtonBlock
-} from "@webx/forms"
+} from "@ui"
 
 import languages from "./languages"
 

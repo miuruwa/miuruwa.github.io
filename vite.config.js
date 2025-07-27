@@ -26,6 +26,12 @@ const config = defineConfig({
                 find: '@shared', replacement: path.resolve(__dirname, 'src/shared')
             },
             {
+                find: '@layout', replacement: path.resolve(__dirname, 'src/components/layout')
+            },
+            {
+                find: '@ui', replacement: path.resolve(__dirname, 'src/components/ui')
+            },
+            {
                 find: '~', replacement: path.resolve(__dirname, 'src')
             }
         ]

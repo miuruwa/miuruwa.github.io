@@ -6,7 +6,7 @@ import {
 
 import {
     Button
-} from "@webx/forms"
+} from "@ui"
 
 
 export default function ({ selectedLanguage }) {

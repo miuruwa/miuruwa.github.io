@@ -1,5 +1,5 @@
 import { useToolKit } from "@webx/toolkit"
-import { Button } from "@webx/forms"
+import { Button } from "@ui"
 
 
 export default function ({ name, href }) {

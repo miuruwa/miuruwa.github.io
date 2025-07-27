@@ -1,4 +1,4 @@
-import { CardBlock } from "@webx/forms"
+import { CardBlock } from "@ui"
 import {
     useToolKit
 } from "@webx/toolkit"

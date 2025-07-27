@@ -14,7 +14,7 @@ import "./stylesheet.scss"
 import {
     LanguageContext, useLanguage
 } from "./Context"
-import { CardBlock } from "@webx/forms"
+import { CardBlock } from "@ui"
 import languages from "./languages"
 
 function Label () {

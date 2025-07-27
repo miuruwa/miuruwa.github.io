@@ -1,4 +1,4 @@
-import { Button, CardBlock } from "@webx/forms";
+import { Button, CardBlock } from "@ui";
 import "./stylesheet.scss"
 
 

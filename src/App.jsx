@@ -2,8 +2,8 @@ import {
     ToolKitContext
 } from "@webx/toolkit"
 
-import Footer from "./components/layout/Footer"
-import Header from "./components/layout/Header"
+import Footer from "@layout/Footer"
+import Header from "@layout/Header"
 import Router from "@pages"
 
 import "./scss/stylesheet.scss"

@@ -4,7 +4,7 @@ import {
 
 import {
     CardBlock
-} from "@webx/forms"
+} from "@ui"
 
 import HomeButton from "./HomeButton"
 import languages from "../languages"

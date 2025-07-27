@@ -1,6 +1,6 @@
 import {
     Button
-} from "@webx/forms"
+} from "@ui"
 import { Fragment } from "react"
 
 import {

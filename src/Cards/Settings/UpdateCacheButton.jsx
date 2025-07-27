@@ -4,7 +4,7 @@ import {
 
 import {
     Button
-} from "@webx/forms"
+} from "@ui"
 
 import UpdateCacheIcon from "@webx/icons/UpdateCacheIcon"
 import * as serviceWorkerRegistration from '~/serviceWorkerRegistration'

@@ -5,7 +5,7 @@ import {
 import {
     Button,
     Dropdown
-} from "@webx/forms"
+} from "@ui"
 
 import languages from "./languages"
 import LanguageButtonList from "./LanguageButtonList"

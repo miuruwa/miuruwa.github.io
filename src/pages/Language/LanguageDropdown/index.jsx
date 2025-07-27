@@ -1,7 +1,7 @@
 import {
     Button,
     Dropdown
-} from "@webx/forms"
+} from "@ui"
 
 import {
     useLanguage

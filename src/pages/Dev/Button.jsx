@@ -4,7 +4,7 @@ import {
 
 import {
     Button
-} from "@webx/forms"
+} from "@ui"
 
 export default function ({ children, link }) {
     const toolkit = useToolKit()

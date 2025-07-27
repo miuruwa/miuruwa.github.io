@@ -1,4 +1,4 @@
-import { ButtonBlock } from "@webx/forms"
+import { ButtonBlock } from "@ui"
 import { useToolKit } from "@webx/toolkit"
 import ButtonList from "./ButtonList"
 import data from "./data"
