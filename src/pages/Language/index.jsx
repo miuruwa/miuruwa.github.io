@@ -20,7 +20,7 @@ function Label () {
 }
 
 const Language = () => {
-    return <Meta title="???">
+    return <Meta title="Before start...">
         <div className="language">
             <LanguageContext>
                 <CardBlock className="card-block">
