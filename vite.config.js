@@ -38,6 +38,9 @@ const config = defineConfig({
                 find: '@icons', replacement: path.resolve(__dirname, 'src/components/icons')
             },
             {
+                find: '@hooks', replacement: path.resolve(__dirname, 'src/hooks')
+            },
+            {
                 find: '~', replacement: path.resolve(__dirname, 'src')
             }
         ]
