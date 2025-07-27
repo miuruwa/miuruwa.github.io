@@ -9,7 +9,7 @@ import {
 import data from "./data"
 import Button from "../components/Navigation"
 
-import Navigation from "~/Cards/Navigation"
+import Navigation from "@modal/Navigation"
 
 import "./stylesheet.scss"
 

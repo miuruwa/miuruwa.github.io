@@ -3,7 +3,7 @@ import {
 } from "@webx/toolkit"
 
 import Icon from "@webx/icons/SettingsIcon"
-import Сard from "~/Cards/Settings"
+import Сard from "@modal/Settings"
 import languages from "./languages"
 
 import "./stylesheet.scss"

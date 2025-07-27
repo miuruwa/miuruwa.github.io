@@ -29,6 +29,9 @@ const config = defineConfig({
                 find: '@layout', replacement: path.resolve(__dirname, 'src/components/layout')
             },
             {
+                find: '@modal', replacement: path.resolve(__dirname, 'src/components/modal')
+            },
+            {
                 find: '@ui', replacement: path.resolve(__dirname, 'src/components/ui')
             },
             {
