@@ -3,7 +3,7 @@ import "./stylesheet.scss"
 
 
 export default function () {
-    const [src, { blur }] = useProgressiveImg("/BlurredClouds.jpg", "/Clouds.gif");
+    const [src, { blur }] = useProgressiveImg("/img/BlurredClouds.jpg", "/img/Clouds.gif");
 
     const props = {
         className: "homepage-face-background",

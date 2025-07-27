@@ -1,6 +1,5 @@
-import { Fragment } from "react";
 import "./stylesheet.scss"
-import Avatar from "/TemporaryUnavailable.png"
+import Avatar from "/img/TemporaryUnavailable.png"
 
 export default function () {
     return <div className="new-not-found">

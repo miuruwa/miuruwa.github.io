@@ -11,7 +11,7 @@
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    background: url("../img/diagobg.png");
+    background: url("../public/img/diagobg.png");
     font-family: 'TT Commons';
     box-sizing: border-box;
 }

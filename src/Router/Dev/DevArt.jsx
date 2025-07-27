@@ -1,4 +1,4 @@
-import DevArt from "/DevArt.png"
+import DevArt from "/img/DevArt.png"
 
 export default function () {
     const props = {

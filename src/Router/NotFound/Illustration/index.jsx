@@ -1,4 +1,4 @@
-import Clouds from "/Risha.png"
+import Clouds from "/img/Risha.png"
 import BackgroundImage from "./BackgroundImage"
 
 export default function () {
