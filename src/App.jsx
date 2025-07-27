@@ -4,15 +4,16 @@ import {
 
 import Footer from "./Footer"
 import Header from "./Header"
-import Router from "./Router"
+import Router from "@pages"
 
 import "./scss/stylesheet.scss"
 
-
-export default function () {
+const App = () => {
     return <ToolKitContext>
         <Header />
         <Router />
         <Footer />
     </ToolKitContext>
 }
+
+export default App;
