@@ -23,6 +23,9 @@ const config = defineConfig({
                 find: '@pages', replacement: path.resolve(__dirname, 'src/Router')
             },
             {
+                find: '@shared', replacement: path.resolve(__dirname, 'src/shared')
+            },
+            {
                 find: '~', replacement: path.resolve(__dirname, 'src')
             }
         ]

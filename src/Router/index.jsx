@@ -12,10 +12,10 @@ import {
     Routes
 } from "react-router-dom"
 
-import routesProps from "./routesProps"
+import routesConfig from "../shared/routeConfig"
 import "./stylesheet.scss"
 
-export default function () {
+const Router = () => {
     const toolkit = useToolKit()
 
     if (toolkit.settings.language === "unset" & window.location.pathname !== "/language") {
@@ -26,10 +26,12 @@ export default function () {
     return <BrowserRouter>
         <Routes>
             {
-                routesProps.map(
+                routesConfig.map(
                     props => <Route key={nanoid()} {...props} />
                 )
             }
         </Routes>
     </BrowserRouter>
 }
+
+export default Router;
