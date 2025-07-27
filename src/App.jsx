@@ -4,7 +4,7 @@ import {
 
 import Footer from "@layout/Footer"
 import Header from "@layout/Header"
-import Router from "@pages"
+import Router from "@pages/router"
 
 import "./scss/stylesheet.scss"
 

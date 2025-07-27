@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid"
 
-import data from "~/Header/Navigation/data"
+import data from "@layout/Header/Navigation/data"
 import Button from "./Button"
 
 

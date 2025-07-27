@@ -20,7 +20,7 @@ const config = defineConfig({
                 find: '@webx', replacement: path.resolve(__dirname, 'src/@webx')
             },
             {
-                find: '@pages', replacement: path.resolve(__dirname, 'src/Router')
+                find: '@pages', replacement: path.resolve(__dirname, 'src/pages')
             },
             {
                 find: '@shared', replacement: path.resolve(__dirname, 'src/shared')
@@ -35,7 +35,7 @@ const config = defineConfig({
                 find: '@ui', replacement: path.resolve(__dirname, 'src/components/ui')
             },
             {
-                find: '@icons', replacement: path.resolve(__dirname, 'src/@icons')
+                find: '@icons', replacement: path.resolve(__dirname, 'src/components/icons')
             },
             {
                 find: '~', replacement: path.resolve(__dirname, 'src')
