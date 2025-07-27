@@ -20,6 +20,9 @@ const config = defineConfig({
                 find: '@webx', replacement: path.resolve(__dirname, 'src/@webx')
             },
             {
+                find: '@pages', replacement: path.resolve(__dirname, 'src/Router')
+            },
+            {
                 find: '~', replacement: path.resolve(__dirname, 'src')
             }
         ]

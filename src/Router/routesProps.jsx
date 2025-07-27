@@ -2,13 +2,16 @@ import {
     Navigate
 } from "react-router-dom"
 
-import Home from "./Home"
-import UnsupportedLanguage from "./UnsupportedLanguage"
-import Language from "./Language"
-import NotFound from "./NotFound"
-import Dev from "./Dev"
+import { lazy } from "react"
 
-export default [
+import NotFound from "@pages/NotFound"
+
+const LazyHome = lazy(() => import("@pages/Home"))
+const LazyUnsupportedLanguage = lazy(() => import("@pages/UnsupportedLanguage"))
+const LazyLanguage = lazy(() => import("@pages/Language"))
+const LazyDev = lazy(() => import("@pages/Dev"))
+
+export const routeConfig = [
     {
         path: "/",
         exact: true,
@@ -21,31 +24,28 @@ export default [
     },
     {
         path: "/*",
-        element: <Navigate to="/not-found" />
+        element: <NotFound />
     },
     {
         path: "/home",
         exact: true,
-        element: <Home />
+        element: <LazyHome />
     },
     {
         path: "/language",
         exact: true,
-        element: <Language />
+        element: <LazyLanguage />
     },
     {
         path: "/unsupported",
         exact: true,
-        element: <UnsupportedLanguage />
+        element: <LazyUnsupportedLanguage />
     },
     {
         path: "/dev",
         exact: true,
-        element: <Dev />
-    },
-    {
-        path: "/not-found",
-        exact: true,
-        element: <NotFound />
+        element: <LazyDev />
     },
 ]
+
+export default routeConfig;
