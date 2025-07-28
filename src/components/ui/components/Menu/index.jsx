@@ -1,52 +1,46 @@
-import {
-    useState
-} from "react"
-
-import {
-    nanoid
-} from "nanoid"
+import { useState } from "react"
 
 export function Menu (props) {
-    const [state, setState] = useState({
-        context: props.context,
+  const [state, setState] = useState({
+    context: props.context,
+  })
+
+  const setContext = (value) => {
+    props.setContext(value)
+
+    setState({
+      context: value,
     })
+  }
 
-    const setContext = (value) => {
-        props.setContext(value)
+  const ContextButton = (item, index) => {
+    var classList = ["x-menu-item"]
 
-        setState({
-            context: value,
-        })
+    if (state.context === item.context) {
+      classList.push("x-menu-selected")
+    }
+    
+    if (item.type) {
+      classList.push("svg")
     }
 
-    const ContextButton = (item) => {
-        var classList = ["x-menu-item"]
+    return (
+      <div
+          className={classList.join(" ")}
+          key={index}
+          onClick={() => {
+            setContext(item.context)
+          }}
+      >
+        {item.name}
+      </div>
+    )
+  }
 
-        if (state.context === item.context) {
-            classList.push("x-menu-selected")
-        }
-        
-        if (item.type) {
-            classList.push("svg")
-        }
-
-        return (
-            <div
-                  className={classList.join(" ")}
-                  key={nanoid()}
-                  onClick={() => {
-                      setContext(item.context)
-                  }}
-            >
-                {item.name}
-            </div>
-        )
-    }
-
-    return <div className="x-menu">
-        <div className="x-menu-wrapper">
-            {props.tumbleConfig.map(ContextButton)}
-        </div>
+  return <div className="x-menu">
+    <div className="x-menu-wrapper">
+      {props.tumbleConfig.map(ContextButton)}
     </div>
-        
+  </div>
+    
 }

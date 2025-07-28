@@ -1,0 +1,12 @@
+.root {
+  background: var(--bg-image);
+  background-size: contain;
+  background-position: center;
+
+  width: 120%;
+  height: 120%;
+
+  position: absolute;
+  top: -10%;
+  left: -10%;
+}

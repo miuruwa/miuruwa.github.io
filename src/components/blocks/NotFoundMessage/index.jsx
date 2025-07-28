@@ -1,37 +1,65 @@
-import {
-    useToolKit
-} from "@shared/toolkit"
-
-import {
-    CardBlock, Button
-} from "@ui"
+import { motion, useAnimation } from "motion/react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import languages from "@shared/languages"
+import Headline from "@blocks/Headline";
+import { useToolKit } from "@shared/toolkit";
+import languages from "@shared/languages";
+import { Button } from "@ui";
 
-const Message = () => {
-    const toolkit = useToolKit()
-    const navigate = useNavigate()
+import styles from "./NotFoundMessage.module.scss";
 
-    const pageData = languages[toolkit.settings.language].notFound
+const NotFoundMessage = () => {
+  const { root } = styles;
+  
+  const controls = useAnimation();
+  const toolkit = useToolKit();
+  const navigate = useNavigate();
 
-    return <div className="not-found-content">
-        <h3>
-            {pageData.headline}
-        </h3>
-        <CardBlock>
-            <p>
-                {pageData.road}
-            </p>
-            <p>
-                {pageData.tryHome}
-            </p>
-            <Button 
-                title={pageData.button}
-                theme={"white"}
-                onClick={() => navigate("/home")} />
-        </CardBlock>
-    </div>
+  const pageData = languages[toolkit.settings.language].notFound;
+
+  useEffect(() => {
+    controls.start("visible");
+  }, [])
+
+  return <div className={root}>
+    <Headline title={pageData.title} />
+    <motion.p
+      initial="hidden"
+      variants={{
+        hidden: {
+          filter: "blur(10px)",
+          opacity: 0,
+        },
+        visible: {
+          filter: "blur(0)",
+          opacity: 1,
+        },
+      }}
+      animate={controls}
+      transition={{ delay: 0.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
+      {pageData.road}
+    </motion.p>
+    <motion.div
+      initial="hidden"
+      variants={{
+        hidden: {
+          filter: "blur(10px)",
+          opacity: 0,
+        },
+        visible: {
+          filter: "blur(0)",
+          opacity: 1,
+        },
+      }}
+      animate={controls}
+      transition={{ delay: 1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
+      <Button 
+        title={pageData.button}
+        theme="invert"
+        onClick={() => navigate("/home")} />
+    </motion.div>
+  </div>
 }
 
-export default Message;
+export default NotFoundMessage;

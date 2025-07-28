@@ -1,0 +1,10 @@
+.root {
+  position: relative;
+  font-family: 'serif';
+  text-transform: uppercase;
+  display: flex;
+  span {
+    font-size: 4rem;
+    display: inline-block;
+  }
+}

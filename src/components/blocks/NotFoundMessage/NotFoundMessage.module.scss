@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  z-index: 200;
+  background: black;
+  padding: 10rem 2rem;
+  max-width: 512px;
+  box-sizing: border-box;
+}

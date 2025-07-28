@@ -1,17 +1,16 @@
-import { useToolKit } from "@shared/toolkit"
-
-import HomepageBanner from "@blocks/HomepageBanner"
-import languagesData from "@shared/languages"
-import Meta from "@layout/Meta"
+import HomeBanner from "@blocks/HomeBanner";
+import languagesData from "@shared/languages";
+import { useToolKit } from "@shared/toolkit";
+import Meta from "@layout/Meta";
 
 const Home = () => {
-    const toolkit = useToolKit();
+  const toolkit = useToolKit();
 
-    const pageData = languagesData[toolkit.settings.language].homepage
+  const pageData = languagesData[toolkit.settings.language].homepage;
 
-    return <Meta title={pageData.title}>
-        <HomepageBanner />
-    </Meta>
-}
+  return <Meta title={pageData.title}>
+    <HomeBanner />
+  </Meta>
+};
 
 export default Home;

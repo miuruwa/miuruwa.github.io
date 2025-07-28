@@ -1,7 +1,1 @@
-export {
-    CardBehaviour
-} from "./card"
-
-export {
-    SettingsBehaviour
-} from "./settings"
+export { SettingsBehaviour } from "./settings"

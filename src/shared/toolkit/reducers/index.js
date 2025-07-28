@@ -1,7 +1,1 @@
-export {
-    card, CardReducer
-} from "./card"
-
-export {
-    settings, SettingsReducer
-} from "./settings"
+export { settings, SettingsReducer } from "./settings"

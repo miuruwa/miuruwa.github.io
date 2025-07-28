@@ -1,29 +1,27 @@
 @mixin x-block {
-    .x-block {        
-        background: #222222;
-        // --x-block-background-hover: var(--zircon);
-        // --x-block-border: 0 0 0 1px #424242;
-        --x-block-shadow: 0px 4px 12px rgba(2, 3, 5, 0.596);
-        box-shadow: var(--x-block-shadow);
+  .x-block {    
+    background: #222222;
+    --x-block-shadow: 0px 4px 12px rgba(2, 3, 5, 0.596);
+    box-shadow: var(--x-block-shadow);
 
-        border-radius: $point * 2;
-        padding: $point;
-        box-sizing: border-box;
+    border-radius: 1rem * 2;
+    padding: 1rem;
+    box-sizing: border-box;
 
-        &.button-block {
-            box-sizing: border-box;
-            padding: $point*2 0;
-            
-            .x-button {
-                border-radius: 0;
-                width: 100%;
-                padding: 0 $point*4;
-                gap: $point * 4!important;
+    &.button-block {
+      box-sizing: border-box;
+      padding: 1rem*2 0;
+      
+      .x-button {
+        border-radius: 0;
+        width: 100%;
+        padding: 0 1rem*4;
+        gap: 1rem * 4!important;
 
-                .x-button-title {
-                    text-align: left!important;
-                }
-            }
+        .x-button-title {
+          text-align: left!important;
         }
+      }
     }
+  }
 }
