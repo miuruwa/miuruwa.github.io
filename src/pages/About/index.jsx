@@ -1,3 +1,4 @@
+// import AboutCommissions from "@blocks/AboutCommissions";
 import AboutMe from "@blocks/AboutMe";
 import AboutIllustration from "@blocks/AboutIllustration";
 import AboutLinks from "@blocks/AboutLinks";
@@ -21,11 +22,13 @@ const About = () => {
           <AboutMe />
           <AboutIllustration />
           <AboutLinks />
+          {/* <AboutCommissions /> */}
         </div> : <div className={aboutContent}>
           <AboutIllustration />
           <div className={infoBlock}>
             <AboutMe />
             <AboutLinks />
+            {/* <AboutCommissions /> */}
           </div>
         </div>}
     </div>

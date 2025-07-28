@@ -17,6 +17,7 @@ const Headline = ({title, delay=0}) => {
 
   return <div className={root}>
     {test.map((char, index) => <motion.span
+      key={index}
       initial="hidden"
       variants={{
         "hidden": {

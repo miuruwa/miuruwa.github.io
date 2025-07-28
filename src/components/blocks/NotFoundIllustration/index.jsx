@@ -23,10 +23,12 @@ const NotFoundIllustration = () => {
       variants={{
         hidden: {
           filter: "blur(10px)",
+          x: 256,
           opacity: 0,
         },
         visible: {
           filter: "blur(0)",
+          x: 0,
           opacity: 1,
         },
       }}

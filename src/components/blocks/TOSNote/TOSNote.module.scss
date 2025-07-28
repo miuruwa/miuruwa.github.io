@@ -1,0 +1,22 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 512px;
+  margin: 0 auto;
+  background: rgb(31, 31, 31);
+  padding: 5rem 3rem;
+}
+
+.mark {
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Arial";
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+  display: block;
+  width: fit-content;
+}
