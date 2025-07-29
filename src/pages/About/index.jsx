@@ -1,7 +1,7 @@
-// import AboutCommissions from "@blocks/AboutCommissions";
+import AboutCommissions from "@blocks/AboutCommissions";
 import AboutMe from "@blocks/AboutMe";
 import AboutIllustration from "@blocks/AboutIllustration";
-import AboutLinks from "@blocks/AboutLinks";
+import AboutHardware from "@blocks/AboutHardware";
 import Meta from "@layout/Meta";
 import languageData from "@shared/languages";
 import { useToolKit } from "@shared/toolkit";
@@ -21,14 +21,14 @@ const About = () => {
       {isMobile ? <div className={infoBlock}>
           <AboutMe />
           <AboutIllustration />
-          <AboutLinks />
-          {/* <AboutCommissions /> */}
+          <AboutHardware />
+          <AboutCommissions />
         </div> : <div className={aboutContent}>
           <AboutIllustration />
           <div className={infoBlock}>
             <AboutMe />
-            <AboutLinks />
-            {/* <AboutCommissions /> */}
+            <AboutHardware />
+            <AboutCommissions />
           </div>
         </div>}
     </div>

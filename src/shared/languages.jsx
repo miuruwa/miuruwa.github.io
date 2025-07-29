@@ -1,65 +1,104 @@
-import XTwitterLogo from "@icons/XTwitterLogoIcon"
-import VKLogoIcon from "@icons/VKLogoIcon";
+import KoFiLogo from "@icons/KoFiLogo";
 import TelegramLogoIcon from "@icons/TelegramLogoIcon";
-import KoFiLogo from "@icons/KoFiLogo"
+import VKLogoIcon from "@icons/VKLogoIcon";
+import XTwitterLogoIcon from "@icons/XTwitterLogoIcon";
 
 const languageData = {
   eng: {
-    pageNavigation: {
-      home: "Homepage"
-    },
+    email: "miuruwadev@gmail.com",
     about: {
       title: "About me",
       description: "My nickname is Miu Ruwa. I’m 22 years old. I’m from Russia. I draw art in different styles and make websites/PWA!",
+      commissions: {
+        title: "Commissions",
+        note: "Please read my terms of service before ordering a commission!",
+        links: [
+          {
+            title: "Terms of service",
+            path: "/terms-of-service"
+          },
+          {
+            title: "Waitlist",
+            path: "/waitlist"
+          },
+          {
+            title: "Details",
+            path: "/details"
+          },
+        ]
+      },
+      hardware: {
+        headline: "Hardware",
+        list: ["Gaomon WH851", "My own laptop"]
+      },
+      software: {
+        headline: "Software",
+        list: ["Clip Studio Paint Pro", "Figma", "VS Code"]
+      }
     },
-    commissions: {
-      title: "Commissions",
-      note: "Please read my terms of service before ordering a commission!",
+    details: {
+      title: "Commission details",
+      preferences: [
+        {
+          headline: "Will draw",
+          list: [
+            "+ OC", "+ Furry", "+ Realistic", "+ Slightly suggestive"
+          ]
+        },
+        {
+          headline: "Won't draw",
+          list: [
+            "- NSFW", "- Fan art", "- Mecha"
+          ]
+        },
+      ],
+      addons: {
+        headline: "ADDONS",
+        list: [
+          "50% per extra character", "simple background starting from $10", "special request", "commercial use fee", "rush fee"
+        ]
+      },
+      turnarounds: {
+        headline: "Turnarounds",
+        description: "1-6 weeks depending on complexity"
+      },
       links: [
+        {
+          title: "About me",
+          path: "/about"
+        },
         {
           title: "Terms of service",
           path: "/terms-of-service"
         },
-        // {
-        //   title: "Waitlist",
-        //   path: "/waitlist"
-        // },
-        // {
-        //   title: "Details",
-        //   path: "/pricelist"
-        // },
-      ]
-    },
-    links: {
-      title: "My social",
-      links: [
         {
-          icon: <XTwitterLogo />,
-          title: "X",
-          location: "https://x.com/miuruwax8"
+          title: "Base price",
+          path: "" // price list is modal
         },
         {
-          icon: <KoFiLogo />,
-          title: "KoFi",
-          location: "ko-fi.com/miuruwa"
-        }
+          title: "Submit a commission",
+          path: "/submit-commission"
+        },
       ]
     },
+    submit: {
+      title: "Submit a commission"
+    },
+    homepage: {
+      title: "Home",
+      headline: "Miu Ruwa"
+    },
     notFound: {
-      title: "not found",
+      title: "Not found",
       headline: "Lost, traveler?",
       road: "Seems like you are lost. Try going back to a known path.",
       button: "Go home"
-    },
-    homepage: {
-      title: "homepage",
-      headline: "Miu Ruwa"
     },
     tos: {
       title: "Terms of service",
       headline: "✦Terms of service✦",
       noteMark: "Important",
-      note: "Заказывая у меня artwork вы соглашаетесь с моей terms of service и в дальнейшем не можете выставить претензии к художнику",
+      note: "Ordering artwork from me, you agree to my terms of service and in the future you cannot make claims against the document.",
       terms: [
         {
           headline: "Payment",
@@ -101,57 +140,58 @@ const languageData = {
           title: "Home",
           path: "/home",
         },
-        // {
-        //   title: "Waitlist",
-        //   path: "/waitlist",
-        // },
-        // {
-        //   title: "Commission details",
-        //   path: "/details",
-        // },
+        {
+          title: "Waitlist",
+          path: "/waitlist",
+        },
+        {
+          title: "Commission details",
+          path: "/details",
+        },
       ]
-    }
-  },
-  ru: {
-    pageNavigation: {
-      home: "Домой"
     },
-    about: {
-      title: "Обо мне",
-      description: "Мой никнейм Miu Ruwa. Мне 22 года. Я из России. Я рисую картинки в разных стилях и пишу сайты/PWA!",
-    },
-    commissions: {
-      title: "Рисунки на заказ",
-      note: "Пожалуйста, перед заказом прочитайте политику оказания услуги!",
-      tos: "Политика оказания услуги",
-      waitlist: "Очередь",
-      details: "Детали"
-    },
-    links: {
-      title: "Мои соцсети",
+    footer: {
+      navigation: "navigation",
       links: [
         {
+          title: "About",
+          path: "/about",
+        },
+        {
+          title: "Home",
+          path: "/home",
+        },
+        {
+          title: "Terms of service",
+          path: "/terms-of-service",
+        },
+        {
+          title: "Commission details",
+          path: "/details",
+        },
+        {
+          title: "Submit commission",
+          path: "/submit-commission",
+        },
+      ],
+      social: [
+        {
+          icon: <KoFiLogo />,
+          location: "https://ko-fi.com/miuruwa",
+        },
+        {
           icon: <VKLogoIcon />,
-          title: "VK",
-          location: "https://vk.com/miuruwax8"
+          location: "https://vk.com/miuruwax8",
+        },
+        {
+          icon: <XTwitterLogoIcon />,
+          location: "https://x.com/miuruwax8",
         },
         {
           icon: <TelegramLogoIcon />,
-          title: "Телеграм",
-          location: "https://t.me/miuruwax8"
-        }
-      ]
-    },
-    notFound: {
-      title: "Не найдено",
-      headline: "Потерялся, путник?",
-      road: "Видимо ты оказался там, где тебе не нужно было оказываться. Вернись на свою тропу жизни.",
-      tryHome: "Или вернись на домашнюю страницу",
-      button: "Домой"
-    },
-    homepage: {
-      title: "Домашняя",
-      headline: "Миу Рува"
+          location: "https://t.me/miuruwax8",
+        },
+      ],
     }
   },
 }

@@ -6,7 +6,6 @@ import HomeIllustration from "@blocks/HomeIllustration";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { useToolKit } from "@shared/toolkit";
 import languageData from "@shared/languages";
-import { Button } from "@ui";
 
 import styles from "./HomeBanner.module.scss";
 
@@ -21,19 +20,9 @@ const HomeBanner = () => {
     {isMobile ? <div className={data}>
       <Headline title={pageData.headline} />
       <HomeIllustration />
-      <Button
-        title="about"
-        theme="transparent"
-        onClick={() => navigate("/about")}
-      />
     </div> : <div className={desktopPage}>
       <div className={data}>
         <Headline title={pageData.headline} />
-        <Button
-          title="about"
-          theme="transparent"
-          onClick={() => navigate("/about")}
-        />
       </div>
       <HomeIllustration />
     </div>}

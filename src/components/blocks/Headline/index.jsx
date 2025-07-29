@@ -2,11 +2,12 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
 import styles from "./Headline.module.scss";
+import { classNames } from "@utils/classNames";
 
 const HEAD = [-16,	4,	-8,	-6,	3,	-5,	-2,	3,	-4,	3,	-4,	-3,	4,	-2,	-4,	3,	-3,	2,	-2,	2,	-2,	1,	-2,	2,	4,	3,	-3,	2,	-2,	1,	-2,	-1];
 
-const Headline = ({title, delay=0}) => {
-  const { root } = styles;
+const Headline = ({title, type="big", delay=0}) => {
+  const { root, big, medium, small } = styles;
   const test = title.split("").map(item => item === " " ? "\u00A0\u00A0\u00A0" : item);
 
   const controls = useAnimation();
@@ -15,8 +16,15 @@ const Headline = ({title, delay=0}) => {
     controls.start("visible")
   })
 
-  return <div className={root}>
+  const containerClasses = classNames(root, {
+    [big]: type === "big",
+    [medium]: type === "medium",
+    [small]: type === "small",
+  })
+
+  return <div className={containerClasses}>
     {test.map((char, index) => <motion.span
+      className={type}
       key={index}
       initial="hidden"
       variants={{

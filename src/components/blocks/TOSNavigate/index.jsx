@@ -38,7 +38,7 @@ const TOSNavigate = () => {
             },
           }}
           animate={controls}
-          transition={{ delay: 1 + 0.1 * index, duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}
+          transition={{ delay: 3 + 0.1 * index, duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}
         >
           <Button 
             key={index} 

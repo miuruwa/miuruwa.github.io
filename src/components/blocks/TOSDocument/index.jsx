@@ -44,10 +44,9 @@ const TOSDocument = () => {
         },
       }}
       animate={controls}
-      transition={{ delay: 5, duration: 2, ease: [0, 0.71, 0.2, 1.01] }}>
+      transition={{ delay: 4, duration: 2, ease: [0, 0.71, 0.2, 1.01] }}>
       {pageData.terms.map((item, index) => <TOSChapter key={index} item={item} />)}
     </motion.div>
-    <TOSNavigate />
   </div>
 }
 

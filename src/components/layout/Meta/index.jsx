@@ -3,7 +3,7 @@ import { useEffect } from "react"
 const Meta = ({children, title}) => {
   useEffect(
     () => {
-      document.title = `${title} / miuruwa`
+      document.title = `${title} × Celestial expanse`
     }, []
   )
 

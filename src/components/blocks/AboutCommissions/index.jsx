@@ -1,13 +1,13 @@
-import { motion, useAnimation } from "motion/react"
-import { useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { motion, useAnimation } from "motion/react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { useToolKit } from "@shared/toolkit"
-import { Button, CardBlock } from "@ui"
-import languageData from "@shared/languages"
+import Headline from "@blocks/Headline";
+import languageData from "@shared/languages";
+import { useToolKit } from "@shared/toolkit";
+import { Button } from "@ui";
 
-import styles from "./AboutCommissions.module.scss"
-import Headline from "../Headline"
+import styles from "./AboutCommissions.module.scss";
 
 const AboutCommissions = () => {
   const { root, buttonList } = styles;
@@ -16,14 +16,14 @@ const AboutCommissions = () => {
   const toolkit = useToolKit()
   const navigate = useNavigate()
 
-  const pageData = languageData[toolkit.settings.language].commissions
+  const pageData = languageData[toolkit.settings.language].about.commissions;
 
   useEffect(() => {
     controls.start("visible");
   }, [])
 
   return <div className={root}>
-    <Headline title={pageData.title} delay={1} />
+    <Headline title={pageData.title} delay={3} type="small" />
     <motion.p
       initial="hidden"
       variants={{
@@ -37,10 +37,11 @@ const AboutCommissions = () => {
         },
       }}
       animate={controls}
-      transition={{ delay: 1.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
+      transition={{ delay: 3.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}
     >{pageData.note}</motion.p>
     <div className={buttonList}>
       {pageData.links.map((item, index) => <motion.span
+          key={index}
           initial="hidden"
           variants={{
             hidden: {
@@ -55,8 +56,8 @@ const AboutCommissions = () => {
             },
           }}
           animate={controls}
-          transition={{ delay: 2 + 0.1 * index, duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}>
-          <Button key={index} theme="invert" title={item.title} onClick={() => navigate(item.path)} />
+          transition={{ delay: 4 + 0.1 * index, duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}>
+          <Button theme="invert" title={item.title} onClick={() => navigate(item.path)} />
         </motion.span>)}
     </div>
   </div>

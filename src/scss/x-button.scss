@@ -65,6 +65,7 @@
 
     &.theme-invert {
       background: #ffffff;
+      color: #000000 !important;
 
       .x-button-icon {
         svg {
@@ -80,15 +81,12 @@
 
       &:hover {
         background: #383838;
+        color: #ffffff !important;
         
         .x-button-icon {
           svg {
             fill: #ffffff !important;
           }
-        }
-        
-        .x-button-title {
-          color: #ffffff;
         }
       }
     }

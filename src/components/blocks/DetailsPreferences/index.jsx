@@ -1,0 +1,50 @@
+import { motion, useAnimation } from "motion/react";
+import { useEffect } from "react";
+
+import Headline from "@blocks/Headline";
+import languageData from "@shared/languages";
+import { useToolKit } from "@shared/toolkit";
+
+import styles from "./DetailsPreferences.module.scss";
+
+const DetailsPreferences = () => {
+  const { root } = styles;
+  
+  const controls = useAnimation();
+  const toolkit = useToolKit();
+
+  const pageData = languageData[toolkit.settings.language].details;
+
+  useEffect(() => {
+    controls.start("visible");
+  }, [])
+
+  return <div className={root}>
+    {pageData.preferences.map((item, olIndex) => <div key={olIndex}>
+      <Headline title={item.headline} delay={0.5 + olIndex * 2} type="small" />
+      <ol>
+        {item.list.map((item, liIndex) => <motion.li 
+          key={liIndex}
+          initial="hidden"
+          variants={{
+            hidden: {
+              filter: "blur(10px)",
+              scale: 1.2,
+              opacity: 0,
+            },
+            visible: {
+              filter: "blur(0)",
+              scale: 1,
+              opacity: 1,
+            },
+          }}
+          animate={controls}
+          transition={{ delay: 1 + olIndex * 2 + liIndex * 0.25, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
+          {item}
+        </motion.li>)}
+      </ol>            
+    </div>)}
+  </div>
+}
+
+export default DetailsPreferences;

@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
+import Footer from "@layout/Footer"
 import { ToolKitContext } from "@shared/toolkit"
 import routesConfig from "@shared/routeConfig"
 
@@ -15,6 +16,7 @@ const App = () => {
         )
       }
       </Routes>
+      <Footer />
     </BrowserRouter>
   </ToolKitContext>
 }
