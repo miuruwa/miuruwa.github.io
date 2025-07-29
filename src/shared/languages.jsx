@@ -166,12 +166,8 @@ const languageData = {
           path: "/terms-of-service",
         },
         {
-          title: "Commission details",
+          title: "Commissions",
           path: "/details",
-        },
-        {
-          title: "Submit commission",
-          path: "/submit-commission",
         },
       ],
       social: [
