@@ -198,71 +198,71 @@ const languageData = {
     },
     basePrice: {
       title: "Base price",
-      config: [
-        {
+      config: {
+        "progress": {
           title: "Progress",
-          list: [
-            {
+          list: {
+            "sk": {
               title: "Sketch",
-              id: "sk" 
+              price: 0
             },
-            {
+            "ln": {
               title: "Lineart",
-              id: "ln"
+              price: 40
             },
-          ],
+          },
         },
-        {
+        "color": {
           title: "Color",
-          list: [
-            {
+          list: {
+            "nn": {
               title: "None",
-              id: "nn" 
+              price: 0
             },
-            {
+            "bw": {
               title: "Black & White",
-              id: "bw" 
+              price: 1
             },
-            {
+            "sm": {
               title: "Simple",
-              id: "sm" 
+              price: 5
             },
-            {
+            "rn": {
               title: "Render",
-              id: "rn"
+              price: 20
             },
-          ],
+          },
         },
-        {
+        "artwork": {
           title: "Artwork type",
-          list: [
-            {
+          list: {
+            "bu": {
               title: "Bust",
-              id: "bu" 
+              price: 10
             },
-            {
+            "hb": {
               title: "Half body",
-              id: "hb" 
+              price: 20
             },
-            {
+            "fb": {
               title: "Full body",
-              id: "fb" 
+              price: 40
             },
-            {
+            "ch": {
               title: "Chibi",
-              id: "ch" 
+              price: 5
             },
-            {
+            "rs": {
               title: "Reference sheet",
-              id: "rs" 
+              price: 50
             },
-            {
+            "eb": {
               title: "Eye banner",
-              id: "eb"
+              price: 10
             },
-          ],
+          },
         },
-      ],
+      },
       links: [
         {
           title: "Terms of service",

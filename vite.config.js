@@ -15,7 +15,13 @@ const config = defineConfig({
   resolve:{
     alias: [
       {
-        find: '@webx', replacement: path.resolve(__dirname, 'src/@webx')
+        find: '@actions', replacement: path.resolve(__dirname, 'src/actions')
+      },
+      {
+        find: '@stores', replacement: path.resolve(__dirname, 'src/stores')
+      },
+      {
+        find: '@reducers', replacement: path.resolve(__dirname, 'src/reducers')
       },
       {
         find: '@pages', replacement: path.resolve(__dirname, 'src/pages')

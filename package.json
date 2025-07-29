@@ -4,51 +4,53 @@
   "homepage": "https://miuruwa.ru/",
   "private": true,
   "dependencies": {
-  "motion": "^12.23.0",
-  "patch-package": "^8.0.0",
-  "react": "^19.0.0",
-  "react-dom": "^19.0.0",
-  "react-router-dom": "^7.6.3",
-  "sass-embedded": "^1.89.2"
+    "motion": "^12.23.0",
+    "patch-package": "^8.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.3",
+    "redux": "^5.0.1",
+    "sass-embedded": "^1.89.2"
   },
   "devDependencies": {
-  "@testing-library/jest-dom": "^6.6.3",
-  "@testing-library/react": "^16.2.0",
-  "@vitejs/plugin-react": "^4.3.4",
-  "eslint": "^9.32.0",
-  "eslint-plugin-react": "^7.37.5",
-  "eslint-plugin-react-hooks": "^5.2.0",
-  "jsdom": "^26.0.0",
-  "vite": "^6.2.1",
-  "vite-plugin-svgr": "^4.3.0",
-  "vitest": "^3.0.8"
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "jsdom": "^26.0.0",
+    "vite": "^6.2.1",
+    "vite-plugin-svgr": "^4.3.0",
+    "vitest": "^3.0.8"
   },
   "scripts": {
-  "start": "vite --host 0.0.0.0",
-  "build": "vite build",
-  "serve": "vite preview",
-  "deploy": "node ./utils/deploy.js",
-  "not-found-patch": "node ./utils/NotFoundPatch.js",
-  "cname-patch": "node ./utils/CNAMEPatch.js",
-  "github-pages": "gh-pages -d build",
-  "postinstall": "patch-package"
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "node ./utils/deploy.js",
+    "not-found-patch": "node ./utils/NotFoundPatch.js",
+    "cname-patch": "node ./utils/CNAMEPatch.js",
+    "github-pages": "gh-pages -d build",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
-  "extends": [
-    "react-app",
-    "react-app/jest"
-  ]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
-  "production": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all"
-  ],
-  "development": [
-    "last 1 chrome version",
-    "last 1 firefox version",
-    "last 1 safari version"
-  ]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
