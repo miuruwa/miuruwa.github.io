@@ -37,7 +37,7 @@ const languageData = {
       }
     },
     details: {
-      title: "Commission details",
+      title: "Commissions",
       preferences: [
         {
           headline: "Will draw",
@@ -73,7 +73,7 @@ const languageData = {
         },
         {
           title: "Base price",
-          path: "" // price list is modal
+          path: "/base-price"
         },
         {
           title: "Submit a commission",
@@ -169,6 +169,10 @@ const languageData = {
           title: "Commissions",
           path: "/details",
         },
+        {
+          title: "Settings",
+          path: "/settings",
+        },
       ],
       social: [
         {
@@ -188,6 +192,94 @@ const languageData = {
           location: "https://t.me/miuruwax8",
         },
       ],
+    },
+    settings: {
+      title: "settings",
+    },
+    basePrice: {
+      title: "Base price",
+      config: [
+        {
+          title: "Progress",
+          list: [
+            {
+              title: "Sketch",
+              id: "sk" 
+            },
+            {
+              title: "Lineart",
+              id: "ln"
+            },
+          ],
+        },
+        {
+          title: "Color",
+          list: [
+            {
+              title: "None",
+              id: "nn" 
+            },
+            {
+              title: "Black & White",
+              id: "bw" 
+            },
+            {
+              title: "Simple",
+              id: "sm" 
+            },
+            {
+              title: "Render",
+              id: "rn"
+            },
+          ],
+        },
+        {
+          title: "Artwork type",
+          list: [
+            {
+              title: "Bust",
+              id: "bu" 
+            },
+            {
+              title: "Half body",
+              id: "hb" 
+            },
+            {
+              title: "Full body",
+              id: "fb" 
+            },
+            {
+              title: "Chibi",
+              id: "ch" 
+            },
+            {
+              title: "Reference sheet",
+              id: "rs" 
+            },
+            {
+              title: "Eye banner",
+              id: "eb"
+            },
+          ],
+        },
+      ],
+      links: [
+        {
+          title: "Terms of service",
+          path: "/terms-of-service"
+        },
+        {
+          title: "Details",
+          path: "/details"
+        },
+        {
+          title: "Submit a commission",
+          path: "/submit-commission"
+        },
+      ]
+    },
+    startup: {
+      title: "startup",
     }
   },
 }

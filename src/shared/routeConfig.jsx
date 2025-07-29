@@ -1,18 +1,20 @@
 import { lazy } from "react"
-import { Navigate } from "react-router-dom"
 
-const LazyAbout = lazy(() => import("@pages/About"))
-const LazyDetails = lazy(() => import("@pages/Details"))
-const LazyHome = lazy(() => import("@pages/Home"))
-import NotFound from "@pages/NotFound"
-const LazySubmitCommission = lazy(() => import("@pages/SubmitCommission"))
-const LazyTermsOfService = lazy(() => import("@pages/TermsOfService"))
+const LazyAbout = lazy(() => import("@pages/About"));
+const LazyDetails = lazy(() => import("@pages/Details"));
+const LazyHome = lazy(() => import("@pages/Home"));
+import NotFound from "@pages/NotFound";
+const LazySubmitCommission = lazy(() => import("@pages/SubmitCommission"));
+const LazyTermsOfService = lazy(() => import("@pages/TermsOfService"));
+const LazyStartup = lazy(() => import("@pages/Startup"));
+const LazySettings = lazy(() => import("@pages/Settings"));
+const LazyBasePrice = lazy(() => import("@pages/BasePrice"));
 
 export const routeConfig = [
 	{
 		path: "/",
 		exact: true,
-		element: <Navigate to="/home" />
+		element: <LazyStartup />
 	},
 	{
 		path: "/*",
@@ -42,6 +44,16 @@ export const routeConfig = [
 		path: "/terms-of-service",
 		exact: true,
 		element: <LazyTermsOfService />
+	},
+	{
+		path: "/settings",
+		exact: true,
+		element: <LazySettings />
+	},
+	{
+		path: "/base-price",
+		exact: true,
+		element: <LazyBasePrice />
 	},
 ]
 

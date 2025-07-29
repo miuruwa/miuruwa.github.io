@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.configList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 12rem;
+}

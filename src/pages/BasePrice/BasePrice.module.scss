@@ -1,0 +1,14 @@
+.root {
+  padding: 4rem;
+  box-sizing: border-box;
+
+  &.mobileTemplate {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+  }
+  &.desktopTemplate {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+  }
+}

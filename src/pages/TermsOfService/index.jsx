@@ -3,7 +3,7 @@ import Meta from "@layout/Meta";
 import languagesData from "@shared/languages";
 import { useToolKit } from "@shared/toolkit";
 
-const Home = () => {
+const TermsOfService = () => {
   const toolkit = useToolKit();
 
   const pageData = languagesData[toolkit.settings.language].tos;
@@ -13,4 +13,4 @@ const Home = () => {
   </Meta>
 };
 
-export default Home;
+export default TermsOfService;
