@@ -3,6 +3,8 @@ import TelegramLogoIcon from "@icons/TelegramLogoIcon";
 import VKLogoIcon from "@icons/VKLogoIcon";
 import XTwitterLogoIcon from "@icons/XTwitterLogoIcon";
 
+import { routes } from "./routes";
+
 const languageData = {
   eng: {
     email: "miuruwadev@gmail.com",
@@ -15,15 +17,15 @@ const languageData = {
         links: [
           {
             title: "Terms of service",
-            path: "/terms-of-service"
+            path: routes.tos
           },
           {
             title: "Waitlist",
-            path: "/waitlist"
+            path: routes.waitList
           },
           {
-            title: "Details",
-            path: "/details"
+            title: "Request information",
+            path: routes.commissionInfo
           },
         ]
       },
@@ -37,7 +39,7 @@ const languageData = {
       }
     },
     details: {
-      title: "Commissions",
+      title: "Request information",
       preferences: [
         {
           headline: "Will draw",
@@ -65,24 +67,17 @@ const languageData = {
       links: [
         {
           title: "About me",
-          path: "/about"
+          path: routes.aboutMe
         },
         {
           title: "Terms of service",
-          path: "/terms-of-service"
+          path: routes.tos
         },
         {
-          title: "Base price",
-          path: "/base-price"
-        },
-        {
-          title: "Submit a commission",
-          path: "/submit-commission"
+          title: "Request commission",
+          path: routes.request
         },
       ]
-    },
-    submit: {
-      title: "Submit a commission"
     },
     homepage: {
       title: "Home",
@@ -138,15 +133,15 @@ const languageData = {
       navigate: [
         {
           title: "Home",
-          path: "/home",
+          path: routes.home,
         },
         {
           title: "Waitlist",
-          path: "/waitlist",
+          path: routes.waitList,
         },
         {
           title: "Commission details",
-          path: "/details",
+          path: routes.commissionInfo,
         },
       ]
     },
@@ -155,23 +150,23 @@ const languageData = {
       links: [
         {
           title: "About",
-          path: "/about",
+          path: routes.aboutMe,
         },
         {
           title: "Home",
-          path: "/home",
+          path: routes.home,
         },
         {
           title: "Terms of service",
-          path: "/terms-of-service",
+          path: routes.tos,
         },
         {
           title: "Commissions",
-          path: "/details",
+          path: routes.commissionInfo,
         },
         {
           title: "Settings",
-          path: "/settings",
+          path: routes.settings,
         },
       ],
       social: [
@@ -196,8 +191,31 @@ const languageData = {
     settings: {
       title: "settings",
     },
-    basePrice: {
-      title: "Base price",
+    request: {
+      title: "Request commission",
+      characterCount: "Character count",
+      briefTitle: "Describe your request",
+      briedPlaceholder: "Draw something for me...",
+      addons: {
+        title: "Addons",
+        list: {
+          "addBackground": {
+            title: "Simple background",
+            price: 10
+          },
+          "specialRequest": {
+            title: "Special",
+            price: 10
+          },
+          "commercialUseFee": {
+            title: "For commercial use",
+            price: 10
+          },
+          "rushFee": {
+            title: "Rush",
+            price: 10
+          },
+        }},
       config: {
         "progress": {
           title: "Progress",
@@ -234,7 +252,7 @@ const languageData = {
           },
         },
         "artwork": {
-          title: "Artwork type",
+          title: "Frame type",
           list: {
             "bu": {
               title: "Bust",
@@ -266,15 +284,15 @@ const languageData = {
       links: [
         {
           title: "Terms of service",
-          path: "/terms-of-service"
+          path: routes.tos
         },
         {
           title: "Details",
-          path: "/details"
+          path: routes.commissionInfo
         },
         {
-          title: "Submit a commission",
-          path: "/submit-commission"
+          title: "Request commission",
+          path: ""
         },
       ]
     },

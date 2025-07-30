@@ -5,10 +5,9 @@
   .x-text-field {
     display: grid;
     gap: 1rem*2;
-    min-height: 1rem*8;
-    padding: 4px 1rem*2 4px 1rem*3;
+    padding: 0.5rem;
     box-sizing: border-box;
-    border-radius: 1rem*8;
+    border-radius: 0.5rem;
     width: 100%;
     cursor: text;
     background: #222;

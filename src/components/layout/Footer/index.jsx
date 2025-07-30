@@ -5,7 +5,7 @@ import { useToolKit } from "@shared/toolkit";
 import { Button } from "@ui";
 
 import styles from "./Footer.module.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@hooks/useNavigate";
 
 const FooterApp = () => {
 	return <div>
@@ -17,7 +17,7 @@ const FooterNavigation = () => {
 	const isMobile = useIsMobile(768);
   const toolkit = useToolKit();
   const pageData = languageData[toolkit.settings.language].footer;
-	const navigate = useNavigate();
+	const { navigate } = useNavigate();
 
 	return <div>
 		{ !isMobile && <h3>{pageData.navigation}</h3>}
@@ -29,10 +29,11 @@ const FooterSocial = () => {
   const toolkit = useToolKit();
   const pageData = languageData[toolkit.settings.language].footer;
 	const emailURL = `email:${pageData.email}`;
+	const { goTo } = useNavigate();
 
 	return <div className={social}>
-		<Button theme="invert" icon={<EmailIcon />} onClick={() => window.location.href = `email:${emailURL}`} />
-		{pageData.social.map((item, index) => <Button key={index} theme="invert" icon={item.icon} onClick={() => window.location.href = item.location} />)}
+		<Button theme="invert" icon={<EmailIcon />} onClick={() => goTo(`email:${emailURL}`)} />
+		{pageData.social.map((item, index) => <Button key={index} theme="invert" icon={item.icon} onClick={() => goTo(item.location)} />)}
 	</div>
 }
 

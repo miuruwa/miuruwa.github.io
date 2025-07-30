@@ -1,21 +1,21 @@
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@hooks/useNavigate";
 
 import languageData from "@shared/languages";
 import { useToolKit } from "@shared/toolkit";
 import { Button } from "@ui";
 
-import styles from "./BasePriceLinks.module.scss";
+import styles from "./RequestLinks.module.scss";
 
-const BasePriceLinks = ({delay}) => {
+const RequestLinks = () => {
   const { root } = styles;
   
   const controls = useAnimation();
-  const navigate = useNavigate();
+  const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
-  const pageData = languageData[toolkit.settings.language].basePrice;
+  const pageData = languageData[toolkit.settings.language].request;
 
   useEffect(() => {
     controls.start("visible");
@@ -36,10 +36,10 @@ const BasePriceLinks = ({delay}) => {
         },
       }}
       animate={controls}
-      transition={{ delay: delay + index * 0.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
+      transition={{ delay: 3.3 + index * 0.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
       <Button title={item.title} theme="invert" onClick={() => navigate(item.path)} />
     </motion.div>)}
   </div>
 }
 
-export default BasePriceLinks;
+export default RequestLinks;

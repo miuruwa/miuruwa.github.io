@@ -3,7 +3,7 @@ import {
   useState
 } from "react"
 
-import ClearIcon from "@icons/AddIcon";
+import ClearIcon from "@icons/ClearListIcon";
 
 export function TextField ({
   icon, currency, className, placeholder,

@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 import BannerBackground from "@blocks/BannerBackground";
 import Headline from "@blocks/Headline";
 import HomeIllustration from "@blocks/HomeIllustration";
@@ -13,7 +11,6 @@ const HomeBanner = () => {
   const { root, data, desktopPage } = styles;
   const isMobile = useIsMobile(768);
   const toolkit = useToolKit()
-  const navigate = useNavigate();
   const pageData = languageData[toolkit.settings.language].homepage
   return <div className={root}>
     <BannerBackground />

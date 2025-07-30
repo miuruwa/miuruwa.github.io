@@ -10,5 +10,6 @@
   &.desktopTemplate {
     display: grid;
     grid-template-columns: 4fr 5fr;
+    grid-gap: 1rem;
   }
 }

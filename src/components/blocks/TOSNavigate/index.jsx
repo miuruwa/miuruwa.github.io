@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@hooks/useNavigate";
 
 import languagesData from "@shared/languages";
 import { useToolKit } from "@shared/toolkit";
@@ -11,7 +11,7 @@ import styles from "./TOSNavigate.module.scss";
 const TOSNavigate = () => {
   const { root } = styles;
   const controls = useAnimation();
-  const navigate = useNavigate();
+  const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
   const pageData = languagesData[toolkit.settings.language].tos;

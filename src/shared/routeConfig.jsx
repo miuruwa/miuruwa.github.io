@@ -4,15 +4,16 @@ const LazyAbout = lazy(() => import("@pages/About"));
 const LazyDetails = lazy(() => import("@pages/Details"));
 const LazyHome = lazy(() => import("@pages/Home"));
 import NotFound from "@pages/NotFound";
-const LazySubmitCommission = lazy(() => import("@pages/SubmitCommission"));
 const LazyTermsOfService = lazy(() => import("@pages/TermsOfService"));
 const LazyStartup = lazy(() => import("@pages/Startup"));
 const LazySettings = lazy(() => import("@pages/Settings"));
-const LazyBasePrice = lazy(() => import("@pages/BasePrice"));
+const LazyRequest = lazy(() => import("@pages/Request"));
+
+import { routes } from "./routes";
 
 export const routeConfig = [
 	{
-		path: "/",
+		path: routes.startUp,
 		exact: true,
 		element: <LazyStartup />
 	},
@@ -21,39 +22,34 @@ export const routeConfig = [
 		element: <NotFound />
 	},
 	{
-		path: "/about",
+		path: routes.aboutMe,
 		exact: true,
 		element: <LazyAbout />
 	},
 	{
-		path: "/details",
+		path: routes.commissionInfo,
 		exact: true,
 		element: <LazyDetails />
 	},
 	{
-		path: "/home",
+		path: routes.home,
 		exact: true,
 		element: <LazyHome />
 	},
 	{
-		path: "/submit-commission",
-		exact: true,
-		element: <LazySubmitCommission />
-	},
-	{
-		path: "/terms-of-service",
+		path: routes.tos,
 		exact: true,
 		element: <LazyTermsOfService />
 	},
 	{
-		path: "/settings",
+		path: routes.settings,
 		exact: true,
 		element: <LazySettings />
 	},
 	{
-		path: "/base-price",
+		path: routes.request,
 		exact: true,
-		element: <LazyBasePrice />
+		element: <LazyRequest />
 	},
 ]
 

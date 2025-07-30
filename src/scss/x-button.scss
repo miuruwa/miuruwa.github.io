@@ -3,7 +3,7 @@
     display: grid;
     gap: 0.8rem;
 
-    border-radius: 1rem;
+    border-radius: 10rem;
     border: none;
     min-height: 2rem;
     box-sizing: border-box;
@@ -36,8 +36,7 @@
     .x-button-title {
       width: max-content;
 
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding: 0.6rem;
 
       font-size: 20px;
       text-align: left;
@@ -75,8 +74,6 @@
 
       .x-button-title {
         color: #000000;
-        padding-left: 0.6rem;
-        padding-right: 0.6rem;
       }
 
       &:hover {

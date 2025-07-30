@@ -1,10 +1,11 @@
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@hooks/useNavigate";
 
 import Headline from "@blocks/Headline";
 import { useToolKit } from "@shared/toolkit";
 import languages from "@shared/languages";
+import { routes } from "@shared/routes";
 import { Button } from "@ui";
 
 import styles from "./NotFoundMessage.module.scss";
@@ -14,7 +15,7 @@ const NotFoundMessage = () => {
   
   const controls = useAnimation();
   const toolkit = useToolKit();
-  const navigate = useNavigate();
+  const { navigate } =useNavigate();
 
   const pageData = languages[toolkit.settings.language].notFound;
 
@@ -57,7 +58,7 @@ const NotFoundMessage = () => {
       <Button 
         title={pageData.button}
         theme="invert"
-        onClick={() => navigate("/home")} />
+        onClick={() => navigate(routes.home)} />
     </motion.div>
   </div>
 }

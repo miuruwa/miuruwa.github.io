@@ -1,18 +1,18 @@
-import BasePriceIllustration from "@blocks/BasePriceIllustration";
-import BasePriceConfig from "@blocks/BasePriceConfig";
+import RequestIllustration from "@blocks/RequestIllustration";
+import RequestConfig from "@blocks/RequestConfig";
 import Meta from "@layout/Meta";
 import languageData from "@shared/languages";
 import { useToolKit } from "@shared/toolkit";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { classNames } from "@utils/classNames";
 
-import styles from "./BasePrice.module.scss";
+import styles from "./Request.module.scss";
 
 
-const BasePrice = () => {
+const Request = () => {
   const { root, mobileTemplate, desktopTemplate } = styles;
   const toolkit = useToolKit();
-  const pageData = languageData[toolkit.settings.language].basePrice;
+  const pageData = languageData[toolkit.settings.language].request;
   const isMobile = useIsMobile(768);
 
   const containerClasses = classNames(
@@ -24,10 +24,10 @@ const BasePrice = () => {
 
   return <Meta title={pageData.title}>
     <div className={containerClasses}>
-      <BasePriceConfig />
-      <BasePriceIllustration />
+      <RequestConfig />
+      <RequestIllustration />
     </div>
   </Meta>
 };
 
-export default BasePrice;
+export default Request;

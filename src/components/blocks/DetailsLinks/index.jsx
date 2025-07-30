@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@hooks/useNavigate";
 
 import languageData from "@shared/languages";
 import { useToolKit } from "@shared/toolkit";
@@ -8,7 +8,7 @@ import styles from "./DetailsLinks.module.scss";
 
 const DetailsLinks = () => {
   const { root } = styles;
-  const navigate = useNavigate();
+  const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
   const pageData = languageData[toolkit.settings.language].details;

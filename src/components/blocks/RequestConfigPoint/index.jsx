@@ -1,20 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setProgress, setColor, setArtworkType } from '@actions/BasePrice';
-
+import { setProgress, setColor, setArtwork } from '@actions/Request';
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 import { Button } from "@ui";
 
-import styles from "./BasePriceConfigPoint.module.scss";
+import styles from "./RequestConfigPoint.module.scss";
 
-const BasePriceConfigPoint = ({item, action, delay}) => {
+const RequestConfigPoint = ({item, action, delay}) => {
   const { root, configList } = styles;
   const dispatch = useDispatch();
   const selector = useSelector(state => state);
   
   const controls = useAnimation();
 
-  const toggleTheme = (id) => selector[action] === id ? "white" : "invert";
+  const toggleTheme = (id) => selector[action] === id ? "invert" : "white";
 
   const handleButton = (value) => {
 	switch (action) {
@@ -27,7 +26,7 @@ const BasePriceConfigPoint = ({item, action, delay}) => {
 			break;
 
 		default:
-			dispatch(setArtworkType(value))
+			dispatch(setArtwork(value))
 			break;
 	}
   }
@@ -75,4 +74,4 @@ const BasePriceConfigPoint = ({item, action, delay}) => {
 	</motion.div>
 }
 
-export default BasePriceConfigPoint;
+export default RequestConfigPoint;

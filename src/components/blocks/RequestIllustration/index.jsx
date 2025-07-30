@@ -4,13 +4,13 @@ import { useEffect } from "react";
 import BannerBackground from "@blocks/BannerBackground";
 import useProgressiveImg from "@hooks/useProgressiveImg";
 
-import styles from "./BasePriceIllustration.module.scss";
+import styles from "./RequestIllustration.module.scss";
 
-const BasePriceIllustration = () => {
+const RequestIllustration = () => {
   const { root, miuRuwa } = styles;
 
   const controls = useAnimation();
-  const [src, _] = useProgressiveImg("/img/Risha&NastyaSmall.png", "/img/Risha&Nastya.png.png");
+  const [src, _] = useProgressiveImg("/img/Risha&NastyaSmall.png", "/img/Risha&Nastya.png");
   
   useEffect(() => {
     controls.start("visible");
@@ -39,4 +39,4 @@ const BasePriceIllustration = () => {
   </div>
 }
 
-export default BasePriceIllustration;
+export default RequestIllustration;
