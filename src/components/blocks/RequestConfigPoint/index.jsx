@@ -68,7 +68,7 @@ const RequestConfigPoint = ({item, action, delay}) => {
 				}}
 				animate={controls}
 				transition={{ delay: delay + index * 0.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-				<Button theme={toggleTheme(data[0])} title={data[1].title} onClick={() => handleButton(data[0])}/>
+				<Button theme={toggleTheme(data[0])} title={data[1]} onClick={() => handleButton(data[0])}/>
 			</motion.div>)}
 		</div>
 	</motion.div>

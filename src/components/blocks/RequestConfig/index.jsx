@@ -7,7 +7,7 @@ import RequestConfigPoint from "@blocks/RequestConfigPoint";
 import RequestLinks from "@blocks/RequestLinks";
 import RequestConfigTotal from '@blocks/RequestConfigTotal';
 import Headline from "@blocks/Headline";
-import languageData from "@shared/languages";
+import { page } from "@shared/request";
 import { useToolKit } from "@shared/toolkit";
 import Request from '@stores/Request';
 
@@ -18,7 +18,7 @@ const RequestConfig = () => {
 
 	const toolkit = useToolKit()
 
-  const pageData = languageData[toolkit.settings.language].request;
+  const pageData = page[toolkit.settings.language];
 
 	return <Provider store={Request}>
     <div className={root}>

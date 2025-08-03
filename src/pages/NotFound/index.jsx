@@ -1,12 +1,12 @@
 import NotFoundBanner from "@blocks/NotFoundBanner";
 import Meta from "@layout/Meta";
 import { useToolKit } from "@shared/toolkit";
-import languages from "@shared/languages";
+import { page } from "@shared/notFound";
 
 const NotFound = () => {
   const toolkit = useToolKit()
 
-  const pageData = languages[toolkit.settings.language].notFound
+  const pageData = page[toolkit.settings.language]
 
   return <Meta title={pageData.title}>
     <NotFoundBanner />

@@ -2,23 +2,23 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
 import Headline from "@blocks/Headline";
-import languageData from "@shared/languages";
+import { page } from "@shared/details";
 import { useToolKit } from "@shared/toolkit";
 
 const DetailsAddons = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  const pageData = languageData[toolkit.settings.language].details;
+  const pageData = page[toolkit.settings.language].addons;
 
   useEffect(() => {
     controls.start("visible");
   }, [])
 
   return <div>
-    <Headline title={pageData.addons.headline} delay={4} type="small" />
+    <Headline title={pageData.headline} delay={4} type="small" />
     <ol>
-      {pageData.addons.list.map((item, index) => <motion.li key={index}
+      {pageData.list.map((item, index) => <motion.li key={index}
           initial="hidden"
           variants={{
             hidden: {

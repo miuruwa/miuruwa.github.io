@@ -4,7 +4,7 @@ import { useNavigate } from "@hooks/useNavigate";
 
 import Headline from "@blocks/Headline";
 import { useToolKit } from "@shared/toolkit";
-import languages from "@shared/languages";
+import { page } from "@shared/notFound";
 import { routes } from "@shared/routes";
 import { Button } from "@ui";
 
@@ -17,7 +17,7 @@ const NotFoundMessage = () => {
   const toolkit = useToolKit();
   const { navigate } =useNavigate();
 
-  const pageData = languages[toolkit.settings.language].notFound;
+  const pageData = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");

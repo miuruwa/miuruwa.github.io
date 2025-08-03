@@ -2,7 +2,7 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 import { useNavigate } from "@hooks/useNavigate";
 
-import languageData from "@shared/languages";
+import { page } from "@shared/request";
 import { useToolKit } from "@shared/toolkit";
 import { Button } from "@ui";
 
@@ -15,14 +15,14 @@ const RequestLinks = () => {
   const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
-  const pageData = languageData[toolkit.settings.language].request;
+  const { links } = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
   }, [])
   
   return <div className={root}>
-    {pageData.links.map((item, index) => <motion.div
+    {links.map((item, index) => <motion.div
       key={index}
       initial="hidden"
       variants={{

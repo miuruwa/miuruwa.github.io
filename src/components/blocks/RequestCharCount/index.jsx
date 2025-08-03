@@ -6,7 +6,7 @@ import { setCharacterCount } from '@actions/Request';
 import CharAddIcon from '@icons/CharAddIcon';
 import CharSubstractIcon from '@icons/CharSubstractIcon';
 import { useToolKit } from "@shared/toolkit";
-import languages from "@shared/languages";
+import { page } from "@shared/request";
 import { Button } from "@ui";
 
 import styles from "./RequestCharCount.module.scss";
@@ -19,7 +19,7 @@ const RequestCharCount = () => {
   const controls = useAnimation();
   const { characterCount } = useSelector(state => state);
   
-  const pageData = languages[toolkit.settings.language].request;
+  const pageData = page[toolkit.settings.language];
 
   const Add = () => dispatch(setCharacterCount(characterCount + 1));
   const Substract = () => characterCount > 1 && dispatch(setCharacterCount(characterCount - 1));

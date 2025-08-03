@@ -2,21 +2,21 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
 import Headline from "@blocks/Headline";
-import languageData from "@shared/languages";
+import { page } from "@shared/details";
 import { useToolKit } from "@shared/toolkit";
 
 const DetailsTurnarounds = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  const pageData = languageData[toolkit.settings.language].details;
+  const { turnarounds } = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
   }, [])
 
   return <div>
-    <Headline title={pageData.turnarounds.headline} delay={6.5} type="small" />
+    <Headline title={turnarounds.headline} delay={6.5} type="small" />
     <motion.p
       initial="hidden"
       variants={{
@@ -33,7 +33,7 @@ const DetailsTurnarounds = () => {
       }}
       animate={controls}
       transition={{ delay: 7, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-      {pageData.turnarounds.description}
+      {turnarounds.description}
     </motion.p>
   </div>
 }

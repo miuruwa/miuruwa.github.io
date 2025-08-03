@@ -2,7 +2,7 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
 import Headline from "@blocks/Headline";
-import languageData from "@shared/languages";
+import { page } from "@shared/details";
 import { useToolKit } from "@shared/toolkit";
 
 import styles from "./DetailsPreferences.module.scss";
@@ -13,14 +13,14 @@ const DetailsPreferences = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  const pageData = languageData[toolkit.settings.language].details;
+  const { preferences } = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
   }, [])
 
   return <div className={root}>
-    {pageData.preferences.map((item, olIndex) => <div key={olIndex}>
+    {preferences.map((item, olIndex) => <div key={olIndex}>
       <Headline title={item.headline} delay={0.5 + olIndex * 2} type="small" />
       <ol>
         {item.list.map((item, liIndex) => <motion.li 

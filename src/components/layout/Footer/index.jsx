@@ -1,6 +1,7 @@
 import EmailIcon from "@icons/EmailIcon";
 import { useIsMobile } from "@hooks/useIsMobile";
-import languageData from "@shared/languages";
+import { page } from "@shared/footer";
+import { email } from "@shared/common";
 import { useToolKit } from "@shared/toolkit";
 import { Button } from "@ui";
 
@@ -16,7 +17,7 @@ const FooterApp = () => {
 const FooterNavigation = () => {
 	const isMobile = useIsMobile(768);
   const toolkit = useToolKit();
-  const pageData = languageData[toolkit.settings.language].footer;
+  const pageData = page[toolkit.settings.language];
 	const { navigate } = useNavigate();
 
 	return <div>
@@ -27,8 +28,8 @@ const FooterNavigation = () => {
 const FooterSocial = () => {
 	const { social } = styles;
   const toolkit = useToolKit();
-  const pageData = languageData[toolkit.settings.language].footer;
-	const emailURL = `email:${pageData.email}`;
+  const pageData = page[toolkit.settings.language];
+	const emailURL = `email:${email}`;
 	const { goTo } = useNavigate();
 
 	return <div className={social}>

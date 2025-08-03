@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 import Headline from "@blocks/Headline";
 import { useToolKit } from "@shared/toolkit";
-import languageData from "@shared/languages";
+import { page } from "@shared/about";
 
 import styles from "./AboutMe.module.scss";
 
@@ -13,7 +13,7 @@ const AboutMe = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  const pageData = languageData[toolkit.settings.language].about;
+  const pageData = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");

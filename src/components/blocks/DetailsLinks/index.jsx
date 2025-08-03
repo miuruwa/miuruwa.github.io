@@ -1,6 +1,6 @@
 import { useNavigate } from "@hooks/useNavigate";
 
-import languageData from "@shared/languages";
+import { page } from "@shared/details";
 import { useToolKit } from "@shared/toolkit";
 import { Button } from "@ui";
 
@@ -11,7 +11,7 @@ const DetailsLinks = () => {
   const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
-  const pageData = languageData[toolkit.settings.language].details;
+  const pageData = page[toolkit.settings.language];
 
   return <div className={root}>
     {pageData.links.map((item, index) => <div 

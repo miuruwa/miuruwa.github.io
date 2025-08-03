@@ -2,7 +2,7 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
 import Headline from "@blocks/Headline";
-import languageData from "@shared/languages";
+import { page } from "@shared/about";
 import { useToolKit } from "@shared/toolkit";
 
 import styles from "./AboutHardware.module.scss";
@@ -12,7 +12,7 @@ const AboutHardware = () => {
   
   const controls = useAnimation();
   const toolkit = useToolKit();
-  const pageData = languageData[toolkit.settings.language].about;
+  const pageData = page[toolkit.settings.language];
   
   useEffect(() => {
     controls.start("visible");

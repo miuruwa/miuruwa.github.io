@@ -1,12 +1,12 @@
 import TOSDocument from "@blocks/TOSDocument";
 import Meta from "@layout/Meta";
-import languagesData from "@shared/languages";
+import { page } from "@shared/termsOfService";
 import { useToolKit } from "@shared/toolkit";
 
 const TermsOfService = () => {
   const toolkit = useToolKit();
 
-  const pageData = languagesData[toolkit.settings.language].tos;
+  const pageData = page[toolkit.settings.language];
 
   return <Meta title={pageData.title}>
     <TOSDocument />

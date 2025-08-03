@@ -1,7 +1,7 @@
 import RequestIllustration from "@blocks/RequestIllustration";
 import RequestConfig from "@blocks/RequestConfig";
 import Meta from "@layout/Meta";
-import languageData from "@shared/languages";
+import { page } from "@shared/request";
 import { useToolKit } from "@shared/toolkit";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { classNames } from "@utils/classNames";
@@ -12,7 +12,7 @@ import styles from "./Request.module.scss";
 const Request = () => {
   const { root, mobileTemplate, desktopTemplate } = styles;
   const toolkit = useToolKit();
-  const pageData = languageData[toolkit.settings.language].request;
+  const pageData = page[toolkit.settings.language];
   const isMobile = useIsMobile(768);
 
   const containerClasses = classNames(

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 import Headline from "@blocks/Headline";
 import { useNavigate } from "@hooks/useNavigate";
-import languageData from "@shared/languages";
+import { page } from "@shared/about";
 import { useToolKit } from "@shared/toolkit";
 import { Button } from "@ui";
 
@@ -16,7 +16,7 @@ const AboutCommissions = () => {
   const toolkit = useToolKit()
   const { navigate } =useNavigate()
 
-  const pageData = languageData[toolkit.settings.language].about.commissions;
+  const pageData = page[toolkit.settings.language].commissions;
 
   useEffect(() => {
     controls.start("visible");
@@ -57,7 +57,7 @@ const AboutCommissions = () => {
           }}
           animate={controls}
           transition={{ delay: 4 + 0.1 * index, duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}>
-          <Button theme="invert" title={item.title} onClick={() => navigate(path = item.path)} />
+          <Button theme="invert" title={item.title} onClick={() => navigate(item.path)} />
         </motion.span>)}
     </div>
   </div>

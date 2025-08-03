@@ -1,10 +1,10 @@
 import Meta from "@layout/Meta";
-import languageData from "@shared/languages";
+import { page } from "@shared/settings";
 import { useToolKit } from "@shared/toolkit";
 
 const Settings = () => {
   const toolkit = useToolKit();
-  const pageData = languageData[toolkit.settings.language].settings;
+  const pageData = page[toolkit.settings.language];
 
   return <Meta title={pageData.title}>
     Settings

@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
-import languagesData from "@shared/languages";
+import { page } from "@shared/termsOfService";
 import { useToolKit } from "@shared/toolkit";
 
 import styles from "./TOSNote.module.scss";
@@ -12,7 +12,7 @@ const TOSNote = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  const pageData = languagesData[toolkit.settings.language].tos;
+  const pageData = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");

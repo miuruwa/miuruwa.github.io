@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAddBackground, setSpecialRequest, setCommercialUseFee, setRushFee } from '@actions/Request';
 
 import { useToolKit } from "@shared/toolkit";
-import languages from "@shared/languages";
+import { page } from "@shared/request";
 import { Button } from "@ui";
 
 import styles from "./RequestAddons.module.scss";
@@ -17,7 +17,7 @@ const RequestAddons = () => {
   const controls = useAnimation();
   const selector = useSelector(state => state);
 
-  const pageData = languages[toolkit.settings.language].request;
+  const { addons } = page[toolkit.settings.language];
   const toggleTheme = (id) => selector[id] ? "invert" : "white";
 
   const handleButton = (id) => {
@@ -60,9 +60,9 @@ const RequestAddons = () => {
         }}
         animate={controls}
         transition={{ delay: 2.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-        {pageData.addons.title}:
+        {addons.title}:
       </motion.p>
-      {Object.entries(pageData.addons.list).map((item, index) => <motion.div
+      {Object.entries(addons.list).map((item, index) => <motion.div
         key={index}
         initial="hidden"
         variants={{
@@ -77,7 +77,7 @@ const RequestAddons = () => {
         }}
         animate={controls}
         transition={{ delay: 2.6 + 0.1 * index, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-        <Button title={item[1].title} theme={toggleTheme(item[0])} onClick={() => handleButton(item[0])} />  
+        <Button title={item[1]} theme={toggleTheme(item[0])} onClick={() => handleButton(item[0])} />  
       </motion.div>)}    
     </div>
   </div>

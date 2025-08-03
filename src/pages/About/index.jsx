@@ -3,7 +3,7 @@ import AboutMe from "@blocks/AboutMe";
 import AboutIllustration from "@blocks/AboutIllustration";
 import AboutHardware from "@blocks/AboutHardware";
 import Meta from "@layout/Meta";
-import languageData from "@shared/languages";
+import { page } from "@shared/about";
 import { useToolKit } from "@shared/toolkit";
 import { useIsMobile } from "@hooks/useIsMobile";
 
@@ -14,7 +14,7 @@ const About = () => {
 
   const isMobile = useIsMobile(768);
   const toolkit = useToolKit();
-  const pageData = languageData[toolkit.settings.language].about;
+  const pageData = page[toolkit.settings.language];
 
   return <Meta title={pageData.title}>
     <div className={root}>

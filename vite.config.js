@@ -18,6 +18,9 @@ const config = defineConfig({
         find: '@actions', replacement: path.resolve(__dirname, 'src/actions')
       },
       {
+        find: '@enums', replacement: path.resolve(__dirname, 'src/enums')
+      },
+      {
         find: '@stores', replacement: path.resolve(__dirname, 'src/stores')
       },
       {

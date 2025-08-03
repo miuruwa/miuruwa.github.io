@@ -4,7 +4,7 @@ import { motion, useAnimation } from "motion/react";
 import { setBrief } from '@actions/Request';
 
 import { useToolKit } from "@shared/toolkit";
-import languages from "@shared/languages";
+import { page } from "@shared/request";
 import { TextField } from "@ui";
 
 import styles from "./RequestBrief.module.scss";
@@ -17,7 +17,7 @@ const RequestBrief = () => {
   const controls = useAnimation();
   const { brief } = useSelector(state => state);
   
-  const pageData = languages[toolkit.settings.language].request;
+  const pageData = page[toolkit.settings.language];
 
   const handleInput = (value) => dispatch(setBrief(value))
 
