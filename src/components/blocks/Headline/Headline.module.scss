@@ -1,7 +1,6 @@
 .root {
   position: relative;
   font-family: "Cormorant Unicase", 'serif';
-  text-transform: uppercase;
   display: flex;
   span {
     display: inline-block;
@@ -18,4 +17,12 @@
 
 .small {
   font-size: 2.5rem;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform: lowercase;
 }

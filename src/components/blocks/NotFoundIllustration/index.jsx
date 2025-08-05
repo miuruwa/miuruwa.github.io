@@ -9,7 +9,7 @@ const NotFoundIllustration = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  const [src, _] = useProgressiveImg("/img/RishaSmall.png", "/img/Risha.png");
+  const [src, _] = useProgressiveImg("/img/Risha/loading.png", "/img/Risha/2000px.png");
   
   useEffect(() => {
     controls.start("visible");

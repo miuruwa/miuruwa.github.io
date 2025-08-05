@@ -8,7 +8,7 @@ const BannerBackground = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  const [src, { blur }] = useProgressiveImg("/img/BlurredClouds.jpg", "/img/Clouds.gif");
+  const [src, { blur }] = useProgressiveImg("/img/SlightlyThoughts/loading.jpg", "/img/SlightlyThoughts/380px.gif");
   
   useEffect(() => {
     controls.start("visible");

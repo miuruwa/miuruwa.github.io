@@ -10,8 +10,8 @@ import { useNavigate } from "@hooks/useNavigate";
 
 const FooterApp = () => {
 	return <div>
-		<h2>Celestial expanse</h2>
-		<h3>Made by miuruwax8</h3>
+		<h3>Celestial expanse</h3>
+		<h4>Made by miuruwax8</h4>
 	</div>
 }
 const FooterNavigation = () => {

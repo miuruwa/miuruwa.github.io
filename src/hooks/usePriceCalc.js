@@ -15,7 +15,7 @@ export const usePriceCalc = ({progress, color, artwork, characterCount, ...addon
   const addonsPriceResult = (() => {
     switch (checkMarkedAddons.length) {
       case 1:
-        return addonsPrice[checkMarkedAddons[0]].price
+        return addonsPrice[checkMarkedAddons[0]].usd
       case 0:
         return 0
       default:

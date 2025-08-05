@@ -1,6 +1,7 @@
 export const page = {
     eng: {
         title: "Home",
-        headline: "Miu Ruwa"
+        headline: "Miu Ruwa",
+        subline: "official website"
     }
 }

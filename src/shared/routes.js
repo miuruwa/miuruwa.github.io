@@ -7,4 +7,5 @@ export const routes = {
   settings: "/settings",
   request: "/request",
   waitList: "/waitlist",
+  waitListURL: "https://t.me/s/x8waitlist",
 };

@@ -10,7 +10,7 @@ const AboutIllustration = () => {
   const { root, miuRuwa } = styles;
 
   const controls = useAnimation();
-  const [src, _] = useProgressiveImg("/img/DevArtSmall.png", "/img/DevArt.png");
+  const [src, _] = useProgressiveImg("/img/miuruwa/loading.png", "/img/miuruwa/1254px.png");
   
   useEffect(() => {
     controls.start("visible");

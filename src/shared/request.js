@@ -35,12 +35,12 @@ export const page = {
             "artwork": {
                 title: "Frame type",
                 list: {
-                    title: "Bust",
-                    title: "Half body",
-                    title: "Full body",
-                    title: "Chibi",
-                    title: "Reference sheet",
-                    title: "Eye banner",
+                    "bu": "Bust",
+                    "hb": "Half body",
+                    "fb": "Full body",
+                    "ch": "Chibi",
+                    "rs": "Reference sheet",
+                    "eb": "Eye banner",
                 },
             },
         },

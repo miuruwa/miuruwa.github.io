@@ -6,8 +6,8 @@ export function classNames(
   return [
     className,
     ...additional,
-    Object.entries(mods)
+    ...(Object.entries(mods)
       .filter(([, value]) => Boolean(value))
-      .map(([className]) => className),
+      .map(([className]) => className)),
   ].join(" ");
 }

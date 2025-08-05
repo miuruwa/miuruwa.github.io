@@ -1,4 +1,4 @@
-import { lazy } from "react"
+import { lazy, useEffect } from "react"
 
 const LazyAbout = lazy(() => import("@pages/About"));
 const LazyDetails = lazy(() => import("@pages/Details"));
@@ -8,6 +8,7 @@ const LazyTermsOfService = lazy(() => import("@pages/TermsOfService"));
 const LazyStartup = lazy(() => import("@pages/Startup"));
 const LazySettings = lazy(() => import("@pages/Settings"));
 const LazyRequest = lazy(() => import("@pages/Request"));
+const LazyRedirect = lazy(() => import("@layout/Redirect"));
 
 import { routes } from "./routes";
 
@@ -18,8 +19,13 @@ export const routeConfig = [
 		element: <LazyStartup />
 	},
 	{
-		path: "/*",
+		path: "*",
 		element: <NotFound />
+	},
+	{
+		path: routes.waitList,
+		exact: true,
+		element: <LazyRedirect url={routes.waitListURL} />,
 	},
 	{
 		path: routes.aboutMe,

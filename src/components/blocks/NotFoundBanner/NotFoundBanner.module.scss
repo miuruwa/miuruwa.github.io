@@ -4,7 +4,7 @@
   height: 100vh;
 
   box-sizing: border-box;
-  padding: 4rem;
+  padding: 0 4rem;
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
   justify-content: space-between;
 
   img {
-    position: fixed;
+    position: absolute;
     height: 90vh;
     right: 4rem;
     bottom: 0;

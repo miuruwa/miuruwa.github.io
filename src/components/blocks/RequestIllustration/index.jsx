@@ -10,7 +10,7 @@ const RequestIllustration = () => {
   const { root, miuRuwa } = styles;
 
   const controls = useAnimation();
-  const [src, _] = useProgressiveImg("/img/Risha&NastyaSmall.png", "/img/Risha&Nastya.png");
+  const [src, _] = useProgressiveImg("/img/TemporaryUnavailable.png", "/img/TemporaryUnavailable.png");
   
   useEffect(() => {
     controls.start("visible");
