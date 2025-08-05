@@ -1,63 +1,45 @@
 import KeyboardArrowDownIcon from "@icons/AddIcon";
 
-export function Button ({
-  icon, title, isDropdown, xstyle, children, theme="usual", className, alt,
+import styles from "./Button.module.scss";
+import { classNames } from "@utils/classNames";
+
+export const Button = ({
+  icon, title, isDropdown, children, theme="usual", className, alt,
   ...props
-}) {
-  const ClassList = ["x-button"]
+}) => {
+  const {
+    root,
+    buttonIcon,
+    buttonTitle,
+    buttonDropdown,
+    withIcon,
+    withTitle,
+    atDropdown,
+    usual,
+    invert,
+    transparent,
+    white,
+  } = styles;
 
-  ClassList.push(`theme-${theme}`)
-  
-  if (className) {
-    ClassList.push(className)
-  }
-  
-  if (icon) {
-    ClassList.push("with-icon")
-  }
-  
-  if (title) {
-    ClassList.push("with-title")
-  }
-
-  if (isDropdown) {
-    ClassList.push("at-dropdown")
-  }
-
-  const ButtonIcon = () => {
-    if (icon) {
-      return <div className="x-button-icon">
-        {icon || " "}
-      </div>
-    }
-  }
-
-  const ButtonTitle = () => {
-    if (title) {
-      return <div className="x-button-title">
-        {title || children || " "}
-      </div>
-    }
-  }
-
-  const ButtonDropdown = () => {
-    if (isDropdown) {
-      return <div className="x-button-icon x-button-dropdown">
-        <KeyboardArrowDownIcon />
-      </div>
-    }
-  }
-
-  const buttonProps = {
-    className: ClassList.join(" "),
-    ...props,
-    style: xstyle,
-    title: alt,
-  }
-
-  return <div {...buttonProps}>
-    <ButtonIcon />
-    <ButtonTitle />
-    <ButtonDropdown />
+  return <div 
+      className={classNames(
+      root,
+      {
+        [withIcon]: icon,
+        [withTitle]: title,
+        [atDropdown]: isDropdown,
+        [usual]: theme === "usual",
+        [invert]: theme === "invert",
+        [transparent]: theme === "transparent",
+        [white]: theme === "white",
+      },
+      [className]
+    )}
+    style={props.style}
+    title={alt}
+    {...props}>
+      {icon && <div className={buttonIcon}>{icon}</div>}
+      {(title || children) && <div className={buttonTitle}>{title || children}</div>}
+      {isDropdown && <div className={classNames(buttonIcon, {}, [buttonDropdown])}><KeyboardArrowDownIcon /></div>}
   </div>
 }

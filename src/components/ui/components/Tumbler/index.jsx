@@ -1,31 +1,20 @@
-import {
-  useState
-} from "react"
+import { useState } from "react"
 
-export function Tumbler ({state, setState}) {
-  const outerClassList = ["x-tumbler"]
-  
-  const [
-    triggered, setTriggered
-  ] = useState(state)
+import styles from "./Tumbler.module.scss";
+import { classNames } from "@utils/classNames";
 
-  if (triggered) {
-    outerClassList.push("triggered")
-  }
+export const Tumbler = ({state, setState}) => {
+  const { root, triggered } = styles;
 
+  const [isTriggered, setTriggered] = useState(state)
+
+  // TODO: вынести в @utils
   const onToggle = () => {
-    setTriggered(!triggered)
-    setTimeout(() => {
-      setState(!state)
-    }, 100)
+    setTriggered(!isTriggered)
+    setTimeout(() => setState(!state), 100)
   }
 
-  return <div
-      className={outerClassList.join(" ")}
-      onClick={onToggle}
-  >
-    <div>
-      &nbsp;
-    </div>
+  return <div className={classNames(root, {[triggered]: isTriggered})} onClick={onToggle}>
+    <div>&nbsp;</div>
   </div>
 }

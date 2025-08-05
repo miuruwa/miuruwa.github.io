@@ -1,15 +1,11 @@
-export function CardBlock(props) {
-  let classList = ["x-block", props.className]
-  
-  return <div className={classList.join(" ")} style={props.xstyle} ref={props.xref} onClick={props.onClick}>
-    {props.children}
-  </div>
-}
+import { classNames } from "@utils/classNames";
 
-export function ButtonBlock(props) {
-  let classList = ["x-block", "button-block", props.className]
+import styles from "./Block.module.scss";
+
+export const CardBlock = (props) => {
+  const { root } = styles;
   
-  return <div className={classList.join(" ")} style={props.xstyle} ref={props.xref} onClick={props.onClick}>
+  return <div className={classNames(root, {}, [props.className])} style={props.xstyle} ref={props.xref} onClick={props.onClick}>
     {props.children}
   </div>
-}
+};

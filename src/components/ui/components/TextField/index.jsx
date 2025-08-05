@@ -1,37 +1,25 @@
-import {
-  useRef, 
-  useState
-} from "react"
+import { useRef, useState } from "react"
 
 import ClearIcon from "@icons/ClearListIcon";
+import { classNames } from "@utils/classNames";
 
-export function TextField ({
-  icon, currency, className, placeholder,
-  field, setField
-}) {
-  const TextField = useRef()
+import styles from "./TextField.module.scss";
+
+export const TextField = ({
+  icon: iconSVG, currency: currencyItem, placeholder,
+  field, setField, ...props
+}) => {
+  const { root, withIcon, withClearButton, withCurrency, focused, icon, currency } = styles;
+  const inputRef = useRef()
 
   const [focus, setFocus] = useState(false)
-  // eslint-disable-next-line
-  const [inputField, _setInputField] = useState(field)
+  const [inputField] = useState(field)
   const [valueCheckMark, setValueCheckMark] = useState(field)
 
-  // methods
-
-  const focusOn = () => {
-    TextField.current?.focus()
-  }
-  const focusOff = () => {
-    TextField.current?.blur()
-  }
-  
-  const onInput = event => {
-    setValueCheckMark(event.target.innerHTML)
-  }
-
-  const onFocus = () => {
-    setFocus(true)
-  }
+  const focusOn = () => inputRef.current?.focus()
+  const focusOff = () => inputRef.current?.blur()
+  const onInput = event => setValueCheckMark(event.target.innerHTML)
+  const onFocus = () => setFocus(true)
   
   const onBlur = () => {
     setField(valueCheckMark)
@@ -39,97 +27,33 @@ export function TextField ({
   }
 
   const clearInput = () => {
-    TextField.current.innerHTML = ""
+    inputRef.current.innerHTML = ""
     setValueCheckMark("")
   }
-
-  // components
-
-  const Icon = () => {
-    if (icon) {
-      return <div className="x-text-field-icon">
-        {
-          icon
-        }
-      </div>
-    }
-  }
-
-  const Input = () => {
-    const inputPlaceholder = currency ? `${placeholder} (${currency})` : placeholder
-    return <div 
-        className="x-text-field-input"
-        ref={TextField}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        contentEditable="true"
-        suppressContentEditableWarning={true}
-        onInput={onInput}
-        data-placeholder={inputPlaceholder}
-    >
-      {
-        inputField
-      }
-    </div>
-  }
-
-  const InputCurrency = () => {
-    if (currency && valueCheckMark !== "") {
-      return <div className="x-text-field-currency">
-        {
-          currency
-        }
-      </div>
-    }
-  }
-
-  const ClearButton = () => {
-    if (valueCheckMark !== "") {
-      return <div 
-          className="x-text-field-icon x-text-field-clear-button"
-          onClick={clearInput}
-      >
-        <ClearIcon />
-      </div>
-    }
-  }
-
-  const classList = []
-
-  classList.push("x-text-field")
-
-  if (icon) {
-    classList.push("with-icon")
-  }
-
-  if (valueCheckMark !== "") {
-    classList.push("with-clear-button")
-
-    if (currency) {
-      classList.push("with-currency")
-    }
-  }
-
-  if (focus) {
-    classList.push("focused")
-  }
-
-  if (className) {
-    classList.push(className)
-  }
-
-  // useEffect(()=>{}, [icon, valueCheckMark, currency, focus])
-
-  const FieldClassName = classList.join(" ")
   
   return <div 
-      className={FieldClassName} 
+      className={classNames(
+        root, {
+            [withIcon]: iconSVG,
+            [withClearButton]: valueCheckMark !== "",
+            [withCurrency]: valueCheckMark !== "" && currencyItem,
+            [focused]: focus,
+          }, [props.className])} 
       onClick={focusOn}
-      onMouseLeave={focusOff}
-  >
-    <Icon />
-    {Input()}
-    <InputCurrency />
-    <ClearButton />
+      onMouseLeave={focusOff}>
+    {iconSVG && <div className={icon}>{iconSVG}</div>}
+    {(() => <div 
+      className="x-text-field-input"
+      ref={inputRef}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      contentEditable="true"
+      suppressContentEditableWarning={true}
+      onInput={onInput}
+      data-placeholder={currencyItem ? `${placeholder} (${currencyItem})` : placeholder}>
+      {inputField}
+    </div>)()}
+    {currencyItem && valueCheckMark !== "" && <div className={currency}>{currencyItem}</div>}
+    {valueCheckMark !== "" && <div className={classNames(icon, {}, [clearButton])} onClick={clearInput}><ClearIcon /></div>}
   </div>
 }

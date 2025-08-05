@@ -4,7 +4,7 @@ import Footer from "@layout/Footer"
 import { ToolKitContext } from "@shared/toolkit"
 import routesConfig from "@shared/routeConfig"
 
-import "./scss/stylesheet.scss"
+import "./assets/stylesheet.scss"
 
 const App = () => {
   return <ToolKitContext>

@@ -1,0 +1,91 @@
+.root {
+  display: grid;
+  gap: 1rem*2;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: text;
+  background: #222;
+  font-size: 20px;
+
+  &:hover {
+    background: #4a4a4a;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #296fc5;
+    
+    &.clear-button {
+      color: #888888;
+      cursor: pointer;
+    }
+  }
+
+  .input {
+    padding-top: 1rem*1.2;
+    padding-bottom: 1rem*0.8;
+    width: 100%;
+    outline: none;
+    overflow: hidden;
+
+    &[contenteditable=true]:empty:before{
+      content: attr(data-placeholder);
+      pointer-events: none;
+      display: block; /* For Firefox */
+      color: #B2B2B2;
+    }
+  }
+
+  .currency {
+    padding-top: 1rem*1.2;
+    padding-bottom: 1rem*0.8;
+  }
+
+  &:not(.withIcon) {
+    &:not(.withCurrency) {
+      &:not(.withClearButton){
+        grid-template-columns: 1fr;
+      }
+      
+      &.withClearButton{
+        grid-template-columns: 1fr 24px;
+      }
+    }
+
+    &.withCurrency {
+      &:not(.withClearButton){
+        grid-template-columns: 1fr 24px;
+      }
+
+      &.withClearButton{
+        grid-template-columns: 1fr 24px 24px;
+      }
+    }
+  }
+  
+  &.withIcon{
+    &:not(.withCurrency) {
+      &:not(.withClearButton){
+        grid-template-columns: 24px 1fr;
+      }
+      
+      &.withClearButton{
+        grid-template-columns: 24px 1fr 24px;
+      }
+    }
+
+    &.withCurrency {
+      &:not(.withClear-button){
+        grid-template-columns: 24px 1fr 24px;
+      }
+
+      &.withClearButton{
+        grid-template-columns: 24px 1fr 24px 24px
+      }
+    }
+  }
+}
