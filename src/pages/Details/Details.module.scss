@@ -8,7 +8,8 @@
     gap: 1rem
   }
   &.desktopTemplate {
-    display: grid;
-    grid-template-columns: 4fr 5fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

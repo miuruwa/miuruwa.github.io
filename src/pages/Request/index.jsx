@@ -1,4 +1,3 @@
-import RequestIllustration from "@blocks/RequestIllustration";
 import RequestConfig from "@blocks/RequestConfig";
 import Meta from "@layout/Meta";
 import { page } from "@shared/request";
@@ -25,7 +24,6 @@ const Request = () => {
   return <Meta title={pageData.title}>
     <div className={containerClasses}>
       <RequestConfig />
-      <RequestIllustration />
     </div>
   </Meta>
 };

@@ -1,4 +1,3 @@
-import DetailsIllustration from "@blocks/DetailsIllustration";
 import DetailsMessage from "@blocks/DetailsMessage";
 import Meta from "@layout/Meta";
 import { page } from "@shared/details";
@@ -25,7 +24,6 @@ const Details = () => {
   return <Meta title={pageData.title}>
     <div className={containerClasses}>
       <DetailsMessage />
-      <DetailsIllustration />
     </div>
   </Meta>
 };
