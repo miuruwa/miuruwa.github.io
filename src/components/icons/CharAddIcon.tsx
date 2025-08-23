@@ -4,4 +4,6 @@ const CharAddIcon=() => {
   </svg>
 }
 
+export default Icon;
+
 export default CharAddIcon;

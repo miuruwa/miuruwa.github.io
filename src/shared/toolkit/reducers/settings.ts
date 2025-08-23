@@ -6,17 +6,16 @@ export const settings = {
   windowHeight: document.body.clientHeight,
 }
 
-// TODO: решить типизацию
-// @ts-ignore
+// @ts-expect-error // TODO: решить типизацию
 export function SettingsReducer(state, action) {
-  var newState = { ...state }
+  const newState = { ...state };
 
   switch (action.type) {
     case "set-cache":
       newState.serviceWorker = action.state
 
       localStorage.setItem(
-        "service-worker", 
+        "service-worker",
         JSON.stringify(action.state)
       )
 
@@ -26,7 +25,7 @@ export function SettingsReducer(state, action) {
       newState.schema = action.state
 
       localStorage.setItem(
-        "color-schema", 
+        "color-schema",
         action.state
       )
 
@@ -36,7 +35,7 @@ export function SettingsReducer(state, action) {
       newState.language = action.state
 
       localStorage.setItem(
-        "language", 
+        "language",
         action.state
       )
 

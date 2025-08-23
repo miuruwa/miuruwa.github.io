@@ -9,7 +9,7 @@ import RequestConfigTotal from '@blocks/RequestConfigTotal';
 import Headline from "@ui/Headline";
 import { page } from "@shared/pages/request";
 import { useToolKit } from "@shared/toolkit";
-import Request from '@stores/Request';
+import { Request } from '@stores/Request';
 
 import styles from "./RequestConfig.module.scss";
 
@@ -18,8 +18,7 @@ const RequestConfig = () => {
 
 	const toolkit = useToolKit()
 
-  // TODO: useLanguage();
-  // @ts-ignore
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   // TODO: завести delay
@@ -27,7 +26,6 @@ const RequestConfig = () => {
     <div className={root}>
       <Headline title={pageData.title} />
       <div className={configList}>
-        {/* @ts-ignore */}
         {Object.entries(pageData.config).map((data, index: number) => <RequestConfigPoint key={index} item={data[1]} action={data[0]} delay={(index+1) / 2} />)}
         <RequestCharCount />
         <RequestAddons />

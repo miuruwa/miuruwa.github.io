@@ -16,13 +16,12 @@ const TOSDocument = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
-  // @ts-ignore
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   // TODO: занести типизацию в d.ts
   return <div className={root}>
@@ -31,7 +30,7 @@ const TOSDocument = () => {
       <Headline title={pageData.headline} delay={1.5} />
     </div>
     <TOSNavigate />
-    <motion.div 
+    <motion.div
       className={terms}
       initial="hidden"
       variants={{

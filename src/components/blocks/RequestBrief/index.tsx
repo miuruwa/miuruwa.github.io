@@ -5,27 +5,28 @@ import { setBrief } from '@actions/Request';
 
 import { useToolKit } from "@shared/toolkit";
 import { page } from "@shared/pages/request";
-import { TextField } from "@ui";
+import { TextField } from "@ui/";
 
 import styles from "./RequestBrief.module.scss";
 
 const RequestBrief = () => {
   const { root, field } = styles;
-  
+
   const toolkit = useToolKit();
   const dispatch = useDispatch();
   const controls = useAnimation();
+	// @ts-expect-error // TODO: SELECTOR TYPE;
   const { brief } = useSelector(state => state);
-  
-  // TODO: useLanguage();
+
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   const handleInput = (value: string) => dispatch(setBrief(value))
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
-  
+  })
+
   return <div className={root}>
     <motion.p
       initial="hidden"

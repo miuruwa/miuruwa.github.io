@@ -9,15 +9,16 @@ const HomeIllustration = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  const [src, _] = useProgressiveImg("/img/Risha&Nastya/loading.png", "/img/Risha&Nastya/2000px.png");
-  
+  const [src, ] = useProgressiveImg("/img/Risha&Nastya/loading.png", "/img/Risha&Nastya/2000px.png");
+
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
-  return <motion.img 
+  return <motion.img
       className={root}
-      src={src} 
+      // @ts-expect-error // TODO: useProgressive
+      src={src}
       style={{imageRendering: "pixelated"}}
       initial="hidden"
       variants={{

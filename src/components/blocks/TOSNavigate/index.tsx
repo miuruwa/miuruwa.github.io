@@ -14,13 +14,12 @@ const TOSNavigate = () => {
   const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
-  // @ts-ignore
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   // TODO: занести типизацию в d.ts
   return <div className={root}>

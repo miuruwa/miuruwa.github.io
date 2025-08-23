@@ -10,30 +10,31 @@ const RequestConfigPoint: Blocks.RequestConfigPoint = ({item, action, delay}) =>
   const { root, configList } = styles;
   const dispatch = useDispatch();
   const selector = useSelector(state => state);
-  
+
   const controls = useAnimation();
 
+	// @ts-expect-error // TODO: 'selector' is of type 'unknown'.ts(18046)
   const toggleTheme = (id: string) => selector[action] === id ? "invert" : "white";
 
   const handleButton = (value: string) => {
-	switch (action) {
-		case "progress":
-			dispatch(setProgress(value))
-			break;
+		switch (action) {
+			case "progress":
+				dispatch(setProgress(value))
+				break;
 
-		case "color":
-			dispatch(setColor(value))
-			break;
+			case "color":
+				dispatch(setColor(value))
+				break;
 
-		default:
-			dispatch(setArtwork(value))
-			break;
-	}
+			default:
+				dispatch(setArtwork(value))
+				break;
+		}
   }
-	
+
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
 	return <motion.div className={root}>
 		<motion.p

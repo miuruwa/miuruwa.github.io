@@ -4,9 +4,7 @@ import { useToolKit } from "@shared/toolkit";
 
 const Settings = () => {
   const toolkit = useToolKit();
-  
-  // TODO: useLanguage()
-  // @ts-ignore
+  // @ts-expect-error // TODO: useLanguage()
   const pageData = page[toolkit.settings.language];
 
   return <Meta title={pageData.title}>

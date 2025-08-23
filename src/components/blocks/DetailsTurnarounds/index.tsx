@@ -9,12 +9,12 @@ const DetailsTurnarounds = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
+  // @ts-expect-error // TODO: useLanguage();
   const { turnarounds } = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div>
     <Headline title={turnarounds.headline} delay={6.5} type="small" />

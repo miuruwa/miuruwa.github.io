@@ -1,20 +1,19 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useReducer } from "react";
 
 import { settings, SettingsReducer } from "./reducers";
 import { SettingsBehaviour } from "./behaviours";
 
-// @ts-ignore
+// @ts-expect-error toolkit is on way to be removed
 const getToolKitContext = createContext();
-// @ts-ignore
+// @ts-expect-error toolkit is on way to be removed
 const createPartition = (state, dispatch, Behaviour) => new Behaviour(state, dispatch);
 
 class ToolKit {
-  // @ts-ignore
   #settings;
-  // @ts-ignore
   #toolDict;
 
-  // @ts-ignore
+  // @ts-expect-error toolkit is on way to be removed
   constructor (settingsPartition) {
     this.#settings = settingsPartition;
     this.#toolDict = {};
@@ -26,12 +25,12 @@ class ToolKit {
     })
   };
 
-  // @ts-ignore
+  // @ts-expect-error toolkit is on way to be removed
   setPartition (name, partition) {
-    // @ts-ignore
+    // @ts-expect-error toolkit is on way to be removed
     this.#toolDict[name] = partition;
     Object.defineProperty(this, name, {
-      // @ts-ignore
+      // @ts-expect-error toolkit is on way to be removed
       get: () => this.#toolDict[name],
       configurable: true,
     });
@@ -42,20 +41,18 @@ class ToolKit {
   }
 }
 
-// @ts-ignore
-function ToolKitContext ({children}) {
+// @ts-expect-error toolkit is on way to be removed
+export function ToolKitContext ({children}) {
   const [ settingsState, settingsDispatch ] = useReducer(SettingsReducer, settings);
-  
+
   const settingsPartition = createPartition(settingsState, settingsDispatch, SettingsBehaviour);
   const toolkit = new ToolKit(settingsPartition);
-  
+
   return <getToolKitContext.Provider value={toolkit}>
     <div className="index">{children}</div>
   </getToolKitContext.Provider>
 }
 
-const useToolKit = () => useContext(getToolKitContext);
-// @ts-ignore
-const usePartition = (name, partition) => useToolKit().setPartition(name, partition);
-
-export { ToolKitContext, useToolKit, usePartition };
+export const useToolKit = () => useContext(getToolKitContext);
+// @ts-expect-error toolkit is on way to be removed
+export const usePartition = (name, partition) => useToolKit().setPartition(name, partition);

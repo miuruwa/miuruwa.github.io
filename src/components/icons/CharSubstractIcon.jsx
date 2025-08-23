@@ -1,7 +1,0 @@
-const CharSubstractIcon=() => {
-  return <svg width="20" height="20" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg">
-    <path fillRule="evenodd" clipRule="evenodd" d="M11.2465 9.246H9.24531H4.2417C3.68918 9.24623 3.24111 9.69402 3.24112 10.2466C3.24111 10.7992 3.68918 11.2469 4.2417 11.2472H9.24531H11.2465H16.2515L16.3537 11.2416C16.8582 11.1903 17.2521 10.7647 17.2521 10.2466C17.252 9.72849 16.8582 9.30282 16.3537 9.25153L16.2515 9.246H11.2465Z" />
-  </svg>
-}
-
-export default CharSubstractIcon;

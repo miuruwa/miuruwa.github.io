@@ -9,22 +9,24 @@ import styles from "./DetailsPreferences.module.scss";
 
 const DetailsPreferences = () => {
   const { root } = styles;
-  
+
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
+  // @ts-expect-error // TODO: useLanguage();
   const { preferences } = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div className={root}>
+    {/* @ts-expect-error типизация */}
     {preferences.map((item, olIndex) => <div key={olIndex}>
       <Headline title={item.headline} delay={0.5 + olIndex * 2} type="small" />
       <ol>
-        {item.list.map((item, liIndex) => <motion.li 
+        {/* @ts-expect-error типизация */}
+        {item.list.map((item, liIndex) => <motion.li
           key={liIndex}
           initial="hidden"
           variants={{
@@ -43,7 +45,7 @@ const DetailsPreferences = () => {
           transition={{ delay: 1 + olIndex * 2 + liIndex * 0.25, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
           {item}
         </motion.li>)}
-      </ol>            
+      </ol>
     </div>)}
   </div>
 }

@@ -11,9 +11,8 @@ import styles from "./Request.module.scss";
 const Request = () => {
   const { root, mobileTemplate, desktopTemplate } = styles;
   const toolkit = useToolKit();
-  
-  // TODO: useLanguage()
-  // @ts-ignore
+
+  // @ts-expect-error // TODO: useLanguage()
   const pageData = page[toolkit.settings.language];
   const isMobile = useIsMobile(768);
 

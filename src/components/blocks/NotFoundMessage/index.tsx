@@ -12,17 +12,17 @@ import styles from "./NotFoundMessage.module.scss";
 
 const NotFoundMessage = () => {
   const { root } = styles;
-  
+
   const controls = useAnimation();
   const toolkit = useToolKit();
   const { navigate } =useNavigate();
 
-  // TODO: useLanguage();
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div className={root}>
     <Headline title={pageData.title} />

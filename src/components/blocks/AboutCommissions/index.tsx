@@ -11,18 +11,17 @@ import styles from "./AboutCommissions.module.scss";
 
 const AboutCommissions = () => {
   const { root, buttonList } = styles;
-  
+
   const controls = useAnimation();
   const toolkit = useToolKit()
   const { navigate } =useNavigate()
 
-  // TODO: useLanguage();
-  // @ts-ignore
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language].commissions;
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div className={root}>
     <Headline title={pageData.title} delay={3} type="small" />

@@ -1,1 +1,0 @@
-export { SettingsBehaviour } from "./settings"

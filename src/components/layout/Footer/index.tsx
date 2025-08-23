@@ -20,8 +20,7 @@ const FooterNavigation = () => {
 	const isMobile = useIsMobile(768);
   const toolkit = useToolKit();
 
-	// TODO: useLanguage()
-	// @ts-ignore
+	// @ts-expect-error // TODO: useLanguage()
   const pageData = page[toolkit.settings.language];
 	const { navigate } = useNavigate();
 
@@ -35,8 +34,7 @@ const FooterSocial = () => {
 	const { social } = styles;
   const toolkit = useToolKit();
 
-	// TODO: useLanguage()
-	// @ts-ignore
+	// @ts-expect-error // TODO: useLanguage()
   const pageData = page[toolkit.settings.language];
 	const emailURL = `email:${email}`;
 	const { goTo } = useNavigate();

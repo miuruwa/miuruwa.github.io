@@ -10,19 +10,18 @@ import styles from "./RequestLinks.module.scss";
 
 const RequestLinks = () => {
   const { root } = styles;
-  
+
   const controls = useAnimation();
   const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
-  // @ts-ignore
+  // @ts-expect-error // TODO: useLanguage();
   const { links } = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
-  
+  })
+
   return <div className={root}>
     {links.map((item: {title:string, path: string}, index: number) => <motion.div
       key={index}

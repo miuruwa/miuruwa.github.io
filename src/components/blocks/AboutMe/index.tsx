@@ -13,12 +13,12 @@ const AboutMe = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div className={root}>
     <Headline title={pageData.title} />

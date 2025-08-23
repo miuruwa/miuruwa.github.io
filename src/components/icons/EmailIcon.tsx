@@ -4,5 +4,4 @@ const EmailIcon = () => {
   </svg>
 
 }
-
 export default EmailIcon;

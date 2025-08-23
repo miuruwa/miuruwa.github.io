@@ -6,16 +6,16 @@ import { usePriceCalc } from "@hooks/usePriceCalc";
 
 const RequestConfigTotal = () => {
   const selector = useSelector(state => state);
-  // TODO: сделать что-то с селектором
-  // @ts-ignore
+
+  // @ts-expect-error // TODO: сделать что-то с селектором
   const priceCount = usePriceCalc(selector);
   const controls = useAnimation();
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
-  return <motion.h3 
+  return <motion.h3
     initial="hidden"
     variants={{
       hidden: {

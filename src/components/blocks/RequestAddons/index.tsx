@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "motion/react";
-import { useDispatch, useSelector } from 'react-redux';
-import { setAddBackground, setSpecialRequest, setCommercialUseFee, setRushFee } from '@actions/Request';
 
+import type { RequestStore } from "@stores/Request";
+import { setAddBackground, setSpecialRequest, setCommercialUseFee, setRushFee } from '@actions/Request';
+import { useRequestDispatch, useRequestSelector } from "@hooks/useRequest";
 import { useToolKit } from "@shared/toolkit";
 import { page } from "@shared/pages/request";
 import { Button } from "@ui/Button";
@@ -13,11 +14,11 @@ const RequestAddons = () => {
   const { root, addonList } = styles;
 
   const toolkit = useToolKit();
-  const dispatch = useDispatch();  
+  const dispatch = useRequestDispatch();
   const controls = useAnimation();
-  const selector = useSelector(state => state);
+  const selector = useRequestSelector(state => state);
 
-  // TODO: useLanguage();
+  // @ts-expect-error // TODO: useLanguage();
   const { addons } = page[toolkit.settings.language];
   const toggleTheme = (id: string) => selector[id] ? "invert" : "white";
 
@@ -26,11 +27,11 @@ const RequestAddons = () => {
       case "addBackground":
         dispatch(setAddBackground(!selector[id]))
         break;
-        
+
       case "specialRequest":
         dispatch(setSpecialRequest(!selector[id]))
         break;
-        
+
       case "commercialUseFee":
         dispatch(setCommercialUseFee(!selector[id]))
         break;
@@ -39,11 +40,11 @@ const RequestAddons = () => {
         dispatch(setRushFee(!selector[id]))
         break;
     }
-  }  
+  }
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div className={root}>
     <div className={addonList}>

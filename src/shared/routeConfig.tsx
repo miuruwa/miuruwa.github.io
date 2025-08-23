@@ -1,4 +1,4 @@
-import { lazy, useEffect } from "react"
+import { lazy } from "react"
 
 const LazyAbout = lazy(() => import("@pages/About"));
 const LazyDetails = lazy(() => import("@pages/Details"));

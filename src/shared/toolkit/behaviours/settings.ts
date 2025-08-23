@@ -1,10 +1,8 @@
 export class SettingsBehaviour {
-  // @ts-ignore
   #state
-  // @ts-ignore
   #dispatch
-  
-  // @ts-ignore
+
+  // @ts-expect-error toolkit is on way to be removed
   constructor(state, dispatch) {
   this.#state = state
   this.#dispatch = dispatch
@@ -21,7 +19,7 @@ export class SettingsBehaviour {
       }
     }
     },
-    
+
     loaded: {
     get: () => this.#state.loaded,
     set: (value) => {
@@ -33,42 +31,42 @@ export class SettingsBehaviour {
       }
     }
   },
-  
+
   page: {
     get: () => this.#state.page,
     set: (value) => {
       if (typeof value == "number") {
-        var offset = 100
-        
-        // @ts-ignore
+        let offset = 100
+
+        // @ts-expect-error toolkit is on way to be removed
         if (this.mounted) {
           offset += 100
-          // @ts-ignore
+          // @ts-expect-error toolkit is on way to be removed
           this.loaded = false
           setTimeout(()=>{
-            // @ts-ignore
+            // @ts-expect-error toolkit is on way to be removed
             this.mounted = false
           }, 100)
         }
-  
+
         setTimeout(()=>{
         this.#dispatch({
           type: "set-page",
           state: value
         })
-        // @ts-ignore
+        // @ts-expect-error toolkit is on way to be removed
         this.mounted = true
         }, offset)
-  
+
         setTimeout(()=>{
-        // @ts-ignore
+        // @ts-expect-error toolkit is on way to be removed
         this.loaded = true
         }, 100 + offset)
-      
+
       }
     }
     },
-    
+
     cacheApp: {
     get: () => this.#state.serviceWorker,
     set: (value) => {
@@ -77,7 +75,7 @@ export class SettingsBehaviour {
         type: "set-cache",
         state: value
         })
-      
+
       }
     }
     },

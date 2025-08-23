@@ -1,7 +1,6 @@
 import { routes } from "../routes";
 
-// TODO: решить вопрос с Pages
-// @ts-ignore
+// @ts-expect-error // TODO: решить вопрос с Pages
 const page: Pages.About = {
     eng: {
         title: "About me",

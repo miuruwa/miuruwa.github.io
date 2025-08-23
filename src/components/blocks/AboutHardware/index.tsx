@@ -9,17 +9,16 @@ import styles from "./AboutHardware.module.scss";
 
 const AboutHardware = () => {
   const { root } = styles;
-  
+
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
-  // @ts-ignore
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
-  
+
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div className={root}>
       <div>

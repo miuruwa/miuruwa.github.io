@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 
 const useProgressiveImg = (lowQualitySrc: string, highQualitySrc: string) => {
-  const [src, setSrc] = useState(lowQualitySrc)
-  
+  const [src, setSrc] = useState<string>(lowQualitySrc)
+
   useEffect(() => {
     setSrc(lowQualitySrc)
     const img = new Image()
@@ -11,7 +11,7 @@ const useProgressiveImg = (lowQualitySrc: string, highQualitySrc: string) => {
       setSrc(highQualitySrc)
     }
   }, [lowQualitySrc, highQualitySrc])
-  
+
   return [src, { blur: src === lowQualitySrc }]
 }
 

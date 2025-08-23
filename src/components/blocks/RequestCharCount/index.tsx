@@ -13,22 +13,23 @@ import styles from "./RequestCharCount.module.scss";
 
 const RequestCharCount = () => {
   const { root } = styles;
-  
+
   const toolkit = useToolKit();
   const dispatch = useDispatch();
   const controls = useAnimation();
+	// @ts-expect-error Property 'characterCount' does not exist on type 'unknown'.ts(2339)
   const { characterCount } = useSelector(state => state);
-  
-  // TODO: useLanguage();
+
+  // @ts-expect-error Property // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   const Add = () => dispatch(setCharacterCount(characterCount + 1));
   const Substract = () => characterCount > 1 && dispatch(setCharacterCount(characterCount - 1));
-	
+
   useEffect(() => {
     controls.start("visible");
-  }, [])
-  
+  })
+
   return <div className={root}>
     <motion.p
       initial="hidden"

@@ -8,13 +8,6 @@ declare module "*.scss" {
   export = cn;
 }
 
-declare module "*.svg" {
-  import type { VFC } from "react";
-
-  const svg: VFC<React.SVGProps<SVGSVGElement>>;
-  export default svg;
-}
-
 declare module "*.png";
 
 declare module "*.gif";

@@ -14,9 +14,8 @@ const About = () => {
 
   const isMobile = useIsMobile(768);
   const toolkit = useToolKit();
-  
-  // TODO: useLanguage()
-  // @ts-ignore
+
+  // @ts-expect-error // TODO: useLanguage()
   const pageData = page[toolkit.settings.language];
 
   return <Meta title={pageData.title}>

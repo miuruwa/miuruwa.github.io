@@ -9,17 +9,18 @@ const DetailsAddons = () => {
   const controls = useAnimation();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language].addons;
 
   useEffect(() => {
     controls.start("visible");
-  }, [])
+  })
 
   return <div>
     <Headline title={pageData.headline} delay={4} type="small" />
     <ol>
-      {pageData.list.map((item, index) => <motion.li key={index}
+      {/* @ts-expect-error // TODO: useLanguage(); */}
+      {pageData.list.map((item, index: number) => <motion.li key={index}
           initial="hidden"
           variants={{
             hidden: {
@@ -37,7 +38,7 @@ const DetailsAddons = () => {
           transition={{ delay: 5 + index * 0.25, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
              ✦ {item}
           </motion.li>)}
-    </ol>            
+    </ol>
   </div>
 }
 
