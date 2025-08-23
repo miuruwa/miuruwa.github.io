@@ -9,7 +9,7 @@ const NotFoundIllustration = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  const [src, ] = useProgressiveImg("/img/Risha/loading.png", "/img/Risha/2000px.png");
+  const { src } = useProgressiveImg("/img/Risha/loading.png", "/img/Risha/2000px.png");
 
   useEffect(() => {
     controls.start("visible");
@@ -17,7 +17,6 @@ const NotFoundIllustration = () => {
 
   return <motion.img
       className={root}
-      // @ts-expect-error // TODO: useProgressive
       src={src}
       style={{imageRendering: "pixelated"}}
       initial="hidden"

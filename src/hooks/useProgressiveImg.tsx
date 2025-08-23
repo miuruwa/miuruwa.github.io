@@ -4,7 +4,8 @@ const useProgressiveImg = (lowQualitySrc: string, highQualitySrc: string) => {
   const [src, setSrc] = useState<string>(lowQualitySrc)
 
   useEffect(() => {
-    setSrc(lowQualitySrc)
+    setSrc(lowQualitySrc);
+
     const img = new Image()
     img.src = highQualitySrc
     img.onload = () => {
@@ -12,7 +13,10 @@ const useProgressiveImg = (lowQualitySrc: string, highQualitySrc: string) => {
     }
   }, [lowQualitySrc, highQualitySrc])
 
-  return [src, { blur: src === lowQualitySrc }]
+  return {
+    src,
+    isLoading: src === lowQualitySrc
+  }
 }
 
 export default useProgressiveImg;

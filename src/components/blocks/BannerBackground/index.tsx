@@ -8,21 +8,18 @@ const BannerBackground = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  // @ts-expect-error // TODO: исправить типизацию useProgressiveImg
-  const [src, { blur }] = useProgressiveImg("/img/SlightlyThoughts/loading.jpg", "/img/SlightlyThoughts/380px.gif");
+  const { src, isLoading } = useProgressiveImg("/img/SlightlyThoughts/loading.jpg", "/img/SlightlyThoughts/380px.gif");
 
   useEffect(() => {
     controls.start("visible");
   })
 
-  // TODO: решить вопрос с --bg-image
-  return <motion.div
+  return <motion.img
     className={ root }
+    src={src}
     style={{
-      // @ts-expect-error // TODO: исправить это
-      "--bg-image": `url(${src})`,
-      filter: blur ? "blur(20px)" : "none",
-      transition: blur ? "none" : "filter 0.3s ease-out"
+      filter: isLoading ? "blur(20px)" : "none",
+      transition: isLoading ? "none" : "filter 0.3s ease-out"
     }}
     initial="hidden"
     variants={{

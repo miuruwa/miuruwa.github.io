@@ -10,7 +10,7 @@ const AboutIllustration = () => {
   const { root, miuRuwa } = styles;
 
   const controls = useAnimation();
-  const [src] = useProgressiveImg("/img/miuruwa/loading.png", "/img/miuruwa/1254px.png");
+  const { src } = useProgressiveImg("/img/miuruwa/loading.png", "/img/miuruwa/1254px.png");
 
   useEffect(() => {
     controls.start("visible");
@@ -20,7 +20,6 @@ const AboutIllustration = () => {
     <BannerBackground />
     <motion.img
       className={miuRuwa}
-      // @ts-expect-error // TODO: исправить типизацию useProgressiveImg
       src={src}
       style={{imageRendering: "pixelated"}}
       initial="hidden"
