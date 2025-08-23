@@ -1,15 +1,12 @@
 import HomeBanner from "@blocks/HomeBanner";
-import { page } from "@shared/pages/home";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { home } from "@shared/pages/home";
 import Meta from "@layout/Meta";
 
 const Home = () => {
-  const toolkit = useToolKit();
+  const { headline } = useTranslation<Pages.Home>(home.translations);
 
-  // @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
-
-  return <Meta title={pageData.title}>
+  return <Meta title={headline}>
     <HomeBanner />
   </Meta>
 };

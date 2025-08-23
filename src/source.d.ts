@@ -50,6 +50,11 @@ declare namespace Pages {
     },
     links: Shared.Link[],
   }
+
+  type Home = {
+    headline: string,
+    description: string,
+  }
 }
 declare namespace Translations {
   type Languages = "eng";

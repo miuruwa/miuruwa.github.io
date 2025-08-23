@@ -1,20 +1,17 @@
 import Headline from "@ui/Headline";
-import { useToolKit } from "@shared/toolkit";
-import { page } from "@shared/pages/home";
+import { useTranslation } from "@hooks/useTranslation";
+import { home } from "@shared/pages/home";
 
 import styles from "./HomeMessage.module.scss";
 
 const HomeMessage = () => {
   const { root } = styles;
-  
-  const toolkit = useToolKit();
 
-  // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { headline, description } = useTranslation<Pages.Home>(home.translations);
 
   return <div className={root}>
-    <Headline title={pageData.headline} type="big" />
-    <Headline title={pageData.subline} type="small" textCase="lower"/>
+    <Headline title={headline} type="big" />
+    <Headline title={description} type="small" textCase="lower"/>
   </div>
 }
 

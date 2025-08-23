@@ -1,7 +1,10 @@
-export const page = {
+export const home: {
+    translations: Translations.Translate<Pages.Home>
+} = {
+  translations: {
     eng: {
-        title: "Home",
-        headline: "Miu Ruwa",
-        subline: "official website"
+      headline: "Celestial expanse",
+      description: "miuruwa official website"
     }
+  }
 }
