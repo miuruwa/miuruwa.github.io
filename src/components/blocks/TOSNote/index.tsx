@@ -1,8 +1,8 @@
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
-import { page } from "@shared/pages/termsOfService";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { termsOfService } from "@shared/pages/termsOfService";
 
 import styles from "./TOSNote.module.scss";
 
@@ -10,10 +10,7 @@ const TOSNote = () => {
   const { note, mark } = styles;
 
   const controls = useAnimation();
-  const toolkit = useToolKit();
-
-  // @ts-expect-error // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { note: noteContent } = useTranslation<Pages.TOS>(termsOfService.translations);
 
   useEffect(() => {
     controls.start("visible");
@@ -36,9 +33,9 @@ const TOSNote = () => {
       }}
       animate={controls}
       transition={{ delay: 1, duration: 2, ease: [0, 0.71, 0.2, 1.01] }}>
-      <span className={mark}> {pageData.noteMark}</span>
+      <span className={mark}> {noteContent.headline}</span>
       <p>
-        {pageData.note}
+        {noteContent.description}
       </p>
     </motion.div>
 }

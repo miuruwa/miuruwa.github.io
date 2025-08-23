@@ -81,6 +81,19 @@ declare namespace Pages {
   type StartUp = {
     headline: string,
   }
+
+  type TOS = {
+    headline: string,
+    note: {
+      headline: string,
+      description: string
+    },
+    terms: {
+      headline: string,
+      list: Shared.Paragraph[]
+    }[],
+    navigate: Shared.Link[]
+  }
 }
 declare namespace Translations {
   type Languages = "eng";
@@ -116,4 +129,9 @@ declare namespace Shared {
     path?: string,
     location?: string,
   }
+
+  type Paragraph = (string | {
+    headline: string,
+    list: string[]
+  })
 }

@@ -2,8 +2,8 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 import { useNavigate } from "@hooks/useNavigate";
 
-import { page } from "@shared/pages/termsOfService";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { termsOfService } from "@shared/pages/termsOfService";
 import { Button } from "@ui/Button";
 
 import styles from "./TOSNavigate.module.scss";
@@ -12,21 +12,16 @@ const TOSNavigate = () => {
   const { root } = styles;
   const controls = useAnimation();
   const { navigate } =useNavigate();
-  const toolkit = useToolKit();
 
-  // @ts-expect-error // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { navigate: navigateContent } = useTranslation<Pages.TOS>(termsOfService.translations);
 
   useEffect(() => {
     controls.start("visible");
   })
 
   return <div className={root}>
-    {pageData.navigate.map(
-        (item: {
-          title: string,
-          path: string
-        }, index: number) => <motion.span
+    {navigateContent.map(
+        (item, index) => <motion.span
           initial="hidden"
           key={index}
           variants={{
@@ -44,11 +39,11 @@ const TOSNavigate = () => {
           animate={controls}
           transition={{ delay: 3 + 0.1 * index, duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}
         >
-          <Button 
-            key={index} 
-            title={item.title} 
+          <Button
+            key={index}
+            title={item.title}
             theme="invert"
-            onClick={() => navigate(item.path)} 
+            onClick={() => navigate(item.path ?? "")}
           />
         </motion.span>)}
   </div>

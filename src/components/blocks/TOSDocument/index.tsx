@@ -5,8 +5,8 @@ import Headline from "@ui/Headline";
 import TOSChapter from "@blocks/TOSChapter";
 import TOSNavigate from "@blocks/TOSNavigate";
 import TOSNote from "@blocks/TOSNote";
-import { page } from "@shared/pages/termsOfService";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { termsOfService } from "@shared/pages/termsOfService";
 
 import styles from "./TOSDocument.module.scss";
 
@@ -14,10 +14,7 @@ const TOSDocument = () => {
   const { root, title, terms } = styles;
 
   const controls = useAnimation();
-  const toolkit = useToolKit();
-
-  // @ts-expect-error // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { headline, terms: termsList } = useTranslation<Pages.TOS>(termsOfService.translations);
 
   useEffect(() => {
     controls.start("visible");
@@ -26,7 +23,7 @@ const TOSDocument = () => {
   return <div className={root}>
     <TOSNote />
     <div className={title}>
-      <Headline title={pageData.headline} delay={1.5} />
+      <Headline title={headline} delay={1.5} />
     </div>
     <TOSNavigate />
     <motion.div
@@ -46,13 +43,7 @@ const TOSDocument = () => {
       }}
       animate={controls}
       transition={{ delay: 4, duration: 2, ease: [0, 0.71, 0.2, 1.01] }}>
-      {pageData.terms.map((item: {
-          headline: string;
-          list: {
-            headline: string;
-            list: string[];
-          }[];
-        }, index: number) => <TOSChapter key={index} item={item} />)}
+      {termsList.map((item, index) => <TOSChapter key={index} item={item} />)}
     </motion.div>
   </div>
 }

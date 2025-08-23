@@ -16,18 +16,12 @@ declare global {
     type TOSChapter = FC<{
       item: {
         headline: string;
-        list: {
-          headline: string;
-          list: string[];
-        }[];
+        list: Shared.Paragraph[];
       }
     }>
 
     type TOSParagraph = FC<{
-      item: {
-        headline: string;
-        list: string[];
-      };
+      item: Shared.Paragraph;
     }>
   }
 

@@ -1,15 +1,12 @@
 import TOSDocument from "@blocks/TOSDocument";
 import Meta from "@layout/Meta";
-import { page } from "@shared/pages/termsOfService";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { termsOfService } from "@shared/pages/termsOfService";
 
 const TermsOfService = () => {
-  const toolkit = useToolKit();
+  const { headline } = useTranslation<Pages.TOS>(termsOfService.translations);
 
-  // @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
-
-  return <Meta title={pageData.title}>
+  return <Meta title={headline}>
     <TOSDocument />
   </Meta>
 };
