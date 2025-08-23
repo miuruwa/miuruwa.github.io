@@ -55,6 +55,12 @@ declare namespace Pages {
     headline: string,
     description: string,
   }
+
+  type NotFound = {
+    headline: string,
+    description: string,
+    button: Shared.Link
+  }
 }
 declare namespace Translations {
   type Languages = "eng";

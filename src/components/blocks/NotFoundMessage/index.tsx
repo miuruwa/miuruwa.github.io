@@ -3,9 +3,8 @@ import { useEffect } from "react";
 import { useNavigate } from "@hooks/useNavigate";
 
 import Headline from "@ui/Headline";
-import { useToolKit } from "@shared/toolkit";
-import { page } from "@shared/pages/notFound";
-import { routes } from "@shared/routes";
+import { useTranslation } from "@hooks/useTranslation";
+import { notFound } from "@shared/pages/notFound";
 import { Button } from "@ui/Button";
 
 import styles from "./NotFoundMessage.module.scss";
@@ -14,18 +13,16 @@ const NotFoundMessage = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  const toolkit = useToolKit();
   const { navigate } =useNavigate();
 
-  // @ts-expect-error // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { headline, description, button } = useTranslation<Pages.NotFound>(notFound.translations);
 
   useEffect(() => {
     controls.start("visible");
   })
 
   return <div className={root}>
-    <Headline title={pageData.title} />
+    <Headline title={headline} />
     <motion.p
       initial="hidden"
       variants={{
@@ -40,7 +37,7 @@ const NotFoundMessage = () => {
       }}
       animate={controls}
       transition={{ delay: 0.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-      {pageData.road}
+      {description}
     </motion.p>
     <motion.div
       initial="hidden"
@@ -56,10 +53,10 @@ const NotFoundMessage = () => {
       }}
       animate={controls}
       transition={{ delay: 1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-      <Button 
-        title={pageData.button}
+      <Button
+        title={button.title}
         theme="invert"
-        onClick={() => navigate(routes.home)} />
+        onClick={() => navigate(button.path ?? "")} />
     </motion.div>
   </div>
 }

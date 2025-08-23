@@ -1,15 +1,12 @@
 import NotFoundBanner from "@blocks/NotFoundBanner";
 import Meta from "@layout/Meta";
-import { useToolKit } from "@shared/toolkit";
-import { page } from "@shared/pages/notFound";
+import { useTranslation } from "@hooks/useTranslation";
+import { notFound } from "@shared/pages/notFound";
 
 const NotFound = () => {
-  const toolkit = useToolKit()
+  const { headline } = useTranslation<Pages.NotFound>(notFound.translations);
 
-  // @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language]
-
-  return <Meta title={pageData.title}>
+  return <Meta title={headline}>
     <NotFoundBanner />
   </Meta>
 }
