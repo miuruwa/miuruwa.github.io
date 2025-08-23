@@ -39,6 +39,17 @@ declare namespace Pages {
     hardware: Shared.TagList;
     software: Shared.TagList;
   }
+
+  type Details = {
+    headline: string,
+    preferences: Shared.TagList[],
+    addons: Shared.TagList,
+    turnarounds: {
+      headline: string,
+      description: string,
+    },
+    links: Shared.Link[],
+  }
 }
 declare namespace Translations {
   type Languages = "eng";

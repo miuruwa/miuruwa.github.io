@@ -2,15 +2,12 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
 import Headline from "@ui/Headline";
-import { page } from "@shared/pages/details";
-import { useToolKit } from "@shared/toolkit";
+import { details } from "@shared/pages/details";
+import { useTranslation } from "@hooks/useTranslation";
 
 const DetailsTurnarounds = () => {
   const controls = useAnimation();
-  const toolkit = useToolKit();
-
-  // @ts-expect-error // TODO: useLanguage();
-  const { turnarounds } = page[toolkit.settings.language];
+  const { turnarounds } = useTranslation<Pages.Details>(details.translations);
 
   useEffect(() => {
     controls.start("visible");

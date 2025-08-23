@@ -1,8 +1,8 @@
 import DetailsMessage from "@blocks/DetailsMessage";
 import Meta from "@layout/Meta";
-import { page } from "@shared/pages/details";
-import { useToolKit } from "@shared/toolkit";
+import { details } from "@shared/pages/details";
 import { useIsMobile } from "@hooks/useIsMobile";
+import { useTranslation } from "@hooks/useTranslation";
 import { classNames } from "@utils/classNames";
 
 import styles from "./Details.module.scss";
@@ -10,10 +10,8 @@ import styles from "./Details.module.scss";
 
 const Details = () => {
   const { root, mobileTemplate, desktopTemplate } = styles;
-  const toolkit = useToolKit();
 
-  // @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
+  const { headline } = useTranslation<Pages.Details>(details.translations);
   const isMobile = useIsMobile(768);
 
   const containerClasses = classNames(
@@ -23,7 +21,7 @@ const Details = () => {
     }
   )
 
-  return <Meta title={pageData.title}>
+  return <Meta title={headline}>
     <div className={containerClasses}>
       <DetailsMessage />
     </div>

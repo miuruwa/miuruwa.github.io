@@ -1,9 +1,9 @@
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
+import { useTranslation } from "@hooks/useTranslation";
 import Headline from "@ui/Headline";
-import { page } from "@shared/pages/details";
-import { useToolKit } from "@shared/toolkit";
+import { details } from "@shared/pages/details";
 
 import styles from "./DetailsPreferences.module.scss";
 
@@ -11,21 +11,16 @@ const DetailsPreferences = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  const toolkit = useToolKit();
-
-  // @ts-expect-error // TODO: useLanguage();
-  const { preferences } = page[toolkit.settings.language];
+  const { preferences } = useTranslation<Pages.Details>(details.translations);
 
   useEffect(() => {
     controls.start("visible");
   })
 
   return <div className={root}>
-    {/* @ts-expect-error типизация */}
     {preferences.map((item, olIndex) => <div key={olIndex}>
       <Headline title={item.headline} delay={0.5 + olIndex * 2} type="small" />
       <ol>
-        {/* @ts-expect-error типизация */}
         {item.list.map((item, liIndex) => <motion.li
           key={liIndex}
           initial="hidden"

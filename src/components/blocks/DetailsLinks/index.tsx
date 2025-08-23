@@ -1,7 +1,7 @@
 import { useNavigate } from "@hooks/useNavigate";
 
-import { page } from "@shared/pages/details";
-import { useToolKit } from "@shared/toolkit";
+import { details } from "@shared/pages/details";
+import { useTranslation } from "@hooks/useTranslation";
 import { Button } from "@ui/Button";
 
 import styles from "./DetailsLinks.module.scss";
@@ -9,16 +9,13 @@ import styles from "./DetailsLinks.module.scss";
 const DetailsLinks = () => {
   const { root } = styles;
   const { navigate } =useNavigate();
-  const toolkit = useToolKit();
 
-  // @ts-expect-error // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { links } = useTranslation<Pages.Details>(details.translations);
 
   return <div className={root}>
-    {/* @ts-expect-error useLanguage */}
-    {pageData.links.map((item, index) => <div
+    {links.map((item, index) => <div
       key={index}>
-      <Button title={item.title} theme="invert" onClick={() => navigate(item.path)} />
+      <Button title={item.title} theme="invert" onClick={() => navigate(item.path ?? "")} />
     </div>)}
   </div>
 }
