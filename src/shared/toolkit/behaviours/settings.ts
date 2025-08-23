@@ -2,7 +2,7 @@ export class SettingsBehaviour {
   #state
   #dispatch
 
-  // @ts-expect-error toolkit is on way to be removed
+  // @ts-expect-error toolkit will be removed in the following versions
   constructor(state, dispatch) {
     this.#state = state
     this.#dispatch = dispatch

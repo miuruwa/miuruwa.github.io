@@ -7,7 +7,7 @@ import { usePriceCalc } from "@hooks/usePriceCalc";
 const RequestConfigTotal = () => {
   const selector = useSelector(state => state);
 
-  // @ts-expect-error // TODO: сделать что-то с селектором
+  // @ts-expect-error // TODO: selector type();
   const priceCount = usePriceCalc(selector);
   const controls = useAnimation();
 

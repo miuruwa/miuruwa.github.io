@@ -21,7 +21,6 @@ const TOSNavigate = () => {
     controls.start("visible");
   })
 
-  // TODO: занести типизацию в d.ts
   return <div className={root}>
     {pageData.navigate.map(
         (item: {

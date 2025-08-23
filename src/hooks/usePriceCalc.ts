@@ -1,6 +1,6 @@
 import { addonsPrice, configPrice } from "@shared/pages/request";
 
-// @ts-expect-error // TODO: не видит source.d.ts
+// @ts-expect-error // TODO: selector type();
 export const usePriceCalc = ({progress, color, artwork, characterCount, ...addons}) => {
   // @ts-expect-error Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ sk: { usd: number; }; ln: { usd: number; }; }'.ts(7053)
   const progressPrice = configPrice["progress"][progress].usd;

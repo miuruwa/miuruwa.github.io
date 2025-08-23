@@ -2,7 +2,7 @@ export const settings = {
   language: localStorage.getItem("language") || "unset",
 }
 
-// @ts-expect-error // TODO: решить типизацию
+// @ts-expect-error toolkit will be removed in the following versions
 export function SettingsReducer(state, action) {
   const newState = { ...state };
 

@@ -13,7 +13,7 @@ const RequestConfigPoint: Blocks.RequestConfigPoint = ({item, action, delay}) =>
 
   const controls = useAnimation();
 
-	// @ts-expect-error // TODO: 'selector' is of type 'unknown'.ts(18046)
+	// @ts-expect-error // TODO: selector type();
   const toggleTheme = (id: string) => selector[action] === id ? "invert" : "white";
 
   const handleButton = (value: string) => {

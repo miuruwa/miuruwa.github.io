@@ -26,7 +26,6 @@ const FooterNavigation = () => {
 
 	return <div>
 		{ !isMobile && <h3>{pageData.navigation}</h3>}
-		{/* TODO: занести в d.ts  */}
 		{pageData.links.map((item: {title: string, path: string}, index: number) => <Button key={index} theme="transparent" title={item.title} onClick={() => navigate(item.path)} />)}
 	</div>
 }
@@ -41,7 +40,6 @@ const FooterSocial = () => {
 
 	return <div className={social}>
 		<Button theme="invert" icon={<EmailIcon />} onClick={() => goTo(`email:${emailURL}`)} />
-		{/* TODO: занести в d.ts  */}
 		{pageData.social.map((item: {icon: FC, title: string, location: string}, index: number) => <Button key={index} theme="invert" icon={item.icon} onClick={() => goTo(item.location)} />)}
 	</div>
 }

@@ -23,7 +23,6 @@ const TOSDocument = () => {
     controls.start("visible");
   })
 
-  // TODO: занести типизацию в d.ts
   return <div className={root}>
     <TOSNote />
     <div className={title}>
