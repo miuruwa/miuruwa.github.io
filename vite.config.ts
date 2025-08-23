@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
+import path from "path";
 
-import reactRefresh from "@vitejs/plugin-react";
+import react from '@vitejs/plugin-react-swc';
 import svgrPlugin from "vite-plugin-svgr";
 
-const path = require("path")
 const config = defineConfig({
   base: "/",
   build: {
@@ -59,7 +59,7 @@ const config = defineConfig({
     ]
   },
   plugins: [
-    reactRefresh(),
+    react(),
     svgrPlugin({
       svgrOptions: {
         icon: true,

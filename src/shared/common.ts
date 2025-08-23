@@ -1,0 +1,1 @@
+export const email = "miuruwadev@gmail.com"
