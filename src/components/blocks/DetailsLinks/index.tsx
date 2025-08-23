@@ -11,11 +11,12 @@ const DetailsLinks = () => {
   const { navigate } =useNavigate();
   const toolkit = useToolKit();
 
-  // TODO: useLanguage();
+  // @ts-expect-error // TODO: useLanguage();
   const pageData = page[toolkit.settings.language];
 
   return <div className={root}>
-    {pageData.links.map((item, index) => <div 
+    {/* @ts-expect-error useLanguage */}
+    {pageData.links.map((item, index) => <div
       key={index}>
       <Button title={item.title} theme="invert" onClick={() => navigate(item.path)} />
     </div>)}

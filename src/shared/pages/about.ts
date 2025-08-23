@@ -1,8 +1,8 @@
 import { routes } from "../routes";
 
-// @ts-expect-error // TODO: решить вопрос с Pages
 const page: Pages.About = {
     eng: {
+        headline: "About me",
         title: "About me",
         description: "My nickname is Miu Ruwa. I’m 22 years old. I’m from Russia. I draw art in different styles and make websites/PWA!",
         commissions: {
