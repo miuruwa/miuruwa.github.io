@@ -54,7 +54,10 @@ const config = defineConfig({
         find: '@utils', replacement: path.resolve(__dirname, 'src/utils')
       },
       {
-        find: '~', replacement: path.resolve(__dirname, 'src')
+        find: '@src', replacement: path.resolve(__dirname, 'src')
+      },
+      {
+        find: '@public', replacement: path.resolve(__dirname, 'public')
       }
     ]
   },
