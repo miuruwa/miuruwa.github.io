@@ -5,8 +5,8 @@ import { setCharacterCount } from '@actions/Request';
 
 import CharAddIcon from '@icons/CharAddIcon';
 import CharSubstractIcon from '@icons/CharSubstractIcon';
-import { useToolKit } from "@shared/toolkit";
-import { page } from "@shared/pages/request";
+import { useTranslation } from "@hooks/useTranslation";
+import { request } from "@shared/pages/request";
 import { Button } from "@ui/Button";
 
 import styles from "./RequestCharCount.module.scss";
@@ -14,14 +14,12 @@ import styles from "./RequestCharCount.module.scss";
 const RequestCharCount = () => {
   const { root } = styles;
 
-  const toolkit = useToolKit();
   const dispatch = useDispatch();
   const controls = useAnimation();
 	// @ts-expect-error Property 'characterCount' does not exist on type 'unknown'.ts(2339)
   const { characterCount } = useSelector(state => state);
 
-  // @ts-expect-error Property // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { characterCount: counter } = useTranslation<Pages.Request>(request.translations);
 
   const Add = () => dispatch(setCharacterCount(characterCount + 1));
   const Substract = () => characterCount > 1 && dispatch(setCharacterCount(characterCount - 1));
@@ -45,7 +43,7 @@ const RequestCharCount = () => {
 			}}
 			animate={controls}
 			transition={{ delay: 2, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-      {pageData.characterCount}:
+      {counter}:
     </motion.p>
     <motion.div
       initial="hidden"
@@ -61,6 +59,7 @@ const RequestCharCount = () => {
 			}}
 			animate={controls}
 			transition={{ delay: 2.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
+			{/* @ts-expect-error // TODO: button icon or svg import */}
       <Button icon={<CharSubstractIcon />} theme="invert" onClick={()=>Substract()}/>
     </motion.div>
     <motion.p
@@ -91,6 +90,7 @@ const RequestCharCount = () => {
 			}}
 			animate={controls}
 			transition={{ delay: 2.3, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
+			{/* @ts-expect-error // TODO: button icon or svg import */}
       <Button icon={<CharAddIcon />} theme="invert" onClick={()=>Add()}/>
     </motion.div>
   </div>

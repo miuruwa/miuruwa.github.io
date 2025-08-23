@@ -2,8 +2,8 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 import { useNavigate } from "@hooks/useNavigate";
 
-import { page } from "@shared/pages/request";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { request } from "@shared/pages/request";
 import { Button } from "@ui/Button";
 
 import styles from "./RequestLinks.module.scss";
@@ -13,17 +13,14 @@ const RequestLinks = () => {
 
   const controls = useAnimation();
   const { navigate } =useNavigate();
-  const toolkit = useToolKit();
-
-  // @ts-expect-error // TODO: useLanguage();
-  const { links } = page[toolkit.settings.language];
+  const { links } = useTranslation<Pages.Request>(request.translations);
 
   useEffect(() => {
     controls.start("visible");
   })
 
   return <div className={root}>
-    {links.map((item: {title:string, path: string}, index: number) => <motion.div
+    {links.map((item, index) => <motion.div
       key={index}
       initial="hidden"
       variants={{
@@ -38,7 +35,7 @@ const RequestLinks = () => {
       }}
       animate={controls}
       transition={{ delay: 3.3 + index * 0.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-      <Button title={item.title} theme="invert" onClick={() => navigate(item.path)} />
+      <Button title={item.title} theme="invert" onClick={() => navigate(item.path ?? "")} />
     </motion.div>)}
   </div>
 }

@@ -61,6 +61,18 @@ declare namespace Pages {
     description: string,
     button: Shared.Link
   }
+
+  type Request = {
+    headline: string,
+    characterCount: string,
+    addons: Shared.IdList<Requests.Addons, string>,
+    config: {
+      progress: Shared.IdList<Requests.Progress, string>,
+      color: Shared.IdList<Requests.Color, string>,
+      artwork: Shared.IdList<Requests.Artwork, string>,
+    },
+    links: Shared.Link[],
+  }
 }
 declare namespace Translations {
   type Languages = "eng";
@@ -68,13 +80,27 @@ declare namespace Translations {
   type Translate<Page> = Record<Languages, Page>
 }
 
+declare namespace Requests {
+  type Addons = "addBackground" | "specialRequest" | "commercialUseFee" | "rushFee";
+  type Progress = "sk" | "ln";
+  type Color = "nn"| "bw"| "sm"| "rn";
+  type Artwork = "bu" | "hb" | "fb" | "ch" | "rs" | "eb";
+  type Config = Shared.IdList<Requests.Progress | Requests.Color | Requests.Artwork, string>
+}
 
 declare namespace Shared {
+  type Currencies = "usd";
   type Pages = keyof Pages;
+
+  type CurrencyList = Record<Currencies, number>;
 
   type TagList = {
     headline: string,
     list: string[],
+  }
+  type IdList<Ids, Value> = {
+    headline: string,
+    list: Record<Ids, Value>,
   }
 
   type Link = {

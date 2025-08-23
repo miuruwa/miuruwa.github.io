@@ -1,7 +1,7 @@
 import RequestConfig from "@blocks/RequestConfig";
 import Meta from "@layout/Meta";
-import { page } from "@shared/pages/request";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { request } from "@shared/pages/request";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { classNames } from "@utils/classNames";
 
@@ -10,10 +10,7 @@ import styles from "./Request.module.scss";
 
 const Request = () => {
   const { root, mobileTemplate, desktopTemplate } = styles;
-  const toolkit = useToolKit();
-
-  // @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
+  const { headline } = useTranslation<Pages.Request>(request.translations);
   const isMobile = useIsMobile(768);
 
   const containerClasses = classNames(
@@ -23,7 +20,7 @@ const Request = () => {
     }
   )
 
-  return <Meta title={pageData.title}>
+  return <Meta title={headline}>
     <div className={containerClasses}>
       <RequestConfig />
     </div>

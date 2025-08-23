@@ -51,7 +51,7 @@ const RequestConfigPoint: Blocks.RequestConfigPoint = ({item, action, delay}) =>
 			}}
 			animate={controls}
 			transition={{ delay: delay, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-			{item.title}
+			{item.headline}
 		</motion.p>
 		<div className={configList}>
 			{Object.entries(item.list).map((data, index) => <motion.div

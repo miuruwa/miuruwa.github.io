@@ -8,10 +8,7 @@ declare global {
 
   namespace Blocks {
     type RequestConfigPoint = FC<{
-      item: {
-        title: string;
-        list: [string, string][]
-      };
+      item: Requests.Config
       action: string;
       delay: number;
     }>

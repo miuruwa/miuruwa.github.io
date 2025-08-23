@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { motion, useAnimation } from "motion/react";
 
 import { setAddBackground, setSpecialRequest, setCommercialUseFee, setRushFee } from '@actions/Request';
-import { useToolKit } from "@shared/toolkit";
-import { page } from "@shared/pages/request";
+import { useTranslation } from "@hooks/useTranslation";
+import { request } from "@shared/pages/request";
 import { Button } from "@ui/Button";
 
 import styles from "./RequestAddons.module.scss";
@@ -12,13 +12,11 @@ import styles from "./RequestAddons.module.scss";
 const RequestAddons = () => {
   const { root, addonList } = styles;
 
-  const toolkit = useToolKit();
   const dispatch = useDispatch();
   const controls = useAnimation();
   const selector = useSelector(state => state);
+  const { addons } = useTranslation<Pages.Request>(request.translations);
 
-  // @ts-expect-error // TODO: useLanguage();
-  const { addons } = page[toolkit.settings.language];
   // @ts-expect-error // TODO: selector type();
   const toggleTheme = (id: string) => selector[id] ? "invert" : "white";
 
@@ -66,7 +64,7 @@ const RequestAddons = () => {
         }}
         animate={controls}
         transition={{ delay: 2.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-        {addons.title}:
+        {addons.headline}:
       </motion.p>
       {Object.entries(addons.list).map((item, index) => <motion.div
         key={index}
