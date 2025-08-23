@@ -13,14 +13,14 @@ const AboutMe = () => {
 
   const controls = useAnimation();
 
-  const { title, description } = useTranslation<Pages.About>(about.translations);
+  const { headline, description } = useTranslation<Pages.About>(about.translations);
 
   useEffect(() => {
     controls.start("visible");
   })
 
   return <div className={root}>
-    <Headline title={title} />
+    <Headline title={headline} />
     <motion.p
       initial="hidden"
       variants={{

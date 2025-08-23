@@ -22,7 +22,7 @@ const AboutCommissions = () => {
   })
 
   return <div className={root}>
-    <Headline title={commissions.title} delay={3} type="small" />
+    <Headline title={commissions.headline} delay={3} type="small" />
     <motion.p
       initial="hidden"
       variants={{

@@ -29,11 +29,10 @@ declare namespace React {
 
 declare namespace Pages {
   type About = {
-    title: string,
     headline: string,
     description: string,
     commissions: {
-      title: string,
+      headline: string,
       note: string,
       links: Shared.Link[]
     }

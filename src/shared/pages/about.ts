@@ -6,10 +6,9 @@ export const about: {
     translations: {
         eng: {
             headline: "About me",
-            title: "About me",
             description: "My nickname is Miu Ruwa. I’m 22 years old. I’m from Russia. I draw art in different styles and make websites/PWA!",
             commissions: {
-                title: "Commissions",
+                headline: "Commissions",
                 note: "Please read my terms of service before ordering a commission!",
                 links: [
                 {

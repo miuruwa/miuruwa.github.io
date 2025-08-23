@@ -13,9 +13,9 @@ const About = () => {
   const { root, aboutContent, infoBlock } = styles;
 
   const isMobile = useIsMobile(768);
-  const { title } = useTranslation<Pages.About>(about.translations);
+  const { headline } = useTranslation<Pages.About>(about.translations);
 
-  return <Meta title={title}>
+  return <Meta title={headline}>
     <div className={root}>
       {isMobile ? <div className={infoBlock}>
           <AboutMe />
