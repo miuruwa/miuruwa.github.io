@@ -4,6 +4,4 @@ const CharSubstractIcon=() => {
   </svg>
 }
 
-export default Icon;
-
 export default CharSubstractIcon;
