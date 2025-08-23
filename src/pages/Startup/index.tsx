@@ -1,15 +1,12 @@
 import Meta from "@layout/Meta";
-import { page } from "@shared/pages/startUp";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { startup } from "@shared/pages/startUp";
 
 const Startup = () => {
-  const toolkit = useToolKit();
+  const { headline } = useTranslation<Pages.StartUp>(startup.translations);
 
-  // @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
-
-  return <Meta title={pageData.title}>
-    Startup
+  return <Meta title={headline}>
+    {headline}
   </Meta>
 }
 

@@ -73,6 +73,14 @@ declare namespace Pages {
     },
     links: Shared.Link[],
   }
+
+  type Settings = {
+    headline: string,
+  }
+
+  type StartUp = {
+    headline: string,
+  }
 }
 declare namespace Translations {
   type Languages = "eng";

@@ -1,5 +1,9 @@
-export const page = {
+export const startup: {
+    translations: Translations.Translate<Pages.StartUp>
+} = {
+  translations: {
     eng: {
-      title: "startup",
+      headline: "Start Up",
     }
+  }
 }
