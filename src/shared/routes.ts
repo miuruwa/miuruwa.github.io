@@ -1,12 +1,12 @@
 const routes = {
   startUp: "/",
-  aboutMe: "/about",
-  commissionInfo: "/details",
-  home: "/home",
-  tos: "/terms-of-service",
-  settings: "/settings",
-  request: "/request",
-  waitList: "/waitlist",
+  aboutMe: "/:language/about",
+  commissionInfo: "/:language/details",
+  home: "/:language/home",
+  tos: "/:language/terms-of-service",
+  settings: "/:language/settings",
+  request: "/:language/request",
+  waitList: "/:language/waitlist",
   waitListURL: "https://t.me/s/x8waitlist",
 };
 

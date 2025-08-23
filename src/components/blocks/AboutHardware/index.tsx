@@ -2,8 +2,8 @@ import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 
 import Headline from "@ui/Headline";
-import { page } from "@shared/pages/about";
-import { useToolKit } from "@shared/toolkit";
+import { useTranslation } from "@hooks/useTranslation";
+import { about } from "@shared/pages/about";
 
 import styles from "./AboutHardware.module.scss";
 
@@ -11,10 +11,8 @@ const AboutHardware = () => {
   const { root } = styles;
 
   const controls = useAnimation();
-  const toolkit = useToolKit();
 
-  // @ts-expect-error // TODO: useLanguage();
-  const pageData = page[toolkit.settings.language];
+  const { hardware, software } = useTranslation<Pages.About>(about.translations);
 
   useEffect(() => {
     controls.start("visible");
@@ -22,9 +20,9 @@ const AboutHardware = () => {
 
   return <div className={root}>
       <div>
-          <Headline title={pageData.hardware.headline} type="small" delay={1}/>
+          <Headline title={hardware.headline} type="small" delay={1}/>
           <ol>
-            {pageData.hardware.list.map((item: string, index: number) => <motion.li
+            {hardware.list.map((item: string, index: number) => <motion.li
               key={index}
               initial="hidden"
               variants={{
@@ -46,9 +44,9 @@ const AboutHardware = () => {
           </ol>
       </div>
       <div>
-          <Headline title={pageData.software.headline} type="small" delay={2}/>
+          <Headline title={software.headline} type="small" delay={2}/>
           <ol>
-            {pageData.software.list.map((item: string, index: number) => <motion.li
+            {software.list.map((item: string, index: number) => <motion.li
               key={index}
               initial="hidden"
               variants={{

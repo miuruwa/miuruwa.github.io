@@ -28,9 +28,7 @@ declare namespace React {
 }
 
 declare namespace Pages {
-  type Languages = "eng";
-
-  type About = Record<Languages, {
+  type About = {
     title: string,
     headline: string,
     description: string,
@@ -41,10 +39,18 @@ declare namespace Pages {
     }
     hardware: Shared.TagList;
     software: Shared.TagList;
-  }>;
+  }
+}
+declare namespace Translations {
+  type Languages = "eng";
+
+  type Translate<Page> = Record<Languages, Page>
 }
 
+
 declare namespace Shared {
+  type Pages = keyof Pages;
+
   type TagList = {
     headline: string,
     list: string[],

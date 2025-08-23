@@ -3,22 +3,19 @@ import AboutMe from "@blocks/AboutMe";
 import AboutIllustration from "@blocks/AboutIllustration";
 import AboutHardware from "@blocks/AboutHardware";
 import Meta from "@layout/Meta";
-import { page } from "@shared/pages/about";
-import { useToolKit } from "@shared/toolkit";
+import { about } from "@shared/pages/about";
 import { useIsMobile } from "@hooks/useIsMobile";
 
 import styles from "./About.module.scss";
+import { useTranslation } from "@hooks/useTranslation";
 
 const About = () => {
   const { root, aboutContent, infoBlock } = styles;
 
   const isMobile = useIsMobile(768);
-  const toolkit = useToolKit();
+  const { title } = useTranslation<Pages.About>(about.translations);
 
-  // @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
-
-  return <Meta title={pageData.title}>
+  return <Meta title={title}>
     <div className={root}>
       {isMobile ? <div className={infoBlock}>
           <AboutMe />
