@@ -13,6 +13,4 @@ const initialState = {
   brief: "",
 };
 
-const store = createStore(RequestReducer, initialState);
-
-export default store;
+export const Request = createStore(RequestReducer, initialState);

@@ -1,9 +1,8 @@
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { motion, useAnimation } from "motion/react";
 
-import type { RequestStore } from "@stores/Request";
 import { setAddBackground, setSpecialRequest, setCommercialUseFee, setRushFee } from '@actions/Request';
-import { useRequestDispatch, useRequestSelector } from "@hooks/useRequest";
 import { useToolKit } from "@shared/toolkit";
 import { page } from "@shared/pages/request";
 import { Button } from "@ui/Button";
@@ -14,29 +13,34 @@ const RequestAddons = () => {
   const { root, addonList } = styles;
 
   const toolkit = useToolKit();
-  const dispatch = useRequestDispatch();
+  const dispatch = useDispatch();
   const controls = useAnimation();
-  const selector = useRequestSelector(state => state);
+  const selector = useSelector(state => state);
 
   // @ts-expect-error // TODO: useLanguage();
   const { addons } = page[toolkit.settings.language];
+  // @ts-expect-error // TODO: selector type();
   const toggleTheme = (id: string) => selector[id] ? "invert" : "white";
 
   const handleButton = (id: string) => {
     switch (id) {
       case "addBackground":
+        // @ts-expect-error // TODO: selector type();
         dispatch(setAddBackground(!selector[id]))
         break;
 
       case "specialRequest":
+        // @ts-expect-error // TODO: selector type();
         dispatch(setSpecialRequest(!selector[id]))
         break;
 
       case "commercialUseFee":
+        // @ts-expect-error // TODO: selector type();
         dispatch(setCommercialUseFee(!selector[id]))
         break;
 
       default:
+        // @ts-expect-error // TODO: selector type();
         dispatch(setRushFee(!selector[id]))
         break;
     }
