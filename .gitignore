@@ -27,4 +27,4 @@ yarn-error.log*
 /src/components/Content/components/Scrollbar
 /src/components/Scrollbar
 
-/.env
+.env
