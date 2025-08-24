@@ -1,6 +1,5 @@
 import { routes } from "../routes";
 
-
 export const request: {
     translations: Translations.Translate<Pages.Request>,
     addonsPrice: Record<Requests.Addons, Shared.CurrencyList>,

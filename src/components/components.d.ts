@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren } from "react";
+import type { FC, JSX, PropsWithChildren } from "react";
 
 declare global {
   type Option = {
@@ -34,6 +34,7 @@ declare global {
   namespace UI {
     type Button = FC<
       {
+        icon?: JSX.Element,
         title?: string;
         alt?: string;
         theme?: "usual" | "invert" | "transparent" | "white";

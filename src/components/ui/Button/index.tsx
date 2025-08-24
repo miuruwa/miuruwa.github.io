@@ -17,7 +17,7 @@ export const Button: UI.Button = ({
     white,
   } = styles;
 
-  return <div 
+  return <div
       className={classNames(
         root,
         {

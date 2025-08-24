@@ -1,46 +1,39 @@
-import type { FC } from "react";
-
 import EmailIcon from "@icons/EmailIcon";
 import { useIsMobile } from "@hooks/useIsMobile";
-import { page } from "@shared/footer";
+import { footer } from "@shared/footer";
 import { email } from "@shared/common";
-import { useToolKit } from "@shared/toolkit";
 import { Button } from "@ui/Button";
+import { useNavigate } from "@hooks/useNavigate";
+import { useTranslation } from "@hooks/useTranslation";
 
 import styles from "./Footer.module.scss";
-import { useNavigate } from "@hooks/useNavigate";
 
 const FooterApp = () => {
+	const { info } = useTranslation<Shared.Footer>(footer.translations);
 	return <div>
-		<h3>Celestial expanse</h3>
-		<h4>Made by miuruwax8</h4>
+		<h3>{info.headline}</h3>
+		<h4>{info.description}</h4>
 	</div>
 }
 const FooterNavigation = () => {
 	const isMobile = useIsMobile(768);
-  const toolkit = useToolKit();
-
-	// @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
+	const { navigation } = useTranslation<Shared.Footer>(footer.translations);
 	const { navigate } = useNavigate();
 
 	return <div>
-		{ !isMobile && <h3>{pageData.navigation}</h3>}
-		{pageData.links.map((item: {title: string, path: string}, index: number) => <Button key={index} theme="transparent" title={item.title} onClick={() => navigate(item.path)} />)}
+		{ !isMobile && <h3>{navigation.headline}</h3>}
+		{navigation.links.map((item, index) => <Button key={index} theme="transparent" title={item.title} onClick={() => navigate(item.path ?? "")} />)}
 	</div>
 }
 const FooterSocial = () => {
 	const { social } = styles;
-  const toolkit = useToolKit();
-
-	// @ts-expect-error // TODO: useLanguage()
-  const pageData = page[toolkit.settings.language];
+	const { navigation } = useTranslation<Shared.Footer>(footer.translations);
 	const emailURL = `email:${email}`;
 	const { goTo } = useNavigate();
 
 	return <div className={social}>
 		<Button theme="invert" icon={<EmailIcon />} onClick={() => goTo(`email:${emailURL}`)} />
-		{pageData.social.map((item: {icon: FC, title: string, location: string}, index: number) => <Button key={index} theme="invert" icon={item.icon} onClick={() => goTo(item.location)} />)}
+		{navigation.social.map((item, index) => <Button key={index} theme="invert" icon={item.icon} onClick={() => goTo(item.location ?? "")} />)}
 	</div>
 }
 
