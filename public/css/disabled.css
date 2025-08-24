@@ -1,18 +1,13 @@
 .webx-js-disabled {
   --webx-point: 8px;
   --webx-border-radius: calc(var(--webx-point) * 2);
-  --webx-thin-border: 1px;
   --webx-separator-common: gray;
-  --webx-box-shadow-color: rgba(0, 0, 0, 0.11);
-  --webx-block-border: 0 0 0 var(--webx-thin-border) var(--webx-separator-common);
-  --webx-block-box-shadow: 0 calc(var(--webx-point) / 2) calc(var(--webx-point) * 0.6) calc(var(--webx-point)*0.3) var(--webx-box-shadow-color);
-  --webx-block-effects: var(--webx-block-border), var(--webx-block-box-shadow);
   display: flex;
   justify-content: center;
   width: 100%;
   min-height: 100vh;
   background: url("../public/img/diagobg.png");
-  font-family: 'TT Commons';
+  font-family: 'Source Serif 4';
   box-sizing: border-box;
 }
 
@@ -22,12 +17,12 @@
   --enable-x-paddings: 1;
   padding: calc(var(--webx-point) * var(--padding-y)) calc(var(--webx-point) * var(--padding-x));
   border-radius: var(--webx-border-radius);
-  box-shadow: var(--webx-block-effects);
   --width: 90;
   max-width: calc(var(--webx-point) * var(--width));
   margin: calc(var(--webx-point) * 2) calc(var(--webx-point) * 2 * var(--enable-x-paddings));
   position: relative;
-  background: #FFFFFF;
+  background: #252525;
+  color: #FFFFFF;
   padding-bottom: calc(var(--webx-point) * 8);
 }
 
@@ -49,6 +44,7 @@
   min-height: calc(var(--webx-point) * var(--height));
   line-height: calc(var(--webx-point) * var(--height));
   font-weight: 600;
+  font-family: 'Cormorant Unicase';
 }
 
 .webx-js-disabled .webx-js-disabled-webx-logo {
@@ -90,7 +86,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .webx-js-disabled .webx-block{   
+  .webx-js-disabled .webx-block{
     --enable-x-paddings: 0;
   }
 }
@@ -99,7 +95,7 @@
     --padding-y: 1;
     --padding-x: 1;
   }
-  
+
   .webx-js-disabled .webx-js-disabled-webx-logo {
     --top-value: 4;
     --left-value: 2;
@@ -120,13 +116,13 @@
     --padding-y: 1;
     --padding-x: 1;
   }
-  
+
   .webx-js-disabled .webx-js-disabled-webx-logo {
     --top-value: 4;
     --left-value: 2;
     --margin-bottom: 2;
   }
-  
+
   .webx-js-disabled .webx-headline {
     --padding-x: 2;
   }
