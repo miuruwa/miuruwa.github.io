@@ -15,89 +15,15 @@ export const request: {
             characterCount: "Character count",
             addons: {
                 headline: "Addons",
-                list: [
-                    {
-                        name: "addBackground",
-                        value: "Simple background",
-                    },
-                    {
-                        name: "specialRequest",
-                        value: "Special",
-                    },
-                    {
-                        name: "commercialUseFee",
-                        value: "For commercial use",
-                    },
-                    {
-                        name: "rushFee",
-                        value: "Rush",
-                    },
-                ]
             },
-            config: {
-                progress: {
-                    headline: "Progress",
-                    list: [
-                        {
-                            name: "sk",
-                            value: "Sketch",
-                        },
-                        {
-                            name: "ln",
-                            value: "Lineart",
-                        },
-                    ],
-                },
-                color: {
-                    headline: "Color",
-                    list: [
-                        {
-                            name: "nn",
-                            value: "None",
-                        },
-                        {
-                            name: "bw",
-                            value: "Black & White",
-                        },
-                        {
-                            name: "sm",
-                            value: "Simple",
-                        },
-                        {
-                            name: "rn",
-                            value: "Render",
-                        },
-                    ],
-                },
-                artwork: {
-                    headline: "Frame type",
-                    list: [
-                        {
-                            name: "bu",
-                            value: "Bust",
-                        },
-                        {
-                            name: "hb",
-                            value: "Half body",
-                        },
-                        {
-                            name: "fb",
-                            value: "Full body",
-                        },
-                        {
-                            name: "ch",
-                            value: "Chibi",
-                        },
-                        {
-                            name: "rs",
-                            value: "Reference sheet",
-                        },
-                        {
-                            name: "eb",
-                            value: "Eye banner",
-                        },
-                    ],
-                },
+            progress: {
+                headline: "Progress",
+            },
+            color: {
+                headline: "Color",
+            },
+            artwork: {
+                headline: "Frame type",
             },
             links: [
                 {

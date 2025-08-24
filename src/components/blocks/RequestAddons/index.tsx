@@ -1,26 +1,23 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "motion/react";
 
-import { useTranslation } from "@hooks/useTranslation";
 import { useAppDispatch, useAppSelector} from "@hooks/redux";
-import { request } from "@shared/pages/request";
 import { Button } from "@ui/Button";
 
 import styles from "./RequestAddons.module.scss";
 import { requestSlice } from "@reducers/Request";
 
-const RequestAddons = () => {
+const RequestAddons = ({item, data}: Blocks.RequestConfigPoint) => {
   const { root, addonList } = styles;
 
   const dispatch = useAppDispatch();
   const controls = useAnimation();
   const { ToggleAddBackground, ToggleSpecialRequest, ToggleCommercialUseFee, ToggleRushFee } = requestSlice.actions;
   const selector = useAppSelector(state => state.RequestReducer);
-  const { addons } = useTranslation<Pages.Request>(request.translations);
 
   const toggleTheme = (id: Requests.Addons) => selector[id] ? "invert" : "white";
 
-  const handleButton = (id: string) => {
+  const handleButton = (id: Requests.Addons) => {
     switch (id) {
       case "addBackground":
         dispatch(ToggleAddBackground())
@@ -60,9 +57,9 @@ const RequestAddons = () => {
         }}
         animate={controls}
         transition={{ delay: 2.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-        {addons.headline}:
+        {data.headline}:
       </motion.p>
-      {addons.list.map((item, index) => <motion.div
+      {item.map((parameter: Requests.Option, index: number) => <motion.div
         key={index}
         initial="hidden"
         variants={{
@@ -77,7 +74,7 @@ const RequestAddons = () => {
         }}
         animate={controls}
         transition={{ delay: 2.6 + 0.1 * index, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-        <Button title={item.value} theme={toggleTheme(item.name)} onClick={() => handleButton(item.name)} />
+        <Button title={parameter.text} theme={toggleTheme(parameter.value as Requests.Addons)} onClick={() => handleButton(parameter.value as Requests.Addons)} />
       </motion.div>)}
     </div>
   </div>

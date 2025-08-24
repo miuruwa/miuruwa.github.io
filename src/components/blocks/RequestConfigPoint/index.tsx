@@ -5,18 +5,18 @@ import { Button } from "@ui/Button";
 
 import styles from "./RequestConfigPoint.module.scss";
 
-const RequestConfigPoint = <RequestType, >({item, state, DoAction, delay}: Blocks.RequestConfigPoint<RequestType>) => {
+const RequestConfigPoint = ({item, data, state, DoAction, delay}: Blocks.RequestConfigPoint) => {
   const { root, configList } = styles;
 
   const dispatch = useAppDispatch();
   const controls = useAnimation();
 
-  const toggleTheme = (id: RequestType) => {
+  const toggleTheme = (id?: string) => {
 		return state === id? "invert" : "white"
 	}
 
-  const handleButton = (value: RequestType) => {
-		dispatch(DoAction(value))
+  const handleButton = (value?: string) => {
+		if (DoAction) dispatch(DoAction(value ?? ""))
 	}
 
   useEffect(() => {
@@ -38,10 +38,10 @@ const RequestConfigPoint = <RequestType, >({item, state, DoAction, delay}: Block
 			}}
 			animate={controls}
 			transition={{ delay: delay, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-			{item.headline}
+			{data.headline}
 		</motion.p>
 		<div className={configList}>
-			{item.list.map((parameter, index) => <motion.div
+			{item.map((parameter, index) => <motion.div
 				key={index}
 				initial="hidden"
 				variants={{
@@ -55,8 +55,8 @@ const RequestConfigPoint = <RequestType, >({item, state, DoAction, delay}: Block
 					},
 				}}
 				animate={controls}
-				transition={{ delay: delay + index * 0.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-				<Button theme={toggleTheme(parameter.name)} title={parameter.value} onClick={() => handleButton(parameter.name)}/>
+				transition={{ delay: delay ?? 0 + index * 0.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
+				<Button theme={toggleTheme(parameter.value)} title={parameter.text} onClick={() => handleButton(parameter.value)}/>
 			</motion.div>)}
 		</div>
 	</motion.div>

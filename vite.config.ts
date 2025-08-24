@@ -58,6 +58,9 @@ const config = defineConfig({
       },
       {
         find: '@public', replacement: path.resolve(__dirname, 'public')
+      },
+      {
+        find: '@queries', replacement: path.resolve(__dirname, 'src/queries')
       }
     ]
   },

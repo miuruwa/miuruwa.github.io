@@ -1,3 +1,4 @@
+/// <reference types="vite/types/importMeta.d.ts" />
 declare module '*.module.css' {
   const classes: { readonly [key: string]: string }
   export default classes
@@ -76,11 +77,17 @@ declare namespace Pages {
   type Request = {
     headline: string,
     characterCount: string,
-    addons: Shared.IdList<Requests.Addons, string>,
-    config: {
-      progress: Shared.IdList<Requests.Progress, string>,
-      color: Shared.IdList<Requests.Color, string>,
-      artwork: Shared.IdList<Requests.Artwork, string>,
+    addons: {
+      headline: string
+    },
+    progress: {
+      headline: string
+    },
+    color: {
+      headline: string
+    },
+    artwork: {
+      headline: string
     },
     links: Shared.Link[],
   }
@@ -115,9 +122,9 @@ declare namespace Translations {
 
 declare namespace Requests {
   type Addons = "addBackground" | "specialRequest" | "commercialUseFee" | "rushFee";
-  type Progress = "sk" | "ln";
-  type Color = "nn"| "bw"| "sm"| "rn";
-  type Artwork = "bu" | "hb" | "fb" | "ch" | "rs" | "eb";
+  type Progress = "sk" | "ln" | undefined;
+  type Color = "nn"| "bw"| "sm"| "rn" | undefined;
+  type Artwork = "bu" | "hb" | "fb" | "ch" | "rs" | "eb" | undefined;
   type Config<ConfigType> = Shared.IdList<ConfigType, string>
   type State = {
     progress: Requests.Progress,
@@ -128,6 +135,18 @@ declare namespace Requests {
     specialRequest: boolean,
     commercialUseFee: boolean,
     rushFee: boolean,
+  }
+  type Option = {
+    type: "progress" | "color" | "artwork" | "addons",
+    value: Requests.Progress | Requests.Color | Requests.Artwork | Requests.Addons
+    text: string,
+    price: number,
+  }
+
+  type Query = {
+    isLoading: boolean,
+    error: string,
+    requests: Requests.Option[]
   }
 }
 

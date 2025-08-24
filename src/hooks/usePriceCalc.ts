@@ -1,20 +1,24 @@
-import { request } from "@shared/pages/request";
 import { useAppSelector } from "./redux";
-import { usePrice } from "./usePrice";
+import { useFindOptionsByType } from "./useFindOptionsByType";
 
 export const usePriceCalc = () => {
   const {progress, color, artwork, characterCount, addBackground, specialRequest, commercialUseFee, rushFee } = useAppSelector(state => state.RequestReducer);
 
-  const basePrice = usePrice<Requests.Progress>(request.configPrice.progress, progress) +
-    usePrice<Requests.Color>(request.configPrice.color, color) +
-    usePrice<Requests.Artwork>(request.configPrice.artwork, artwork);
+  const progressList = useFindOptionsByType("progress");
+  const colorList = useFindOptionsByType("color");
+  const artworkList = useFindOptionsByType("artwork");
+  const addonsList = useFindOptionsByType("addons");
+
+  const basePrice = (progressList.find(option => option.value === progress)?.price ?? 0) +
+    (colorList.find(option => option.value === color)?.price ?? 0) +
+    (artworkList.find(option => option.value === artwork)?.price ?? 0);
 
   const characterPrice = basePrice / 2 * (characterCount - 1)
 
-  const addBackgroundPrice = usePrice<Requests.Addons>(request.addonsPrice, "addBackground");
-  const specialRequestPrice = usePrice<Requests.Addons>(request.addonsPrice, "specialRequest");
-  const commercialUseFeePrice = usePrice<Requests.Addons>(request.addonsPrice, "commercialUseFee");
-  const rushFeePrice = usePrice<Requests.Addons>(request.addonsPrice, "rushFee");
+  const addBackgroundPrice = addonsList.find(addon => addon.value === 'addBackground')?.price ?? 0;
+  const specialRequestPrice = addonsList.find(addon => addon.value === 'specialRequest')?.price ?? 0;
+  const commercialUseFeePrice = addonsList.find(addon => addon.value === 'commercialUseFee')?.price ?? 0;
+  const rushFeePrice = addonsList.find(addon => addon.value === 'rushFee')?.price ?? 0;
 
   const addonsPriceResult = (addBackground ? addBackgroundPrice : 0)
     + (specialRequest ? specialRequestPrice : 0)

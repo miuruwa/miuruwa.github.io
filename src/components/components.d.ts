@@ -7,11 +7,15 @@ declare global {
   };
 
   namespace Blocks {
-    type RequestConfigPoint<RequestType> = {
-      item: Requests.Config<RequestType>;
-      state: RequestType;
-      DoAction: CallableFunction;
-      delay: number }
+    type RequestConfigPoint = {
+      item: Requests.Option[];
+      data: {
+        headline: string
+      },
+      state?: RequestType;
+      DoAction?: CallableFunction;
+      delay?: number
+    }
 
     type TOSChapter = FC<{
       item: {

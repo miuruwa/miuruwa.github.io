@@ -1,0 +1,100 @@
+{
+    "requests": [
+        {
+            "type": "progress",
+            "value": "sk",
+            "text": "Sketch",
+            "price": 0
+        },
+        {
+            "type": "progress",
+            "value": "ln",
+            "text": "Lineart",
+            "price": 40
+        },
+        {
+            "type": "color",
+            "value": "nn",
+            "text": "None",
+            "price": 0
+        },
+        {
+            "type": "color",
+            "value": "bw",
+            "text": "Black & White",
+            "price": 1
+        },
+        {
+            "type": "color",
+            "value": "sm",
+            "text": "Simple",
+            "price": 5
+        },
+        {
+            "type": "color",
+            "value": "rn",
+            "text": "Render",
+            "price": 2
+        },
+        {
+            "type": "artwork",
+            "value": "bu",
+            "text": "Bust",
+            "price": 10
+        },
+        {
+            "type": "artwork",
+            "value": "hb",
+            "text": "Half body",
+            "price": 20
+        },
+        {
+            "type": "artwork",
+            "value": "fb",
+            "text": "Full body",
+            "price": 40
+        },
+        {
+            "type": "artwork",
+            "value": "ch",
+            "text": "Chibi",
+            "price": 5
+        },
+        {
+            "type": "artwork",
+            "value": "rs",
+            "text": "Reference sheet",
+            "price": 50
+        },
+        {
+            "type": "artwork",
+            "value": "eb",
+            "text": "Eye banner",
+            "price": 10
+        },
+        {
+            "type": "addons",
+            "value": "addBackground",
+            "text": "Simple background",
+            "price": 10
+        },
+        {
+            "type": "addons",
+            "value": "specialRequest",
+            "text": "Special",
+            "price": 10
+        },
+        {
+            "type": "addons",
+            "value": "commercialUseFee",
+            "text": "For commercial use",
+            "price": 10
+        },
+        {
+            "type": "addons",
+            "value": "rushFee",
+            "text": "Rush",
+            "price": 10
+        }
+    ]
+}

@@ -13,10 +13,12 @@
     "not-found-patch": "node ./utils/NotFoundPatch.js",
     "cname-patch": "node ./utils/CNAMEPatch.js",
     "github-pages": "gh-pages -d build",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "db": "npx json-server db.json"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
+    "axios": "^1.11.0",
     "motion": "^12.23.0",
     "patch-package": "^8.0.0",
     "react": "^19.0.0",

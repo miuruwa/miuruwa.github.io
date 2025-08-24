@@ -26,3 +26,5 @@ yarn-error.log*
 # Not enough ready
 /src/components/Content/components/Scrollbar
 /src/components/Scrollbar
+
+/.env
