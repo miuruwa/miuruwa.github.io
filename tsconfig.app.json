@@ -35,7 +35,7 @@
       "@blocks/*": ["src/components/blocks/*"],
       "@modal/*": ["src/components/modal/*"],
       "@ui/*": ["src/components/ui/*"],
-      "@icons/*": ["src/components/icons/*"],
+      "@icons/*": ["src/assets/icons/*"],
       "@hooks/*": ["src/hooks/*"],
       "@utils/*": ["src/utils/*"],
       "@queries/*": ["src/queries/*"],

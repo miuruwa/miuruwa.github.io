@@ -1,4 +1,4 @@
-import EmailIcon from "@icons/EmailIcon";
+import EmailIcon from "@icons/EmailIcon.svg?react";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { footer } from "@shared/footer";
 import { email } from "@shared/common";

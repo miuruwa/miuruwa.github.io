@@ -1,7 +1,7 @@
-import KoFiLogo from "@icons/KoFiLogo";
-import TelegramLogoIcon from "@icons/TelegramLogoIcon";
-import VKLogoIcon from "@icons/VKLogoIcon";
-import XTwitterLogoIcon from "@icons/XTwitterLogoIcon";
+import KoFiLogo from "@icons/KoFiLogo.svg?react";
+import TelegramLogoIcon from "@icons/TelegramLogoIcon.svg?react";
+import VKLogoIcon from "@icons/VKLogoIcon.svg?react";
+import XTwitterLogoIcon from "@icons/XTwitterLogoIcon.svg?react";
 
 import { routes } from "./routes";
 

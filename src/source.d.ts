@@ -1,4 +1,5 @@
 /// <reference types="vite/types/importMeta.d.ts" />
+/// <reference types="vite-plugin-svgr/client" />
 declare module '*.module.css' {
   const classes: { readonly [key: string]: string }
   export default classes

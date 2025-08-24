@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "motion/react";
 
-import CharAddIcon from '@icons/CharAddIcon';
-import CharSubstractIcon from '@icons/CharSubstractIcon';
+import CharAddIcon from '@icons/CharAddIcon.svg?react';
+import CharSubstractIcon from '@icons/CharSubstractIcon.svg?react';
 import { useTranslation } from "@hooks/useTranslation";
 import { request } from "@shared/pages/request";
 import { Button } from "@ui/Button";

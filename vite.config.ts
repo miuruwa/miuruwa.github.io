@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import path from "path";
 
 import react from '@vitejs/plugin-react-swc';
-import svgrPlugin from "vite-plugin-svgr";
+import svgr from "vite-plugin-svgr";
 
 const config = defineConfig({
   base: "/",
@@ -45,7 +45,7 @@ const config = defineConfig({
         find: '@ui', replacement: path.resolve(__dirname, 'src/components/ui')
       },
       {
-        find: '@icons', replacement: path.resolve(__dirname, 'src/components/icons')
+        find: '@icons', replacement: path.resolve(__dirname, 'src/assets/icons')
       },
       {
         find: '@hooks', replacement: path.resolve(__dirname, 'src/hooks')
@@ -66,11 +66,7 @@ const config = defineConfig({
   },
   plugins: [
     react(),
-    svgrPlugin({
-      svgrOptions: {
-        icon: true,
-      },
-    }),
+    svgr()
   ],
 });
 
