@@ -118,7 +118,17 @@ declare namespace Requests {
   type Progress = "sk" | "ln";
   type Color = "nn"| "bw"| "sm"| "rn";
   type Artwork = "bu" | "hb" | "fb" | "ch" | "rs" | "eb";
-  type Config = Shared.IdList<Requests.Progress | Requests.Color | Requests.Artwork, string>
+  type Config<ConfigType> = Shared.IdList<ConfigType, string>
+  type State = {
+    progress: Requests.Progress,
+    color: Requests.Color,
+    artwork: Requests.Artwork,
+    characterCount: number,
+    addBackground: boolean,
+    specialRequest: boolean,
+    commercialUseFee: boolean,
+    rushFee: boolean,
+  }
 }
 
 declare namespace Shared {
@@ -135,7 +145,13 @@ declare namespace Shared {
   };
   type Currencies = "usd";
 
-  type CurrencyList = Record<Currencies, number>;
+  type CurrencyList<Type> = {
+    name: Type,
+    currency: {
+      name: Currencies,
+      value: number
+    }[],
+  };
 
   type TagList = {
     headline: string,
@@ -144,7 +160,10 @@ declare namespace Shared {
 
   type IdList<Ids, Value> = {
     headline: string,
-    list: Record<Ids, Value>,
+    list: {
+      name: Ids
+      value: Value
+    }[],
   }
 
   type Link = {

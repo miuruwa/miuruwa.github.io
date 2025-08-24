@@ -1,13 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Provider } from "react-redux"
 
+import { setupStore } from "@stores/store"
 import Footer from "@layout/Footer"
-import { ToolKitContext } from "@shared/toolkit"
 import routesConfig from "@shared/routeConfig"
 
-import "./assets/stylesheet.scss"
+const store = setupStore()
 
 const App = () => {
-  return <ToolKitContext>
+  return <Provider store={store}>
     <BrowserRouter>
       <Routes>
       {
@@ -18,7 +19,7 @@ const App = () => {
       </Routes>
       <Footer />
     </BrowserRouter>
-  </ToolKitContext>
+  </Provider>
 }
 
 export default App;

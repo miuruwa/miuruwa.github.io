@@ -1,45 +1,41 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { motion, useAnimation } from "motion/react";
 
-import { setAddBackground, setSpecialRequest, setCommercialUseFee, setRushFee } from '@actions/Request';
 import { useTranslation } from "@hooks/useTranslation";
+import { useAppDispatch, useAppSelector} from "@hooks/redux";
 import { request } from "@shared/pages/request";
 import { Button } from "@ui/Button";
 
 import styles from "./RequestAddons.module.scss";
+import { requestSlice } from "@reducers/Request";
 
 const RequestAddons = () => {
   const { root, addonList } = styles;
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const controls = useAnimation();
-  const selector = useSelector(state => state);
+  const { ToggleAddBackground, ToggleSpecialRequest, ToggleCommercialUseFee, ToggleRushFee } = requestSlice.actions;
+  const selector = useAppSelector(state => state.RequestReducer);
   const { addons } = useTranslation<Pages.Request>(request.translations);
 
-  // @ts-expect-error // TODO: selector type();
-  const toggleTheme = (id: string) => selector[id] ? "invert" : "white";
+  const toggleTheme = (id: Requests.Addons) => selector[id] ? "invert" : "white";
 
   const handleButton = (id: string) => {
     switch (id) {
       case "addBackground":
-        // @ts-expect-error // TODO: selector type();
-        dispatch(setAddBackground(!selector[id]))
+        dispatch(ToggleAddBackground())
         break;
 
       case "specialRequest":
-        // @ts-expect-error // TODO: selector type();
-        dispatch(setSpecialRequest(!selector[id]))
+        dispatch(ToggleSpecialRequest())
         break;
 
       case "commercialUseFee":
-        // @ts-expect-error // TODO: selector type();
-        dispatch(setCommercialUseFee(!selector[id]))
+        dispatch(ToggleCommercialUseFee())
         break;
 
       default:
-        // @ts-expect-error // TODO: selector type();
-        dispatch(setRushFee(!selector[id]))
+        dispatch(ToggleRushFee())
         break;
     }
   }
@@ -66,7 +62,7 @@ const RequestAddons = () => {
         transition={{ delay: 2.5, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
         {addons.headline}:
       </motion.p>
-      {Object.entries(addons.list).map((item, index) => <motion.div
+      {addons.list.map((item, index) => <motion.div
         key={index}
         initial="hidden"
         variants={{
@@ -81,8 +77,8 @@ const RequestAddons = () => {
         }}
         animate={controls}
         transition={{ delay: 2.6 + 0.1 * index, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-        <Button title={item[1]} theme={toggleTheme(item[0])} onClick={() => handleButton(item[0])} />  
-      </motion.div>)}    
+        <Button title={item.value} theme={toggleTheme(item.name)} onClick={() => handleButton(item.name)} />
+      </motion.div>)}
     </div>
   </div>
 }

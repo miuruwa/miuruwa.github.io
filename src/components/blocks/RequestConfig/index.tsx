@@ -1,5 +1,3 @@
-import { Provider } from 'react-redux';
-
 import RequestCharCount from '@blocks/RequestCharCount';
 import RequestAddons from '@blocks/RequestAddons';
 import RequestConfigPoint from "@blocks/RequestConfigPoint";
@@ -8,39 +6,30 @@ import RequestConfigTotal from '@blocks/RequestConfigTotal';
 import Headline from "@ui/Headline";
 import { useTranslation } from "@hooks/useTranslation";
 import { request } from "@shared/pages/request";
-import { Request } from '@stores/Request';
+import { requestSlice } from '@reducers/Request';
+import { useAppSelector } from '@hooks/redux';
 
 import styles from "./RequestConfig.module.scss";
 
 const RequestConfig = () => {
   const { root, configList } = styles;
+  const { progress, color, artwork } = useAppSelector(state => state.RequestReducer);
+    const { SetProgress, SetColor, SetArtwork } = requestSlice.actions;
 
   const { headline, config } = useTranslation<Pages.Request>(request.translations);
 
-  // TODO: завести delay
-	return <Provider store={Request}>
-    <div className={root}>
+	return <div className={root}>
       <Headline title={headline} />
       <div className={configList}>
-        <RequestConfigPoint
-          item={config.progress as Requests.Config}
-          action="progress"
-          delay={0.5} />
-        <RequestConfigPoint
-          item={config.color as Requests.Config}
-          action="color"
-          delay={1.0} />
-        <RequestConfigPoint
-          item={config.artwork as Requests.Config}
-          action="artwork"
-          delay={1.5} />
+        <RequestConfigPoint item={config.progress} state={progress} DoAction={SetProgress} delay={0.5} />
+        <RequestConfigPoint item={config.color} state={color} DoAction={SetColor} delay={1.0} />
+        <RequestConfigPoint item={config.artwork} state={artwork} DoAction={SetArtwork} delay={1.5} />
         <RequestCharCount />
         <RequestAddons />
       </div>
       <RequestConfigTotal />
       <RequestLinks />
     </div>
-  </Provider>
 }
 
 export default RequestConfig;

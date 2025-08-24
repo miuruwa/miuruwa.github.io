@@ -1,14 +1,10 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "motion/react";
-import { useSelector } from 'react-redux';
 
 import { usePriceCalc } from "@hooks/usePriceCalc";
 
 const RequestConfigTotal = () => {
-  const selector = useSelector(state => state);
-
-  // @ts-expect-error // TODO: selector type();
-  const priceCount = usePriceCalc(selector);
+  const priceCount = usePriceCalc();
   const controls = useAnimation();
 
   useEffect(() => {

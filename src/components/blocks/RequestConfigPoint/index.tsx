@@ -1,36 +1,23 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { setProgress, setColor, setArtwork } from '@actions/Request';
+import { useAppDispatch } from '@hooks/redux';
 import { motion, useAnimation } from "motion/react";
 import { useEffect } from "react";
 import { Button } from "@ui/Button";
 
 import styles from "./RequestConfigPoint.module.scss";
 
-const RequestConfigPoint: Blocks.RequestConfigPoint = ({item, action, delay}) => {
+const RequestConfigPoint = <RequestType, >({item, state, DoAction, delay}: Blocks.RequestConfigPoint<RequestType>) => {
   const { root, configList } = styles;
-  const dispatch = useDispatch();
-  const selector = useSelector(state => state);
 
+  const dispatch = useAppDispatch();
   const controls = useAnimation();
 
-	// @ts-expect-error // TODO: selector type();
-  const toggleTheme = (id: string) => selector[action] === id ? "invert" : "white";
+  const toggleTheme = (id: RequestType) => {
+		return state === id? "invert" : "white"
+	}
 
-  const handleButton = (value: string) => {
-		switch (action) {
-			case "progress":
-				dispatch(setProgress(value))
-				break;
-
-			case "color":
-				dispatch(setColor(value))
-				break;
-
-			default:
-				dispatch(setArtwork(value))
-				break;
-		}
-  }
+  const handleButton = (value: RequestType) => {
+		dispatch(DoAction(value))
+	}
 
   useEffect(() => {
     controls.start("visible");
@@ -54,7 +41,7 @@ const RequestConfigPoint: Blocks.RequestConfigPoint = ({item, action, delay}) =>
 			{item.headline}
 		</motion.p>
 		<div className={configList}>
-			{Object.entries(item.list).map((data, index) => <motion.div
+			{item.list.map((parameter, index) => <motion.div
 				key={index}
 				initial="hidden"
 				variants={{
@@ -69,7 +56,7 @@ const RequestConfigPoint: Blocks.RequestConfigPoint = ({item, action, delay}) =>
 				}}
 				animate={controls}
 				transition={{ delay: delay + index * 0.1, duration: 1, ease: [0, 0.71, 0.2, 1.01] }}>
-				<Button theme={toggleTheme(data[0])} title={data[1]} onClick={() => handleButton(data[0])}/>
+				<Button theme={toggleTheme(parameter.name)} title={parameter.value} onClick={() => handleButton(parameter.name)}/>
 			</motion.div>)}
 		</div>
 	</motion.div>

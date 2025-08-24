@@ -2,11 +2,11 @@ import { routes } from "../routes";
 
 export const request: {
     translations: Translations.Translate<Pages.Request>,
-    addonsPrice: Record<Requests.Addons, Shared.CurrencyList>,
+    addonsPrice: Shared.CurrencyList<Requests.Addons>[],
     configPrice: {
-        progress: Record<Requests.Progress, Shared.CurrencyList>,
-        color: Record<Requests.Color, Shared.CurrencyList>,
-        artwork: Record<Requests.Artwork, Shared.CurrencyList>,
+        progress:Shared.CurrencyList<Requests.Progress>[],
+        color: Shared.CurrencyList<Requests.Color>[],
+        artwork: Shared.CurrencyList<Requests.Artwork>[],
     }
 } = {
     translations: {
@@ -15,40 +15,88 @@ export const request: {
             characterCount: "Character count",
             addons: {
                 headline: "Addons",
-                list: {
-                    addBackground: "Simple background",
-                    specialRequest: "Special",
-                    commercialUseFee: "For commercial use",
-                    rushFee: "Rush",
-                }
+                list: [
+                    {
+                        name: "addBackground",
+                        value: "Simple background",
+                    },
+                    {
+                        name: "specialRequest",
+                        value: "Special",
+                    },
+                    {
+                        name: "commercialUseFee",
+                        value: "For commercial use",
+                    },
+                    {
+                        name: "rushFee",
+                        value: "Rush",
+                    },
+                ]
             },
             config: {
                 progress: {
                     headline: "Progress",
-                    list: {
-                        sk: "Sketch",
-                        ln: "Lineart",
-                    },
+                    list: [
+                        {
+                            name: "sk",
+                            value: "Sketch",
+                        },
+                        {
+                            name: "ln",
+                            value: "Lineart",
+                        },
+                    ],
                 },
                 color: {
                     headline: "Color",
-                    list: {
-                        nn: "None",
-                        bw: "Black & White",
-                        sm: "Simple",
-                        rn: "Render",
-                    },
+                    list: [
+                        {
+                            name: "nn",
+                            value: "None",
+                        },
+                        {
+                            name: "bw",
+                            value: "Black & White",
+                        },
+                        {
+                            name: "sm",
+                            value: "Simple",
+                        },
+                        {
+                            name: "rn",
+                            value: "Render",
+                        },
+                    ],
                 },
                 artwork: {
                     headline: "Frame type",
-                    list: {
-                        bu: "Bust",
-                        hb: "Half body",
-                        fb: "Full body",
-                        ch: "Chibi",
-                        rs: "Reference sheet",
-                        eb: "Eye banner",
-                    },
+                    list: [
+                        {
+                            name: "bu",
+                            value: "Bust",
+                        },
+                        {
+                            name: "hb",
+                            value: "Half body",
+                        },
+                        {
+                            name: "fb",
+                            value: "Full body",
+                        },
+                        {
+                            name: "ch",
+                            value: "Chibi",
+                        },
+                        {
+                            name: "rs",
+                            value: "Reference sheet",
+                        },
+                        {
+                            name: "eb",
+                            value: "Eye banner",
+                        },
+                    ],
                 },
             },
             links: [
@@ -63,62 +111,158 @@ export const request: {
             ]
         }
     },
-    addonsPrice: {
-        addBackground: {
-            usd: 10
+    addonsPrice: [
+        {
+            name: "addBackground",
+            currency: [
+                {
+                    name: "usd",
+                    value: 10
+                },
+            ],
         },
-        specialRequest: {
-            usd: 10
+        {
+            name: "specialRequest",
+            currency: [
+                {
+                    name: "usd",
+                    value: 10
+                },
+            ],
         },
-        commercialUseFee: {
-            usd: 10
+        {
+            name: "commercialUseFee",
+            currency: [
+                {
+                    name: "usd",
+                    value: 10
+                },
+            ],
         },
-        rushFee: {
-            usd: 10
+        {
+            name: "rushFee",
+            currency: [
+                {
+                    name: "usd",
+                    value: 10
+                },
+            ],
         },
-    },
+    ],
     configPrice: {
-        progress: {
-            sk: {
-                usd: 0,
+        progress: [
+            {
+                name: "sk",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 0,
+                    },
+                ],
             },
-            ln: {
-                usd: 40,
+            {
+                name: "ln",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 40
+                    },
+                ],
             },
-        },
-        color: {
-            nn: {
-                usd: 0,
+        ],
+        color: [
+            {
+                name: "nn",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 0,
+                    },
+                ],
             },
-            bw: {
-                usd: 1,
+            {
+                name: "bw",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 1,
+                    },
+                ],
             },
-            sm: {
-                usd: 5,
+            {
+                name: "sm",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 5,
+                    },
+                ],
             },
-            rn: {
-                usd: 20,
+            {
+                name: "rn",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 20
+                    },
+                ],
             },
-        },
-        artwork: {
-            bu: {
-                usd: 10,
+        ],
+        artwork: [
+            {
+                name: "bu",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 10,
+                    },
+                ],
             },
-            hb: {
-                usd: 20,
+            {
+                name: "hb",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 20,
+                    },
+                ],
             },
-            fb: {
-                usd: 40,
+            {
+                name: "fb",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 40,
+                    },
+                ],
             },
-            ch: {
-                usd: 5,
+            {
+                name: "ch",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 5,
+                    },
+                ],
             },
-            rs: {
-                usd: 50,
+            {
+                name: "rs",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 50,
+                    },
+                ],
             },
-            eb: {
-                usd: 10,
+            {
+                name: "eb",
+                currency: [
+                    {
+                        name: "usd",
+                        value: 10,
+                    },
+                ],
             },
-        },
+        ],
     },
 }

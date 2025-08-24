@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from 'react-redux';
 import { motion, useAnimation } from "motion/react";
-import { setCharacterCount } from '@actions/Request';
 
 import CharAddIcon from '@icons/CharAddIcon';
 import CharSubstractIcon from '@icons/CharSubstractIcon';
@@ -10,19 +8,20 @@ import { request } from "@shared/pages/request";
 import { Button } from "@ui/Button";
 
 import styles from "./RequestCharCount.module.scss";
+import { useAppDispatch, useAppSelector } from "@hooks/redux";
+import { requestSlice } from "@reducers/Request";
 
 const RequestCharCount = () => {
   const { root } = styles;
 
-  const dispatch = useDispatch();
   const controls = useAnimation();
-	// @ts-expect-error Property 'characterCount' does not exist on type 'unknown'.ts(2339)
-  const { characterCount } = useSelector(state => state);
-
+  const dispatch = useAppDispatch();
+  const { characterCount } = useAppSelector(state => state.RequestReducer);
+	const { SetCharacterCount } = requestSlice.actions;
   const { characterCount: counter } = useTranslation<Pages.Request>(request.translations);
 
-  const Add = () => dispatch(setCharacterCount(characterCount + 1));
-  const Substract = () => characterCount > 1 && dispatch(setCharacterCount(characterCount - 1));
+  const Add = () => dispatch(SetCharacterCount(characterCount + 1));
+  const Substract = () => characterCount > 1 && dispatch(SetCharacterCount(characterCount - 1));
 
   useEffect(() => {
     controls.start("visible");

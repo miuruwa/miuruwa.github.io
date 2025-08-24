@@ -1,7 +1,7 @@
 export function classNames(
   className: string,
-  mods: Record<string, boolean | string> = {},
-  additional: string[] = [],
+  mods: Record<string, string | boolean | React.JSX.Element | undefined> = {},
+  additional: (string | undefined)[] = [],
 ) {
   return [
     className,
